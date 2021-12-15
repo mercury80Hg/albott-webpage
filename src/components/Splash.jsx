@@ -9,7 +9,7 @@ function Splash() {
                         <div className="img-wrapper">
                             <img className="logo" src="images/AEB-logo-final.png" alt="logo: green winged letter B in front of a pink and blue pyramid in front of a yellow circle"/>
                         </div> 
-                    <a className="splash-box-bottom" href="#travel-text" alt="travel button">TRAVEL</a>
+                    <a className="splash-box-bottom" href="#travel-text" alt="travel button">Travel</a>
                 </div>
                 <div className="splash-box-right">
                     <a className="spl_bx-rTop" href="#excitement-text" alt="excitement button">Excitement</a>
