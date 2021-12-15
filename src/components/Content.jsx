@@ -7,26 +7,35 @@ function Content() {
 				<h1 className="content-heading" id="about-text">
 					About
 				</h1>
-				<img className="content-image" src="images/about/Me_Colum_Dog.JPG" alt=""></img>
+				<img
+					className="content-image"
+					src="images/about/Me_Colum_Dog.JPG"
+					alt=""
+				></img>
 				<p className="content-paragraph">
-					{" "}
-					Really? Did nothing cancel? Michael! Really? Did nothing cancel? It's
-					called 'taking advantage.' It's what gets you ahead in life. I don't
-					criticize you! And if you're worried about criticism, sometimes a diet
-					is the best defense. Now, when you do this without getting punched in
-					the chest, you'll have more fun. As you may or may not know, Lindsay
-					and I have hit a bit of a rough patch. I care deeply for nature. No…
-					but I'd like to be asked! We just call it a sausage. Marry me. I'm a
-					monster. Marry me. I'm afraid I just blue myself. No, I did not kill
-					Kitty. However, I am going to oblige and answer the nice officer's
-					questions because I am an honest man with no secrets to hide. No… but
-					I'd like to be asked! Say goodbye to these, because it's the last
-					time! As you may or may not know, Lindsay and I have hit a bit of a
-					rough patch. Not tricks, Michael, illusions. Oh, you're gonna be in a
-					coma, all right. Say goodbye to these, because it's the last time!
-					There's only one man I've ever called a coward, and that's Brian Doyle
-					Murray. No, what I'm calling you is a television actor. Whoa, this
-					guy's straight?
+					Make the most of yourself and you are on a good path to make the most
+					of life. There's plenty of things I can tell you about myself, from
+					the diverse places I've lived, death, life, love. But you aren't going
+					to find it on this website because half the fun is telling the story.
+					I think this website probably reads more like a teaser. Hopefully as
+					you explore it you can gleam a little of my personality from my cheesy
+					writing and it gives you the gist of me, or maybe you are here to see
+					if I'm the kind of guy with the skills necessary for your project or
+					position. Hopefully there is enough information between the lines or
+					in the code. Perhaps one day I'll write a book or maybe my adventures
+					will only be known from oration. But for now here's a website I made
+					from scratch with the tools that I've taught myself to use through
+					heaps of tutorials and classes.{" "}
+					<br />
+					<br />
+					For 20 years I have been the General Manager of an array of
+					restaurants, working with companies and families buidling
+					infrastructure, manuals and procedures, hand picking and training my
+					employees and creating menus. Profit and Loss, budgets and scheduling,
+					meetings and vendors, clients and customer service. In a sense I've
+					been building start-ups and managing corporate branches and teams my
+					whole career, the flavor of business is the only thing that has
+					changed as I pivot to tech.{" "}
 				</p>
 			</div>
 			<div className="adventure">
@@ -39,12 +48,13 @@ function Content() {
 					alt="man walking into treehouse in forest"
 				></img>
 				<p className="content-paragraph">
-					And that is not how I'm introducing myself. Saving the world with
-					meals on wheels. Annihilate? No. No violence. I won't stand for it.
-					Not now, not ever, do you understand me?! I'm the Doctor, the Oncoming
-					Storm - and you basically meant beat them in a football match, didn't
-					you? No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister.
-					No, I'm the Doctor. Don't call me the Rotmeister.{" "}
+					Adventure, Excitement, Beauty and Travel aren't just clichés. They all
+					represent pieces of the experience of life that I try to seek out in
+					the things I do. All the photos on this site are from the many
+					adventures and places I've lived. With such a short life and large
+					planet it seems a shame to not experience as much of it as you can.
+					When we meet in person ask me about any photo and I'm sure I have some
+					fun and interesting stories to go with it.{" "}
 				</p>
 			</div>
 			<div className="excitement">
@@ -57,17 +67,12 @@ function Content() {
 					alt="man kite surfing"
 				></img>
 				<p className="content-paragraph">
-					The way I see it, every life is a pile of good things and bad
-					things.…hey.…the good things don't always soften the bad things; but
-					vice-versa the bad things don't necessarily spoil the good things and
-					make them unimportant. No… It's a thing; it's like a plan, but with
-					more greatness. I'm the Doctor, I'm worse than everyone's aunt.
-					*catches himself* And that is not how I'm introducing myself. Saving
-					the world with meals on wheels. Annihilate? No. No violence. I won't
-					stand for it. Not now, not ever, do you understand me?! I'm the
-					Doctor, the Oncoming Storm - and you basically meant beat them in a
-					football match, didn't you? No, I'll fix it. I'm good at fixing rot.
-					Call me the Rotmeister.
+					Without some danger there isn't excitement. Managing your experience
+					safely gives you an advantage and most of that can be acheived through
+					simply paying attention, being prepared and absorbing the stories of
+					those who have gone before you. For me, I try to always keep it one
+					step forward and minimize the side and backsteps. Having a
+					conversation with my fear has opened up some very fun opprotunities.{" "}
 				</p>
 			</div>
 			<div className="beauty">
@@ -80,12 +85,16 @@ function Content() {
 					alt="medevial stone wall with red potted flower ub window"
 				></img>
 				<p className="content-paragraph">
-					No violence. I won't stand for it. Not now, not ever, do you
-					understand me?! I'm the Doctor, the Oncoming Storm - and you basically
-					meant beat them in a football match, didn't you? I'm the Doctor. Well,
-					they call me the Doctor. I don't know why. I call me the Doctor too. I
-					still don't know why. All I've got to do is pass as an ordinary human
-					being. Simple. What could possibly go wrong?
+					Of course there's beauty to be found in everything if you look hard
+					enough, it is in the eye of the beholder and existing conventions, but
+					nothing compares to an in person experience. Finding a soul in the
+					strokes of a famous painting never translates when viewing a
+					reproduction. Even famous photographers know that their photos are
+					quietly telling you that this was the best way to capture a moment
+					that is far more beautiful in person. Finally standing in the place
+					you have seen numerous images of reveals the injustice of a photo. I
+					hope everyone will stop to experience the small beauties around them
+					and seek out the larger ones in life.{" "}
 				</p>
 			</div>
 			<div className="travel">
@@ -98,16 +107,11 @@ function Content() {
 					alt=""
 				></img>
 				<p className="content-paragraph">
-					Sorry, checking all the water in this area; there's an escaped fish.
-					The way I see it, every life is a pile of good things and bad
-					things.…hey.…the good things don't always soften the bad things; but
-					vice-versa the bad things don't necessarily spoil the good things and
-					make them unimportant. The way I see it, every life is a pile of good
-					things and bad things.…hey.…the good things don't always soften the
-					bad things; but vice-versa the bad things don't necessarily spoil the
-					good things and make them unimportant. No… It's a thing; it's like a
-					plan, but with more greatness. I'm the Doctor, I'm worse than
-					everyone's aunt.{" "}
+					In my experience the best way to understand something different is to
+					try it in earnest. Having lived on four continents I can say, nothing
+					gives you full apperciation and knowledge unless you actually live the
+					culture. Anything else is visiting, and while you can appreciate a lot
+					from a visit, living there gives you true perspective.{" "}
 				</p>
 			</div>
 		</div>

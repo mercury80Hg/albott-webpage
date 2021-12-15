@@ -16,7 +16,6 @@ function Splash() {
                     <a className="spl_bx-rBottom" href="#beauty-text" alt="beauty button">Beauty</a>
                 </div>
             </div>
-
         </div>
         
     )

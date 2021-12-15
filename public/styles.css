@@ -228,6 +228,8 @@ header {
 	display: flex;
 	height: 25vh;
 	overflow: auto;
+	margin: 1vh;
+	font-size: 2vh;
 }
 
 .content-heading {
