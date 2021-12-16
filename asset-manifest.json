@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/albott-webpage/static/js/main.d6138472.chunk.js",
-    "main.js.map": "/albott-webpage/static/js/main.d6138472.chunk.js.map",
+    "main.js": "/albott-webpage/static/js/main.e1ba5168.chunk.js",
+    "main.js.map": "/albott-webpage/static/js/main.e1ba5168.chunk.js.map",
     "runtime-main.js": "/albott-webpage/static/js/runtime-main.56e4bb02.js",
     "runtime-main.js.map": "/albott-webpage/static/js/runtime-main.56e4bb02.js.map",
     "static/js/2.ce283108.chunk.js": "/albott-webpage/static/js/2.ce283108.chunk.js",
@@ -12,6 +12,6 @@
   "entrypoints": [
     "static/js/runtime-main.56e4bb02.js",
     "static/js/2.ce283108.chunk.js",
-    "static/js/main.d6138472.chunk.js"
+    "static/js/main.e1ba5168.chunk.js"
   ]
 }
