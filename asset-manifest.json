@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/static/js/main.e1ba5168.chunk.js",
-    "main.js.map": "/static/js/main.e1ba5168.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.78c1e59e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.78c1e59e.js.map",
-    "static/js/2.ce283108.chunk.js": "/static/js/2.ce283108.chunk.js",
-    "static/js/2.ce283108.chunk.js.map": "/static/js/2.ce283108.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.ce283108.chunk.js.LICENSE.txt": "/static/js/2.ce283108.chunk.js.LICENSE.txt"
+    "main.js": "/albott-webpage/static/js/main.e1ba5168.chunk.js",
+    "main.js.map": "/albott-webpage/static/js/main.e1ba5168.chunk.js.map",
+    "runtime-main.js": "/albott-webpage/static/js/runtime-main.56e4bb02.js",
+    "runtime-main.js.map": "/albott-webpage/static/js/runtime-main.56e4bb02.js.map",
+    "static/js/2.ce283108.chunk.js": "/albott-webpage/static/js/2.ce283108.chunk.js",
+    "static/js/2.ce283108.chunk.js.map": "/albott-webpage/static/js/2.ce283108.chunk.js.map",
+    "index.html": "/albott-webpage/index.html",
+    "static/js/2.ce283108.chunk.js.LICENSE.txt": "/albott-webpage/static/js/2.ce283108.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.78c1e59e.js",
+    "static/js/runtime-main.56e4bb02.js",
     "static/js/2.ce283108.chunk.js",
     "static/js/main.e1ba5168.chunk.js"
   ]
