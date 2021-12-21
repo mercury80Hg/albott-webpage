@@ -2,7 +2,7 @@ import React from "react"
 
 function Header() {
 	return (
-		<header>
+		<header id="header">
 			<div className="hyperlinks-box">
 				<a className="hyperlinks" href="#about-text">
 					About

@@ -10,7 +10,7 @@ function Content() {
 				<img
 					className="content-image"
 					src="images/about/Me_Colum_Dog.JPG"
-					alt=""
+					alt="me looking at a stray dog under my chair in Cartagena Columbia"
 				></img>
 				<p className="content-paragraph">
 					Make the most of yourself and you are on a good path to make the most
@@ -25,8 +25,7 @@ function Content() {
 					in the code. Perhaps one day I'll write a book or maybe my adventures
 					will only be known from oration. But for now here's a website I made
 					from scratch with the tools that I've taught myself to use through
-					heaps of tutorials and classes.{" "}
-					<br />
+					heaps of tutorials and classes. <br />
 					<br />
 					For 20 years I have been the General Manager of an array of
 					restaurants, working with companies and families buidling
@@ -45,7 +44,7 @@ function Content() {
 				<img
 					className="content-image"
 					src="images/adventure/Tulum_Ruins.JPG"
-					alt="man walking into treehouse in forest"
+					alt="tulum native ruins"
 				></img>
 				<p className="content-paragraph">
 					Adventure, Excitement, Beauty and Travel aren't just clichés. They all
@@ -64,15 +63,15 @@ function Content() {
 				<img
 					className="content-image"
 					src="images/excitement/SF_Vampire.JPG"
-					alt="man kite surfing"
+					alt="street art of vampire beckoning"
 				></img>
 				<p className="content-paragraph">
-					Without some danger there isn't excitement. Managing your experience
-					safely gives you an advantage and most of that can be acheived through
-					simply paying attention, being prepared and absorbing the stories of
-					those who have gone before you. For me, I try to always keep it one
-					step forward and minimize the side and backsteps. Having a
-					conversation with my fear has opened up some very fun opprotunities.{" "}
+					Without some danger there isn't excitement. By simply paying attention
+					enough you can manage you experience safely through being prepared and
+					absorbing the stories of those who have gone before you. For me, I try
+					to always keep moving forward and minimize the side and
+					backsteps. Having a conversation with my fear has opened up some very
+					fun opprotunities.{" "}
 				</p>
 			</div>
 			<div className="beauty">
@@ -82,7 +81,7 @@ function Content() {
 				<img
 					className="content-image"
 					src="images/beauty/OB_MyshAl.JPG"
-					alt="medevial stone wall with red potted flower ub window"
+					alt="me petting my dog at the beach during low tide sunset"
 				></img>
 				<p className="content-paragraph">
 					Of course there's beauty to be found in everything if you look hard
@@ -104,7 +103,7 @@ function Content() {
 				<img
 					className="content-image"
 					src="images/travel/Sea_CityRaineer.JPG"
-					alt=""
+					alt="view of Seattle skyline from Queen Anne hill showing mt. raineer and space needle"
 				></img>
 				<p className="content-paragraph">
 					In my experience the best way to understand something different is to
