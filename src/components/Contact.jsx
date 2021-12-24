@@ -18,10 +18,7 @@ function Contact() {
 						<a href="tel:+13476884186">
 							<img className="mobile-img" src="images/call.png" alt=""></img>
 						</a>
-						<a
-							href="mailto:[silver47ag@gmail.com]?subject=Email from allanbott.com, RE: &body=Your favorite color is: %0A%0AIf you could be an animal: %0A%0ASince you are human, what kind of robot would you like to be?: %0A%0A%0A"
-                            
-						>
+						<a href="mailto:[silver47ag@gmail.com]?subject=Email from allanbott.com, RE: &body=Your favorite color is: %0A%0AIf you could be an animal: %0A%0ASince you are human, what kind of robot would you like to be?: %0A%0A%0A">
 							<img className="email-img" src="images/at-sign.png" alt=""></img>
 						</a>
 					</div>
@@ -56,6 +53,7 @@ function Contact() {
 					action="mailto:silver47ag@gmail.com"
 					method="post"
 					enctype="text/plain"
+                    target="_blank"
 				>
 					<div className="name-email">
 						<label className="name-email-label" for="">
