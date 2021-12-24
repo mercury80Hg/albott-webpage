@@ -1,5 +1,6 @@
 import React from "react"
 
+const bodyText = "go one git"
 function Contact() {
 	return (
 		<div className="contact" id="contact">
@@ -17,7 +18,10 @@ function Contact() {
 						<a href="tel:+13476884186">
 							<img className="mobile-img" src="images/call.png" alt=""></img>
 						</a>
-						<a href="">
+						<a
+							href="mailto:[silver47ag@gmail.com]?subject=Email from allanbott.com, RE: &body=Your favorite color is: %0A%0AIf you could be an animal: %0A%0ASince you are human, what kind of robot would you like to be?: %0A%0A%0A"
+                            
+						>
 							<img className="email-img" src="images/at-sign.png" alt=""></img>
 						</a>
 					</div>
@@ -42,8 +46,8 @@ function Contact() {
 					</ul>
 				</div>
 			</div>
-            <br/>
-            <br/>
+			<br />
+			<br />
 			<div>
 				<hr size="5" noshade />
 				<h3 className="or">Or Contact Me Here</h3>
