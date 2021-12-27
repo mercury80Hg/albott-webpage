@@ -9,7 +9,7 @@ body {
 
 	color: #335;
 	font-weight: lighter;
-	letter-spacing: .3vw;
+	letter-spacing: 0.3vw;
 }
 
 .page {
@@ -76,6 +76,34 @@ header {
 .hyperlinks:nth-of-type(2) {
 	border-left: 1px solid #335;
 	border-right: 1px solid #335;
+}
+
+/*///// Floating Home Button /////// */
+
+.floating-btn-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 7vh;
+}
+
+.floating-btn {
+	display: flex;
+	width: 7vh;
+	height: 7vh;
+	background: #00c18ba1;
+	border: 1px solid #335;
+	border-radius: 5px;
+	text-decoration: none;
+	color: #ec0080a0;
+	position: fixed;
+	right: 40px;
+	bottom: 20px;
+	transition: background 0.25s;
+}
+
+.floating-btn:active {
+	background-color: #fced05;
 }
 
 /* ////Splash Page////// */
@@ -238,12 +266,17 @@ header {
 
 .content-heading {
 	display: flex;
-	height: 5vh;
+	height: 10vh;
+	width: 30vw;
+	justify-content: center;
+	align-items: center;
+	border: solid 1px #335;
+	border-radius: 5px;
 }
 
 .content-image {
 	display: flex;
-	
+
 	height: 100%;
 	width: 100%;
 	overflow: auto;
@@ -258,6 +291,7 @@ header {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	align-items: center;
 }
 
 #about {
@@ -268,27 +302,46 @@ header {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	align-items: center;
+}
+#adventure-text {
+	background-color: #ec008ca1;
 }
 
 .excitement {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	align-items: center;
+}
+
+#excitement-text {
+	background-color: #00c18b;
 }
 
 .beauty {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	align-items: center;
 }
 
-.contact {
-	display: flex;
-	height: 100vh;
-	flex-direction: column;
+#beauty-text {
+	background-color: #7ba5de;
 }
 
 .travel {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	align-items: center;
+}
+
+#travel-text {
+	background-color: #fced05;
+}
+
+.contact {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
@@ -322,7 +375,7 @@ header {
 }
 
 .myname-contact {
-	display:flex;
+	display: flex;
 	justify-content: center;
 	font-weight: lighter;
 	letter-spacing: 1vw;
@@ -330,13 +383,13 @@ header {
 }
 
 .logo-box {
-	display:flex;
+	display: flex;
 	justify-content: center;
 	width: 30vw;
 }
 
 .why-list {
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 30vw;
@@ -346,9 +399,8 @@ header {
 	font-size: 2vh;
 	/* line-height: 0px; */
 	font-weight: lighter;
-	letter-spacing: .3vw;
+	letter-spacing: 0.3vw;
 }
-
 
 .logo-contact {
 	height: 20vh;
@@ -400,7 +452,7 @@ header {
 
 .name-email-input {
 	margin-right: 3vw;
-	background-color:#bec4d9;
+	background-color: #bec4d9;
 	border-radius: 5px;
 }
 
@@ -413,6 +465,6 @@ header {
 	display: flex;
 	justify-content: center;
 	width: 10vw;
-	background-color:#7ba5de;
+	background-color: #7ba5de;
 	border-radius: 5px;
 }

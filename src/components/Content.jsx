@@ -5,7 +5,7 @@ function Content() {
 		<div className="content">
 			<div className="about">
 				<h1 className="content-heading" id="about-text">
-					About
+					about
 				</h1>
 				<img
 					className="content-image"
@@ -39,7 +39,7 @@ function Content() {
 			</div>
 			<div className="adventure">
 				<h2 className="content-heading" id="adventure-text">
-					Adventure
+					adventure
 				</h2>
 				<img
 					className="content-image"
@@ -58,7 +58,7 @@ function Content() {
 			</div>
 			<div className="excitement">
 				<h2 className="content-heading" id="excitement-text">
-					Excitement
+					excitement
 				</h2>
 				<img
 					className="content-image"
@@ -76,7 +76,7 @@ function Content() {
 			</div>
 			<div className="beauty">
 				<h2 className="content-heading" id="beauty-text">
-					Beauty
+					beauty
 				</h2>
 				<img
 					className="content-image"
@@ -98,7 +98,7 @@ function Content() {
 			</div>
 			<div className="travel">
 				<h2 className="content-heading" id="travel-text">
-					Travel
+					travel
 				</h2>
 				<img
 					className="content-image"

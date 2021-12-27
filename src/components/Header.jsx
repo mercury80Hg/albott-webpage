@@ -5,19 +5,22 @@ function Header() {
 		<header id="header">
 			<div className="hyperlinks-box">
 				<a className="hyperlinks" href="#about-text">
-					About
+					about
 				</a>
 				<a className="hyperlinks contacts" href="#contact">
-					Contact
+					contact
 				</a>
 				<a
 					className="hyperlinks"
 					href="https://mercury80hg.github.io/NYT-Best-Sellers-List/"
 				>
-					Projects
+					projects
 				</a>
 			</div>
 			<h1 className="myname">allan E bott</h1>
+			<a href="#header" class="material-icons floating-btn">
+				<span class="material-icons-round floating-btn-icon">home</span>
+			</a>
 		</header>
 	)
 }
