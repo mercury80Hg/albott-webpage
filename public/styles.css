@@ -78,6 +78,34 @@ header {
 	border-right: 1px solid #335;
 }
 
+/*///////Floating Home Button/////////// */
+.floating-btn {
+	display: flex;
+	width: 7vh;
+	height: 7vh;
+	background:#00c18ba1;
+	border: 1px solid #335;
+	border-radius: 5px;
+	text-decoration: none;
+	color:#ec0080a0;
+	position: fixed;
+	right: 40px;
+	bottom: 20px;
+	transition: background 0.25s;
+}
+
+.floating-btn:active {
+	background:#fced05;
+}
+
+.floating-btn-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size:7vh;
+	
+}
+
 /* ////Splash Page////// */
 
 .splash {
@@ -228,26 +256,58 @@ header {
 
 /* /////////Content////////// */
 
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.content-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	
+}
+
 .content-paragraph {
 	display: flex;
-	height: 25vh;
-	overflow: auto;
+	width: 90vw;
+	align-items: center;
+	overflow: scroll;
 	margin: 1vh;
 	font-size: 2vh;
+	/* height: 80vh; */
 }
 
 .content-heading {
 	display: flex;
-	height: 5vh;
+	height: 10vh;
+	width: 30vw;
+	justify-content: center;
+	align-items: center;
+	border: solid 1px #335;
+	border-radius: 5px;
+	
+}
+
+.image-text-row {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+
 }
 
 .content-image {
 	display: flex;
-	
-	height: 100%;
-	width: 100%;
+	border: solid 1px #335;
+	border-radius: 5px;
 	overflow: auto;
-	object-fit: contain;
+	object-fit: fill;
+	height:80vh;
+	/* width: 60vw; */
+
+
 }
 
 .content {
@@ -264,16 +324,28 @@ header {
 	display: flex;
 }
 
+#adventure-text {
+	background-color: #ec008ca0;
+}
+
 .adventure {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 }
 
+#excitement-text {
+	background-color: #00c18ba0;
+}
+
 .excitement {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+}
+
+#beauty-text {
+	background-color: #7ba5de;
 }
 
 .beauty {
@@ -288,10 +360,14 @@ header {
 	flex-direction: column;
 }
 
+#travel-text {
+	background-color: #fced05a0;
+}
 .travel {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	
 }
 
 #contact {
@@ -303,6 +379,7 @@ header {
 	flex-direction: row;
 	padding: 0 50px 0 50px;
 }
+
 
 /* ////////Images////////// */
 
@@ -416,3 +493,6 @@ header {
 	background-color:#7ba5de;
 	border-radius: 5px;
 }
+
+
+/* ///////Footer/////////*/

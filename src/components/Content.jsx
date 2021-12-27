@@ -3,63 +3,68 @@ import React from "react"
 function Content() {
 	return (
 		<div className="content">
-			<div className="about">
+			<div className="about content-box">
 				<h1 className="content-heading" id="about-text">
 					About
 				</h1>
-				<img
+				
+					<img
 					className="content-image"
 					src="images/about/Me_Colum_Dog.JPG"
 					alt="me looking at a stray dog under my chair in Cartagena Columbia"
-				></img>
-				<p className="content-paragraph">
-					Make the most of yourself and you are on a good path to make the most
-					of life. There's plenty of things I can tell you about myself, from
-					the diverse places I've lived, death, life, love. But you aren't going
-					to find it on this website because half the fun is telling the story.
-					I think this website probably reads more like a teaser. Hopefully as
-					you explore it you can gleam a little of my personality from my cheesy
-					writing and it gives you the gist of me, or maybe you are here to see
-					if I'm the kind of guy with the skills necessary for your project or
-					position. Hopefully there is enough information between the lines or
-					in the code. Perhaps one day I'll write a book or maybe my adventures
-					will only be known from oration. But for now here's a website I made
-					from scratch with the tools that I've taught myself to use through
-					heaps of tutorials and classes. <br />
-					<br />
-					For 20 years I have been the General Manager of an array of
-					restaurants, working with companies and families buidling
-					infrastructure, manuals and procedures, hand picking and training my
-					employees and creating menus. Profit and Loss, budgets and scheduling,
-					meetings and vendors, clients and customer service. In a sense I've
-					been building start-ups and managing corporate branches and teams my
-					whole career, the flavor of business is the only thing that has
-					changed as I pivot to tech.{" "}
-				</p>
+					></img>
+					<p className="content-paragraph">
+						Make the most of yourself and you are on a good path to make the most
+						of life. There's plenty of things I can tell you about myself, from
+						the diverse places I've lived, death, life, love. But you aren't going
+						to find it on this website because half the fun is telling the story.
+						I think this website probably reads more like a teaser. Hopefully as
+						you explore it you can gleam a little of my personality from my cheesy
+						writing and it gives you the gist of me, or maybe you are here to see
+						if I'm the kind of guy with the skills necessary for your project or
+						position. Hopefully there is enough information between the lines or
+						in the code. Perhaps one day I'll write a book or maybe my adventures
+						will only be known from oration. But for now here's a website I made
+						from scratch with the tools that I've taught myself to use through
+						heaps of tutorials and classes. <br />
+						<br />
+						For 20 years I have been the General Manager of an array of
+						restaurants, working with companies and families buidling
+						infrastructure, manuals and procedures, hand picking and training my
+						employees and creating menus. Profit and Loss, budgets and scheduling,
+						meetings and vendors, clients and customer service. In a sense I've
+						been building start-ups and managing corporate branches and teams my
+						whole career, the flavor of business is the only thing that has
+						changed as I pivot to tech.{" "}
+					</p>
+				
+				
 			</div>
-			<div className="adventure">
+			<div className="adventure content-box">
 				<h2 className="content-heading" id="adventure-text">
 					Adventure
 				</h2>
+				
 				<img
 					className="content-image"
 					src="images/adventure/Tulum_Ruins.JPG"
 					alt="tulum native ruins"
 				></img>
 				<p className="content-paragraph">
-					Adventure, Excitement, Beauty and Travel aren't just clichés. They all
-					represent pieces of the experience of life that I try to seek out in
-					the things I do. All the photos on this site are from the many
-					adventures and places I've lived. With such a short life and large
-					planet it seems a shame to not experience as much of it as you can.
-					When we meet in person ask me about any photo and I'm sure I have some
-					fun and interesting stories to go with it.{" "}
+				Beauty, Adventure, Travel, and Excitement aren't just clichés. They all
+				represent pieces of the experience of life that I try to seek out in
+				the things I do. All the photos on this site are from the many
+				adventures and places I've lived. With such a short life and large
+				planet it seems a shame to not experience as much of it as you can.
+				When we meet in person ask me about any photo and I'm sure I have some
+				fun and interesting stories to go with it.{" "}
 				</p>
 			</div>
-			<div className="excitement">
+			<div className="excitement content-box">
 				<h2 className="content-heading" id="excitement-text">
 					Excitement
 				</h2>
+				
 				<img
 					className="content-image"
 					src="images/excitement/SF_Vampire.JPG"
@@ -74,14 +79,14 @@ function Content() {
 					fun opprotunities.{" "}
 				</p>
 			</div>
-			<div className="beauty">
+			<div className="beauty content-box">
 				<h2 className="content-heading" id="beauty-text">
 					Beauty
 				</h2>
 				<img
-					className="content-image"
-					src="images/beauty/OB_MyshAl.JPG"
-					alt="me petting my dog at the beach during low tide sunset"
+				className="content-image"
+				src="images/beauty/OB_MyshAl.JPG"
+				alt="me petting my dog at the beach during low tide sunset"
 				></img>
 				<p className="content-paragraph">
 					Of course there's beauty to be found in everything if you look hard
@@ -96,14 +101,14 @@ function Content() {
 					and seek out the larger ones in life.{" "}
 				</p>
 			</div>
-			<div className="travel">
+			<div className="travel content-box">
 				<h2 className="content-heading" id="travel-text">
 					Travel
 				</h2>
 				<img
-					className="content-image"
-					src="images/travel/Sea_CityRaineer.JPG"
-					alt="view of Seattle skyline from Queen Anne hill showing mt. raineer and space needle"
+				className="content-image"
+				src="images/travel/Sea_CityRaineer.JPG"
+				alt="view of Seattle skyline from Queen Anne hill showing mt. raineer and space needle"
 				></img>
 				<p className="content-paragraph">
 					In my experience the best way to understand something different is to

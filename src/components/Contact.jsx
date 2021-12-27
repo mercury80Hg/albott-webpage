@@ -46,46 +46,8 @@ function Contact() {
 			<br />
 			<br />
 			<div>
-				<hr size="5" noshade />
-				<h3 className="or">Or Contact Me Here</h3>
-				<form
-					className="contact-form"
-					action="mailto:silver47ag@gmail.com"
-					method="post"
-					enctype="text/plain"
-                    target="_blank"
-				>
-					<div className="name-email">
-						<label className="name-email-label" for="">
-							Your Name:{" "}
-						</label>
-						<input className="name-email-input" type="text" name="yourName" />
-						<label className="name-email-label" for="">
-							Your Email:{" "}
-						</label>
-						<input className="name-email-input" type="email" name="yourEmail" />
-					</div>
-
-					<br />
-					<label className="pray-tell" for="yourMessage">
-						Pray Tell:
-					</label>
-					<textarea
-						className="name-email-input"
-						name="yourMessage"
-						rows="8"
-						cols="80"
-					></textarea>
-					<br />
-					{/* <label for="">Would you like to join the email list?</label>
-                    <input type="checkbox" /> */}
-					<br />
-					<div className="submit-wrapper">
-						<input className="submit-button" type="submit" name="" />
-					</div>
-				</form>
+				<hr size="5" />
 				<br />
-				<a href="#header">Home</a>
 			</div>
 		</div>
 	)

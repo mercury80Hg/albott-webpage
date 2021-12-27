@@ -18,6 +18,9 @@ function Header() {
 				</a>
 			</div>
 			<h1 className="myname">allan E bott</h1>
+			<a href="#header" className="material-icons floating-btn">
+					<span className="material-icons-round floating-btn-icon">home</span>
+			</a>
 		</header>
 	)
 }
