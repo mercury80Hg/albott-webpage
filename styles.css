@@ -112,22 +112,25 @@ header {
 	/* display: flex; */
 	height: 60vh;
 	width: 100vw;
-	overflow:hidden;
-	object-fit: contain;
+	overflow:scroll;
+	/* object-fit: contain; */
 	box-sizing: border-box;
-	
+
 }
 .carousel-image {
 	/* display: flex;
 	flex-direction: row; */
-	height:60vh;
+	height:59vh;
+	margin: 0 2vw 0 2vw;
+	border: solid 1px #335;
+	border-radius: 5px;
 	/* width:100%; */
 	/* position:unset; */
 	
 }
 
 .slick-slide {
-	height: 50vh;
+	height: 60vh;
 	
 }
 
