@@ -1,17 +1,17 @@
 import React from "react"
+import SimpleSlider from "./Carousel"
+import {aboutImg, adventureImg, excitementImg, beautyImg, travelImg} from "./Images"
 
 function Content() {
 	return (
 		<div className="content">
-			<div className="about">
-				<h1 className="content-heading" id="about-text">
+			<div className="about" id="about">
+			
+				<h2 className="content-heading about-text" >
 					about
-				</h1>
-				<img
-					className="content-image"
-					src="images/about/Me_Colum_Dog.JPG"
-					alt="me looking at a stray dog under my chair in Cartagena Columbia"
-				></img>
+				</h2>
+				<SimpleSlider imgArray={aboutImg}/>
+				
 				<p className="content-paragraph">
 					Make the most of yourself and you are on a good path to make the most
 					of life. There's plenty of things I can tell you about myself, from
@@ -37,15 +37,11 @@ function Content() {
 					changed as I pivot to tech.{" "}
 				</p>
 			</div>
-			<div className="adventure">
-				<h2 className="content-heading" id="adventure-text">
+			<div className="adventure" id="adventure">
+				<h2 className="content-heading adventure-text" >
 					adventure
 				</h2>
-				<img
-					className="content-image"
-					src="images/adventure/Tulum_Ruins.JPG"
-					alt="tulum native ruins"
-				></img>
+				<SimpleSlider imgArray={adventureImg} />
 				<p className="content-paragraph">
 					Adventure, Excitement, Beauty and Travel aren't just clichés. They all
 					represent pieces of the experience of life that I try to seek out in
@@ -56,15 +52,11 @@ function Content() {
 					fun and interesting stories to go with it.{" "}
 				</p>
 			</div>
-			<div className="excitement">
-				<h2 className="content-heading" id="excitement-text">
+			<div className="excitement" id="excitement">
+				<h2 className="content-heading excitement-text" >
 					excitement
 				</h2>
-				<img
-					className="content-image"
-					src="images/excitement/SF_Vampire.JPG"
-					alt="street art of vampire beckoning"
-				></img>
+				<SimpleSlider imgArray={excitementImg} />
 				<p className="content-paragraph">
 					Without some danger there isn't excitement. By simply paying attention
 					enough you can manage you experience safely through being prepared and
@@ -74,15 +66,11 @@ function Content() {
 					fun opprotunities.{" "}
 				</p>
 			</div>
-			<div className="beauty">
-				<h2 className="content-heading" id="beauty-text">
+			<div className="beauty" id="beauty">
+				<h2 className="content-heading beauty-text" >
 					beauty
 				</h2>
-				<img
-					className="content-image"
-					src="images/beauty/OB_MyshAl.JPG"
-					alt="me petting my dog at the beach during low tide sunset"
-				></img>
+				<SimpleSlider imgArray={beautyImg} />
 				<p className="content-paragraph">
 					Of course there's beauty to be found in everything if you look hard
 					enough, it is in the eye of the beholder and existing conventions, but
@@ -96,15 +84,11 @@ function Content() {
 					and seek out the larger ones in life.{" "}
 				</p>
 			</div>
-			<div className="travel">
-				<h2 className="content-heading" id="travel-text">
+			<div className="travel" id="travel">
+				<h2 className="content-heading travel-text" >
 					travel
 				</h2>
-				<img
-					className="content-image"
-					src="images/travel/Sea_CityRaineer.JPG"
-					alt="view of Seattle skyline from Queen Anne hill showing mt. raineer and space needle"
-				></img>
+				<SimpleSlider imgArray={travelImg} />
 				<p className="content-paragraph">
 					In my experience the best way to understand something different is to
 					try it in earnest. Having lived on four continents I can say, nothing

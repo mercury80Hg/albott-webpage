@@ -4,7 +4,7 @@ function Header() {
 	return (
 		<header id="header">
 			<div className="hyperlinks-box">
-				<a className="hyperlinks" href="#about-text">
+				<a className="hyperlinks" href="#about">
 					about
 				</a>
 				<a className="hyperlinks contacts" href="#contact">
