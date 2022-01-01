@@ -8,7 +8,7 @@ import Footer from "./Footer";
 function App() {
 
     return (
-        <div class="page">
+        <div className="page">
             <Header />
             <Splash />
             <Content />

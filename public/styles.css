@@ -101,11 +101,11 @@ header {
 	display: flex;
 	width: 7vh;
 	height: 7vh;
-	background: #00c18ba1;
+	background:#00c18ba1;
 	border: 1px solid #335;
 	border-radius: 5px;
 	text-decoration: none;
-	color: #ec0080a0;
+	color:#ec0080a0;
 	position: fixed;
 	right: 40px;
 	bottom: 20px;
@@ -293,6 +293,20 @@ header {
 
 /* /////////Content////////// */
 
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.content-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	
+}
+
 .content-paragraph {
 	display: flex;
 	height: 25vh;
@@ -300,6 +314,7 @@ header {
 	overflow: auto;
 	margin: 1vh;
 	font-size: 2vh;
+	/* height: 80vh; */
 }
 
 .content-heading {
@@ -315,7 +330,6 @@ header {
 
 .content-image {
 	display: flex;
-
 	height: 100%;
 	width: 100%;
 	overflow:scroll;
@@ -336,7 +350,6 @@ header {
 }
 
 
-
 .adventure {
 	display: flex;
 	height: 100vh;
@@ -345,6 +358,10 @@ header {
 }
 .adventure-text {
 	background-color: #ec008ca1;
+}
+
+#excitement-text {
+	background-color: #00c18ba0;
 }
 
 .excitement {
@@ -358,6 +375,10 @@ header {
 .excitement-text {
 	background-color: #00c18b;
 	
+}
+
+#beauty-text {
+	background-color: #7ba5de;
 }
 
 .beauty {
@@ -386,6 +407,7 @@ header {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
+	
 }
 
 #contact {
@@ -397,6 +419,7 @@ header {
 	flex-direction: row;
 	padding: 0 50px 0 50px;
 }
+
 
 /* ////////Images////////// */
 
@@ -509,3 +532,6 @@ header {
 	background-color: #7ba5de;
 	border-radius: 5px;
 }
+
+
+/* ///////Footer/////////*/
