@@ -1,55 +1,47 @@
 import React from "react"
+import SimpleSlider from "./Carousel"
+import {aboutImg, adventureImg, excitementImg, beautyImg, travelImg} from "./Images"
 
 function Content() {
 	return (
 		<div className="content">
-			<div className="about content-box">
-				<h1 className="content-heading" id="about-text">
-					About
-				</h1>
-				
-					<img
-					className="content-image"
-					src="images/about/Me_Colum_Dog.JPG"
-					alt="me looking at a stray dog under my chair in Cartagena Columbia"
-					></img>
-					<p className="content-paragraph">
-						Make the most of yourself and you are on a good path to make the most
-						of life. There's plenty of things I can tell you about myself, from
-						the diverse places I've lived, death, life, love. But you aren't going
-						to find it on this website because half the fun is telling the story.
-						I think this website probably reads more like a teaser. Hopefully as
-						you explore it you can gleam a little of my personality from my cheesy
-						writing and it gives you the gist of me, or maybe you are here to see
-						if I'm the kind of guy with the skills necessary for your project or
-						position. Hopefully there is enough information between the lines or
-						in the code. Perhaps one day I'll write a book or maybe my adventures
-						will only be known from oration. But for now here's a website I made
-						from scratch with the tools that I've taught myself to use through
-						heaps of tutorials and classes. <br />
-						<br />
-						For 20 years I have been the General Manager of an array of
-						restaurants, working with companies and families buidling
-						infrastructure, manuals and procedures, hand picking and training my
-						employees and creating menus. Profit and Loss, budgets and scheduling,
-						meetings and vendors, clients and customer service. In a sense I've
-						been building start-ups and managing corporate branches and teams my
-						whole career, the flavor of business is the only thing that has
-						changed as I pivot to tech.{" "}
-					</p>
-				
-				
-			</div>
-			<div className="adventure content-box">
-				<h2 className="content-heading" id="adventure-text">
-					Adventure
+			<div className="about" id="about">
+			
+				<h2 className="content-heading about-text" >
+					about
 				</h2>
+				<SimpleSlider imgArray={aboutImg}/>
 				
-				<img
-					className="content-image"
-					src="images/adventure/Tulum_Ruins.JPG"
-					alt="tulum native ruins"
-				></img>
+				<p className="content-paragraph">
+					Make the most of yourself and you are on a good path to make the most
+					of life. There's plenty of things I can tell you about myself, from
+					the diverse places I've lived, death, life, love. But you aren't going
+					to find it on this website because half the fun is telling the story.
+					I think this website probably reads more like a teaser. Hopefully as
+					you explore it you can gleam a little of my personality from my cheesy
+					writing and it gives you the gist of me, or maybe you are here to see
+					if I'm the kind of guy with the skills necessary for your project or
+					position. Hopefully there is enough information between the lines or
+					in the code. Perhaps one day I'll write a book or maybe my adventures
+					will only be known from oration. But for now here's a website I made
+					from scratch with the tools that I've taught myself to use through
+					heaps of tutorials and classes. <br />
+					<br />
+					For 20 years I have been the General Manager of an array of
+					restaurants, working with companies and families buidling
+					infrastructure, manuals and procedures, hand picking and training my
+					employees and creating menus. Profit and Loss, budgets and scheduling,
+					meetings and vendors, clients and customer service. In a sense I've
+					been building start-ups and managing corporate branches and teams my
+					whole career, the flavor of business is the only thing that has
+					changed as I pivot to tech.{" "}
+				</p>
+			</div>
+			<div className="adventure" id="adventure">
+				<h2 className="content-heading adventure-text" >
+					adventure
+				</h2>
+				<SimpleSlider imgArray={adventureImg} />
 				<p className="content-paragraph">
 				Beauty, Adventure, Travel, and Excitement aren't just clichés. They all
 				represent pieces of the experience of life that I try to seek out in
@@ -60,16 +52,11 @@ function Content() {
 				fun and interesting stories to go with it.{" "}
 				</p>
 			</div>
-			<div className="excitement content-box">
-				<h2 className="content-heading" id="excitement-text">
-					Excitement
+			<div className="excitement" id="excitement">
+				<h2 className="content-heading excitement-text" >
+					excitement
 				</h2>
-				
-				<img
-					className="content-image"
-					src="images/excitement/SF_Vampire.JPG"
-					alt="street art of vampire beckoning"
-				></img>
+				<SimpleSlider imgArray={excitementImg} />
 				<p className="content-paragraph">
 					Without some danger there isn't excitement. By simply paying attention
 					enough you can manage you experience safely through being prepared and
@@ -79,15 +66,11 @@ function Content() {
 					fun opprotunities.{" "}
 				</p>
 			</div>
-			<div className="beauty content-box">
-				<h2 className="content-heading" id="beauty-text">
-					Beauty
+			<div className="beauty" id="beauty">
+				<h2 className="content-heading beauty-text" >
+					beauty
 				</h2>
-				<img
-				className="content-image"
-				src="images/beauty/OB_MyshAl.JPG"
-				alt="me petting my dog at the beach during low tide sunset"
-				></img>
+				<SimpleSlider imgArray={beautyImg} />
 				<p className="content-paragraph">
 					Of course there's beauty to be found in everything if you look hard
 					enough, it is in the eye of the beholder and existing conventions, but
@@ -101,15 +84,11 @@ function Content() {
 					and seek out the larger ones in life.{" "}
 				</p>
 			</div>
-			<div className="travel content-box">
-				<h2 className="content-heading" id="travel-text">
-					Travel
+			<div className="travel" id="travel">
+				<h2 className="content-heading travel-text" >
+					travel
 				</h2>
-				<img
-				className="content-image"
-				src="images/travel/Sea_CityRaineer.JPG"
-				alt="view of Seattle skyline from Queen Anne hill showing mt. raineer and space needle"
-				></img>
+				<SimpleSlider imgArray={travelImg} />
 				<p className="content-paragraph">
 					In my experience the best way to understand something different is to
 					try it in earnest. Having lived on four continents I can say, nothing
