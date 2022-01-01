@@ -8,7 +8,7 @@ function Contact() {
 				<div>
 					<h1 className="myname-contact">allan E bott</h1>
 					<div className="contact-method-row">
-						<a href="https://www.linkedin.com/in/allan-bott/">
+						<a href="https://www.linkedin.com/in/allan-bott/" target="_blank" rel="noopener noreferrer" alt="link to allan bott's linked in page">
 							<img
 								className="linkedin-img"
 								src="images/linkedin.png"
@@ -39,7 +39,17 @@ function Contact() {
 					<ul>
 						<li>collaboration</li>
 						<li>hire me</li>
-						<li>take me out to lunch</li>
+						<li>
+							<a
+								href="https://www.uber.com/ca/en/gift-cards/"
+								target="_blank"
+								//to prevent tabnabbing
+								rel="noopener noreferrer"
+								alt="link to Uber Eats gift card purchasing webpage"
+							>
+								take me out to lunch
+							</a>
+						</li>
 					</ul>
 				</div>
 			</div>
