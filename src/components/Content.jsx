@@ -12,7 +12,7 @@ function Content() {
 				</h2>
 				<SimpleSlider imgArray={aboutImg}/>
 				
-				<p className="content-paragraph">
+				<p className="content-paragraph shadowbox" >
 					Make the most of yourself and you are on a good path to make the most
 					of life. There's plenty of things I can tell you about myself, from
 					the diverse places I've lived, death, life, love. But you aren't going
@@ -42,7 +42,7 @@ function Content() {
 					adventure
 				</h2>
 				<SimpleSlider imgArray={adventureImg} />
-				<p className="content-paragraph">
+				<p className="content-paragraph shadowbox" >
 				Beauty, Adventure, Travel, and Excitement aren't just clichés. They all
 				represent pieces of the experience of life that I try to seek out in
 				the things I do. All the photos on this site are from the many
@@ -57,7 +57,7 @@ function Content() {
 					excitement
 				</h2>
 				<SimpleSlider imgArray={excitementImg} />
-				<p className="content-paragraph">
+				<p className="content-paragraph shadowbox">
 					Without some danger there isn't excitement. By simply paying attention
 					enough you can manage you experience safely through being prepared and
 					absorbing the stories of those who have gone before you. For me, I try
@@ -71,7 +71,7 @@ function Content() {
 					beauty
 				</h2>
 				<SimpleSlider imgArray={beautyImg} />
-				<p className="content-paragraph">
+				<p className="content-paragraph shadowbox">
 					Of course there's beauty to be found in everything if you look hard
 					enough, it is in the eye of the beholder and existing conventions, but
 					nothing compares to an in person experience. Finding a soul in the
@@ -89,7 +89,7 @@ function Content() {
 					travel
 				</h2>
 				<SimpleSlider imgArray={travelImg} />
-				<p className="content-paragraph">
+				<p className="content-paragraph shadowbox">
 					In my experience the best way to understand something different is to
 					try it in earnest. Having lived on four continents I can say, nothing
 					gives you full apperciation and knowledge unless you actually live the
