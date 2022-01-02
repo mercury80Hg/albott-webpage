@@ -52,6 +52,72 @@ header {
 	padding: 0 1.85vw 0 1.85vw;
 }
 
+/*///////SUB HEADER for full nav control outside of Splash///*/
+
+.headerSub-box {
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: center;
+	height: 15vh;
+	width: 100vw;
+	
+}
+
+.headerSub-logo {
+	display: flex;
+	height: 10vh;
+	padding: 0 2vh;
+}
+
+.myname-headerSub {
+	margin: 0;
+	padding: 0 2vh;
+}
+
+#nav-dot {
+	height: 1vw;
+	width: 1vw;
+	border-radius: 50%;
+	margin: 0 2vh;
+	border: solid 1px #335;
+	
+}
+
+.dot-box {
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	padding: 1vh;
+}
+
+.hyperlinks-headerSub {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: solid 1px #335;
+	border-radius: 5px;
+	font-size: 1.7vh;
+	margin: 0 1vh;
+}
+
+.hyperlinks-navButton-headingSub {
+	padding: 1vh;
+	width:fit-content;
+}
+.hyperlinks-navButton-headingSub:nth-of-type(2) {
+	border-top: 1px solid #335;
+	border-bottom: 1px solid #335;
+	
+}
+.hyperlinks-navButton-headingSub:hover {
+	transition: background-color 1s;
+	background-color: #ec008c;
+	color: #fff;
+}
+
 /* //////hyperlinks/////// */
 
 .hyperlinks-box {
@@ -88,7 +154,7 @@ header {
 }
 
 /*///// Floating Home Button /////// */
-
+/*// save this for mobile //*/
 .floating-btn-icon {
 	display: flex;
 	justify-content: center;
@@ -117,6 +183,7 @@ header {
 }
 
 /*/////////// Scroll Shadow /////////*/
+/*// save this for mobile //*/
 .shadowbox {
 	overflow: auto;
 	width: 200px;
@@ -328,6 +395,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	
+	
 }
 
 .content-box {
@@ -335,7 +404,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
-	
+}
+
+.content-container {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	flex-direction: column;
+	align-items: center;
 }
 
 .content-paragraph {
@@ -366,72 +442,59 @@ header {
 	overflow:scroll;
 	object-fit:contain;
 }
-
-.content {
-	/* background-color: #fff; */
-}
-
+/* 
 .about {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
-	
+} */
 
-}
-
-
-.adventure {
+/* .adventure {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
-}
+} */
 .adventure-text {
 	background-color: #ec008ca1;
 }
 
-#excitement-text {
-	background-color: #00c18ba0;
-}
 
-.excitement {
+/* .excitement {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
 	
-}
+} */
 
 .excitement-text {
-	background-color: #00c18b;
+	background-color: #00c18ba1;
 	
 }
 
-#beauty-text {
-	background-color: #7ba5de;
-}
-
+/* 
 .beauty {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
-}
+} */
 
 .beauty-text {
 	background-color: #7ba5de;
 }
 
-.travel {
+/* .travel {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
-}
+} */
 
 .travel-text {
-	background-color: #fced05;
+	background-color: #fced05a1;
 }
 
 .contact {
@@ -441,10 +504,6 @@ header {
 	
 }
 
-#contact {
-	display: flex;
-	margin: 3vw;
-}
 
 .contact-info {
 	flex-direction: row;

@@ -1,29 +1,26 @@
 import React from "react"
+import { Link } from "react-router-dom"
+
+
 
 function Header() {
 	return (
 		<header id="header">
 			<div className="hyperlinks-box">
-				<a className="hyperlinks" href="#about">
+				<Link className="hyperlinks" to="/about">
 					about
-				</a>
-				<a className="hyperlinks contacts" href="#contact">
+				</Link>
+				<Link className="hyperlinks contacts" to="/contact">
 					contact
-				</a>
-				<a
-					className="hyperlinks"
-					href="https://mercury80hg.github.io/NYT-Best-Sellers-List/"
-					target="_blank" 
-					//prevent tabnabbing
-					rel="noopener noreferrer"
-				>
+				</Link>
+				<Link className="hyperlinks contacts" to="/projects">
 					projects
-				</a>
+				</Link>
 			</div>
-			<h1 className="myname"><a href="#adventure">a</a>llan <a className="e" href="#excitement">E</a>  <a href="#beauty">b</a>ot<a href="#travel">t</a></h1>
-			<a href="#header" class="material-icons floating-btn">
+			<h1 className="myname"><Link to="/adventure">a</Link>llan <Link className="e" to="/excitement">E</Link>  <Link to="/beauty">b</Link>ot<Link to="/travel">t</Link></h1>
+			<Link to="/" class="material-icons floating-btn">
 				<span class="material-icons-round floating-btn-icon">home</span>
-			</a>
+			</Link>
 		</header>
 	)
 }

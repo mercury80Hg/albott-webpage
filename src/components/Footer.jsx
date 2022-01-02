@@ -6,7 +6,7 @@ function Footer() {
 			<div>Photography by Allan Bott</div>
 			<div>One photo by Josh Ter Louw</div>
 			<div>webdesign, images and logos created by Allan Bott</div>
-			<div> allanbott.com Copyright 2022</div>
+			<div>  Copyright &copy; allanbott.com 2022</div>
 			<div>
 				Icons made by{" "}
 				<a
