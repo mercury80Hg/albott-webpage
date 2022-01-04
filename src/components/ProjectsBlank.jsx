@@ -1,48 +1,61 @@
-import React from "react"
+import React, { useState } from "react"
+import { Link } from "react-router-dom"
 import HeaderSub from "./HeaderSub"
+import { ab, blog, home, ohmgd, scratchPad, photography, nytbs } from "./ProjectsContent"
 
-// const { projTitle } = props
 
 function Projects(props) {
+  const [projObj, setprojObj] = useState(home)
+
+  function handleClick(obj) {
+    setprojObj(obj)
+  }
+
 	return (
 		<div className="content-container" >
 			<HeaderSub title={"projects"} />
 			<div className="proj-title">
-				Project Title
+				{projObj.title}
 			</div>
 			<div className="proj-content-row" >
 				<div className="proj-list" >
-					proj list box
+          <div className="proj-list-box " >
+            <div className="proj-hyperlinks" onClick={() => handleClick(ab)}>allanbott.com</div>
+            <div className="proj-hyperlinks ohmgd-hyperlinks" onClick={() => handleClick(ohmgd)}>ΩhmGD</div>
+            <div className="proj-hyperlinks " onClick={() => handleClick(nytbs)}  >NYT Best Sellers</div>
+            <div className="proj-hyperlinks blog-hyperlinks" onClick={() => handleClick(blog)}>blog</div>
+            <div className="proj-hyperlinks" onClick={() => handleClick(photography)}>photography</div>
+          </div>
 				</div>
 				<div className="proj-info-column" >
 					<div className="proj-image">
-						image
+						{projObj.image}
 					</div>
 					<div className="proj-links" >
-						links
+            {projObj.links}
 					</div>
 					<div className="proj-tech-title" >
-						tech title
+           tech 
 					</div>
 					<div className="proj-tech-icons" >
-						tech icons row
+            {projObj.icons} 
 					</div>
 					<div className="proj-blog-links" >
-						blog entery link
+            projObj.blog
 					</div>
 				</div>
 				<div className="proj-content-column" >
 					<div className="proj-content-column-titles">
-						Synopsis Title
+						Synopsis 
 					</div>
 					<div className="synopsis-text-box" >
-						Synopsis text box
+            {projObj.synopsis}
 					</div>
 					<div className="proj-content-column-titles" >
-						Story Title
+						Story 
 					</div>
 					<div className="story-text-box" >
-						Story text box
+            {projObj.story}
 					</div>
 				</div>
 			</div>

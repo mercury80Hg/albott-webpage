@@ -6,7 +6,7 @@ body {
 	height: 100vh;
 	width: 100vw;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-
+	
 	color: #335;
 	font-weight: lighter;
 	letter-spacing: 0.3vw;
@@ -52,6 +52,75 @@ header {
 	padding: 0 1.85vw 0 1.85vw;
 }
 
+/*///////SUB HEADER for full navbar control outside of Splash page///*/
+
+.headerSub-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 15vh;
+	width: 100vw;
+	
+}
+
+.headerSub-logo {
+	display: flex;
+	height: 10vh;
+	padding: 0 2vh;
+}
+
+.myname-headerSub {
+	margin: 0;
+	padding: 0 2vh;
+}
+
+#nav-dot {
+	height: 1vw;
+	width: 1vw;
+	border-radius: 50%;
+	margin: 0 2vh;
+	border: solid 1px #335;
+}
+
+.dot-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 1vh;
+}
+
+.hyperlinks-headerSub {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: solid 1px #335;
+	border-radius: 5px;
+	font-size: 1.7vh;
+	margin: 0 1vh;
+	width: 8vw;
+	
+}
+
+.hyperlinks-navButton-headingSub {
+	text-align: center;
+	padding: 1vh;
+	width: 7vw;
+}
+
+.hyperlinks-navButton-headingSub:nth-of-type(2) {
+	border-top: 1px solid #335;
+	border-bottom: 1px solid #335;
+}
+
+.hyperlinks-navButton-headingSub:hover {
+	transition: background-color 1s;
+	background-color: #ec008c;
+	color: #fff;
+}
+
 /* //////hyperlinks/////// */
 
 .hyperlinks-box {
@@ -63,6 +132,8 @@ header {
 	color: #335;
 	font-size: 2vh;
 	line-height: 20px;
+	width: 30vw;
+	justify-content: space-between;
 }
 
 .hyperlinks {
@@ -71,7 +142,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	height: 5vh;
-	width: 10vw;
+	width: inherit;
 	color: #335;
 	text-decoration: none;
 }
@@ -88,7 +159,7 @@ header {
 }
 
 /*///// Floating Home Button /////// */
-
+/*// save this for mobile //*/
 .floating-btn-icon {
 	display: flex;
 	justify-content: center;
@@ -101,11 +172,11 @@ header {
 	display: flex;
 	width: 7vh;
 	height: 7vh;
-	background:#00c18ba1;
+	background: #00c18ba1;
 	border: 1px solid #335;
 	border-radius: 5px;
 	text-decoration: none;
-	color:#ec0080a0;
+	color: #ec0080a0;
 	position: fixed;
 	right: 40px;
 	bottom: 20px;
@@ -117,6 +188,7 @@ header {
 }
 
 /*/////////// Scroll Shadow /////////*/
+/*// save this for mobile //*/
 .shadowbox {
 	overflow: auto;
 	width: 200px;
@@ -124,25 +196,47 @@ header {
 	margin: 50px auto;
 
 	background:
-		/* Shadow covers */
-		linear-gradient(#bec4d9 30%, rgba(255,255,255,0)),
-		linear-gradient(rgba(255,255,255,0), #bec4d9 70%) 0 100%,
-		
+		/* Shadow covers */ linear-gradient(
+			#bec4d9 30%,
+			rgba(255, 255, 255, 0)
+		),
+		linear-gradient(rgba(255, 255, 255, 0), #bec4d9 70%) 0 100%,
 		/* Shadows */
-		radial-gradient(50% 0, farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)),
-		radial-gradient(50% 100%,farthest-side, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+			radial-gradient(
+				50% 0,
+				farthest-side,
+				rgba(0, 0, 0, 0.2),
+				rgba(0, 0, 0, 0)
+			),
+		radial-gradient(
+				50% 100%,
+				farthest-side,
+				rgba(0, 0, 0, 0.2),
+				rgba(0, 0, 0, 0)
+			)
+			0 100%;
 	background:
-		/* Shadow covers */
-		linear-gradient(#bec4d9 30%, rgba(255,255,255,0)),
-		linear-gradient(rgba(255,255,255,0), #bec4d9 70%) 0 100%,
-		
+		/* Shadow covers */ linear-gradient(
+			#bec4d9 30%,
+			rgba(255, 255, 255, 0)
+		),
+		linear-gradient(rgba(255, 255, 255, 0), #bec4d9 70%) 0 100%,
 		/* Shadows */
-		radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
-		radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
+			radial-gradient(
+				farthest-side at 50% 0,
+				rgba(0, 0, 0, 0.2),
+				rgba(0, 0, 0, 0)
+			),
+		radial-gradient(
+				farthest-side at 50% 100%,
+				rgba(0, 0, 0, 0.2),
+				rgba(0, 0, 0, 0)
+			)
+			0 100%;
 	background-repeat: no-repeat;
 	background-color: #bec4d9;
 	background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
-	
+
 	/* Opera doesn't support this in the shorthand */
 	background-attachment: local, local, scroll, scroll;
 }
@@ -153,15 +247,14 @@ header {
 	/* display: flex; */
 	height: 60vh;
 	width: 100vw;
-	overflow:scroll;
+	overflow: scroll;
 	/* object-fit: contain; */
 	box-sizing: border-box;
-
 }
 .carousel-image {
 	/* display: flex;
 	flex-direction: row; */
-	height:59vh;
+	height: 59vh;
 	margin: 0 1vw 0 1vw;
 	border: solid 1px #335;
 	border-radius: 5px;
@@ -171,7 +264,6 @@ header {
 
 .slick-slide {
 	height: 60vh;
-	
 }
 
 /* ////Splash Page////// */
@@ -182,7 +274,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	height: 85vh;
-	margin-left: 10vw;
+	margin-left: 15vw;
 }
 
 .splash-boxes {
@@ -335,7 +427,14 @@ header {
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
-	
+}
+
+.content-container {
+	display: flex;
+	/* height: 100vh;
+	width: 100vw; */
+	flex-direction: column;
+	align-items: center;
 }
 
 .content-paragraph {
@@ -350,107 +449,84 @@ header {
 
 .content-heading {
 	display: flex;
-	height: 10vh;
+	height: 6vh;
 	width: 30vw;
 	justify-content: center;
 	align-items: center;
 	border: solid 1px #335;
 	border-radius: 5px;
-	
 }
 
 .content-image {
 	display: flex;
 	height: 100%;
 	width: 100%;
-	overflow:scroll;
-	object-fit:contain;
+	overflow: scroll;
+	object-fit: contain;
 }
-
-.content {
-	/* background-color: #fff; */
-}
-
+/* 
 .about {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
-	
+} */
 
-}
-
-
-.adventure {
+/* .adventure {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
-}
+} */
 .adventure-text {
 	background-color: #ec008ca1;
 }
 
-#excitement-text {
-	background-color: #00c18ba0;
-}
-
-.excitement {
+/* .excitement {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
 	
-}
+} */
 
 .excitement-text {
-	background-color: #00c18b;
-	
+	background-color: #00c18ba1;
 }
 
-#beauty-text {
-	background-color: #7ba5de;
-}
-
+/* 
 .beauty {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
-}
+} */
 
 .beauty-text {
 	background-color: #7ba5de;
 }
 
-.travel {
+/* .travel {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
 	align-items: center;
-}
+} */
 
 .travel-text {
-	background-color: #fced05;
+	background-color: #fced05a1;
 }
 
 .contact {
 	display: flex;
 	height: 100vh;
 	flex-direction: column;
-	
-}
-
-#contact {
-	display: flex;
-	margin: 3vw;
 }
 
 .contact-info {
 	flex-direction: row;
 	padding: 0 50px 0 50px;
 }
-
 
 /* ////////Images////////// */
 
@@ -564,5 +640,128 @@ header {
 	border-radius: 5px;
 }
 
+/* /////Projects Page////// */
+
+.content-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.proj-title {
+	display: flex;
+	height: 10vh;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+}
+
+.proj-content-row {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+}
+
+.proj-list {
+	display: flex;
+	flex-direction: column;
+	height: 75vh;
+	width: 20vw;
+	padding-left: 2vh;
+}
+
+.proj-list-box {
+	display: flex;
+	flex-direction: column;
+	border: solid 1px #335;
+	border-radius: 5px;
+}
+
+.proj-hyperlinks {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 5vh;
+	width: inherit;
+	color: #335;
+	text-decoration: none;
+}
+
+.proj-hyperlinks:hover {
+	transition: background-color 1s;
+	background-color: #ec008c;
+	color: #fff;
+}
+
+/* .proj-list-box:nth-of-type(2) {
+	border-top: 1px solid #335;
+	border-bottom: 1px solid #335;
+	
+} */
+
+.blog-hyperlinks {
+	border-top: solid 1px #335;
+	border-bottom: solid 1px #335;
+}
+
+.ohmgd-hyperlinks {
+	border-top: solid 1px #335;
+	border-bottom: solid 1px #335;
+}
+
+.proj-info-column {
+	display: flex;
+	flex-direction: column;
+	width: 30vw;
+	height: 75vh;
+}
+
+.proj-image {
+	display: flex;
+	height: 40vh;
+}
+
+.proj-links {
+	display: flex;
+	height: 10vh;
+}
+
+.proj-tech-title {
+	display: flex;
+	height: 4vh;
+}
+
+.proj-tech-icons {
+	display: flex;
+	height: 6vh;
+}
+
+.proj-blog-links {
+	display: flex;
+	height: 10vh;
+}
+
+.proj-content-column {
+	display: flex;
+	flex-direction: column;
+	height: 75vh;
+	width: 50vw;
+}
+
+.proj-content-column-titles {
+	display: flex;
+	height: 5vh;
+}
+
+.synopsis-text-box {
+	display: flex;
+	height: 25vh;
+}
+
+.story-text-box {
+	display: flex;
+	height: 40vh;
+}
 
 /* ///////Footer/////////*/

@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "react-router-dom"
 const bodyText = "go one git"
 function Contact() {
 	return (
@@ -58,6 +58,9 @@ function Contact() {
 			<div>
 				<hr size="5" noshade />
 			</div>
+			<Link to="/" class="material-icons floating-btn">
+				<span class="material-icons-round floating-btn-icon">home</span>
+			</Link>
 		</div>
 	)
 }
