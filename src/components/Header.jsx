@@ -13,14 +13,15 @@ function Header() {
 				<Link className="hyperlinks contacts" to="/contact">
 					contact
 				</Link>
-				<Link className="hyperlinks contacts" to="/projects">
+				<Link className="hyperlinks contacts" to="/projects_blank">
 					projects
 				</Link>
 			</div>
 			<h1 className="myname"><Link to="/adventure">a</Link>llan <Link className="e" to="/excitement">E</Link>  <Link to="/beauty">b</Link>ot<Link to="/travel">t</Link></h1>
-			<Link to="/" class="material-icons floating-btn">
+			{/* ///Floating Home Button//// */}
+			{/* <Link to="/" class="material-icons floating-btn">
 				<span class="material-icons-round floating-btn-icon">home</span>
-			</Link>
+			</Link> */}
 		</header>
 	)
 }

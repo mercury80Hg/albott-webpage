@@ -4,8 +4,10 @@ import { Link } from "react-router-dom"
 
 function Splash() {
     return (
+        <div>
+        <Header />
         <div className="splash">
-            <Header />
+            
             <div className="splash-boxes">
                 <Link className="splash-box-left" to="/adventure" alt="adventure button">adventure</Link>
                 <div className="splash-logo-group">
@@ -20,7 +22,7 @@ function Splash() {
                 </div>
             </div>
         </div>
-        
+        </div>
     )
 }
 
