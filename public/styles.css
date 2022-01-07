@@ -52,6 +52,10 @@ header {
 	padding: 0 1.85vw 0 1.85vw;
 }
 
+h4 {
+	margin: 0;
+}
+
 /*///////SUB HEADER for full navbar control outside of Splash page///*/
 
 .headerSub-box {
@@ -123,6 +127,25 @@ header {
 
 /* //////hyperlinks/////// */
 
+.hyperlink-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #335;
+	border: 1px solid #335;
+	border-radius: 5px;
+	height: 5vh;
+	padding: 0 1vw;
+	margin: 1vh 1vw;
+}
+
+.hyperlink-button:hover {
+	transition: background-color 1s;
+	background-color: #ec008c;
+	color: #fff;
+}
+
 .hyperlinks-box {
 	display: flex;
 	flex-direction: row;
@@ -191,9 +214,9 @@ header {
 /*// save this for mobile //*/
 .shadowbox {
 	overflow: auto;
-	width: 200px;
+	/* width: 200px; */
 	max-height: 200px;
-	margin: 50px auto;
+	/* margin: 50px auto; */
 
 	background:
 		/* Shadow covers */ linear-gradient(
@@ -713,6 +736,7 @@ header {
 .proj-info-column {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	width: 30vw;
 	height: 75vh;
 }
@@ -720,22 +744,55 @@ header {
 .proj-image {
 	display: flex;
 	height: 40vh;
+	overflow: hidden;
+	object-fit: contain;
+	padding: 0 .5vw;
+	border-radius: 5px;
 }
+
+
 
 .proj-links {
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	height: 10vh;
+
+	align-items: center;
 }
 
-.proj-tech-title {
+.proj-visit-title {
 	display: flex;
-	height: 4vh;
+	
+}
+
+.proj-links-buttons {
+	display: flex;
+	padding: 0 2vw;
+}
+
+.proj-info-column-title {
+	display: flex;
+	justify-content: center;
+
+	padding: 2vh 0;
+}
+
+.proj-tech-icons-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 6vh;
 }
 
 .proj-tech-icons {
 	display: flex;
-	height: 6vh;
+	height: 3vh;
+	object-fit: contain;
+	padding: 0 1vh;
+	color: #bec4d9;
 }
+
 
 .proj-blog-links {
 	display: flex;
@@ -752,16 +809,29 @@ header {
 .proj-content-column-titles {
 	display: flex;
 	height: 5vh;
+	margin: unset;
+	justify-content: center;
+	align-items: flex-end;
 }
 
 .synopsis-text-box {
 	display: flex;
 	height: 25vh;
+	overflow: scroll;
+	border: solid 1px #335;
+	border-radius: 5px;
+	margin: 1vw;
+	padding: .5vw;
 }
 
 .story-text-box {
 	display: flex;
 	height: 40vh;
+	overflow: scroll;
+	border: solid 1px #335;
+	border-radius: 5px;
+	margin: 1vw;
+	padding: .5vw;
 }
 
 /* ///////Footer/////////*/
