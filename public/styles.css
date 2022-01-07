@@ -834,4 +834,33 @@ h4 {
 	padding: .5vw;
 }
 
+
+/* ////////Coming Soon page///////// */
+
+.coming-soon-container {
+	width: 75vw;
+	height: 70vh;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	margin: 0 3vh;
+	border: solid 1px #335;
+	border-radius: 5px;
+}
+
+.coming-soon-image {
+	height: inherit;
+	width: inherit;
+	opacity: 50%;
+}
+
+.coming-soon {
+	position:absolute;
+	bottom: -9vh;
+	color:#ec008c;
+	font-size: 25vh;
+	text-align: center;
+	text-shadow: 0px 10px 15px #335 ;
+	
+}
 /* ///////Footer/////////*/
