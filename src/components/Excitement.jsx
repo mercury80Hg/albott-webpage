@@ -1,5 +1,5 @@
 import React from "react"
-import SimpleSlider from "./Carousel"
+import SimpleSlider from "./SimpleSlider"
 import HeaderSub from "./HeaderSub"
 import { excitementImg } from "./Images"
 

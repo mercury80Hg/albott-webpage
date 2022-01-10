@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Routes, Link, Router} from "react-router-dom"
-import SimpleSlider from "./Carousel"
+import SimpleSlider from "./SimpleSlider"
 import HeaderSub from "./HeaderSub"
 import { aboutImg } from "./Images"
 
