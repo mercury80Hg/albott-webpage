@@ -20,9 +20,9 @@ function HeaderSub(props) {
       <h1 className="myname myname-headerSub"><Link to="/adventure">a</Link>llan <Link className="e" to="/excitement">E</Link>  <Link to="/beauty">b</Link>ot<Link to="/travel">t</Link></h1>      
       <h2 className={style} >{title}</h2>
       <div className="dot-box">
-        <Link id="nav-dot" className="splash-box-left" to="/adventure" alt="adventure button"></Link>
-        <Link id="nav-dot" className="spl_bx-rTop" to="/excitement" alt="excitement button"></Link>
         <Link id="nav-dot" className="spl_bx-rBottom" to="/beauty" alt="beauty button"></Link>
+        <Link id="nav-dot" className="spl_bx-rTop" to="/excitement" alt="excitement button"></Link>
+        <Link id="nav-dot" className="splash-box-left" to="/adventure" alt="adventure button"></Link>
         <Link id="nav-dot" className="splash-box-bottom" to="/travel" alt="travel button"></Link>
       </div>
       
@@ -33,7 +33,7 @@ function HeaderSub(props) {
 				<Link className="hyperlinks-navButton-headingSub" to="/contact">
 					contact
 				</Link>
-				<Link className="hyperlinks-navButton-headingSub"  to="/projects_blank">
+				<Link className="hyperlinks-navButton-headingSub"  to="/projects">
 					projects
 				</Link>
 			</div>

@@ -1,66 +1,88 @@
-import React from "react"
+/*This is the Projects page which is a component being passed data objects from ProjectsContent 
+that change the state of what is displayed.*/
+
+import React, { useState } from "react"
 import HeaderSub from "./HeaderSub"
+import {
+	ab,
+	blog,
+	home,
+	ohmgd,
+	scratchPad,
+	photography,
+	nytbs,
+	logo,
+} from "./ProjectsContent"
+import ProjectsInfoBox from "./ProjectsInfoBox"
+import ComingSoon from "./ComingSoon"
 
-// const { projTitle } = props
+function Projects() {
+	const [projObj, setprojObj] = useState(home)
 
-function Projects(props) {
+	function handleClick(obj) {
+		setprojObj(obj)
+	}
+
 	return (
-		<div className="content-container" >
+		<div className="content-container">
 			<HeaderSub title={"projects"} />
-			<div className="proj-title">
-				Project Title
-			</div>
-			<div className="proj-content-row" >
-				<div className="proj-list" >
-					proj list box
+			<div className="proj-title">{projObj.title}</div>
+			<div className="proj-content-row">
+				<div className="proj-list">
+					<div className="proj-list-box ">
+						<div className="proj-hyperlinks" onClick={() => handleClick(ab)}>
+							allanbott.com
+						</div>
+						<div
+							className="proj-hyperlinks ohmgd-hyperlinks"
+							onClick={() => handleClick(ohmgd)}
+						>
+							ΩhmGD
+						</div>
+						<div
+							className="proj-hyperlinks "
+							onClick={() => handleClick(nytbs)}
+						>
+							NYT Best Sellers
+						</div>
+						<div
+							className="proj-hyperlinks blog-hyperlinks"
+							onClick={() => handleClick(scratchPad)}
+						>
+							scratch pad
+						</div>
+						<div
+							className="proj-hyperlinks "
+							onClick={() => handleClick(blog)}
+						>
+							blog
+						</div>
+						<div
+							className="proj-hyperlinks blog-hyperlinks"
+							onClick={() => handleClick(photography)}
+						>
+							photography
+						</div>
+						<div
+							className="proj-hyperlinks"
+							onClick={() => handleClick(logo)}
+						>
+							logo
+						</div>
+						
+					</div>
 				</div>
-				<div className="proj-info-column" >
-					<div className="proj-image">
-						image
-					</div>
-					<div className="proj-links" >
-						links
-					</div>
-					<div className="proj-tech-title" >
-						tech title
-					</div>
-					<div className="proj-tech-icons" >
-						tech icons row
-					</div>
-					<div className="proj-blog-links" >
-						blog entery link
-					</div>
-				</div>
-				<div className="proj-content-column" >
-					<div className="proj-content-column-titles">
-						Synopsis Title
-					</div>
-					<div className="synopsis-text-box" >
-						Synopsis text box
-					</div>
-					<div className="proj-content-column-titles" >
-						Story Title
-					</div>
-					<div className="story-text-box" >
-						Story text box
-					</div>
-				</div>
-			</div>
 
-			
+				{projObj == home ? (
+					<div />
+				) : <ProjectsInfoBox projObj={projObj} /> && projObj.image ? (
+					<ProjectsInfoBox projObj={projObj} />
+				) : (
+					<ComingSoon />
+				)}
+			</div>
 		</div>
 	)
 }
 
 export default Projects
-
-
-	{/* <a
-					className="hyperlinks"
-					href="https://mercury80hg.github.io/NYT-Best-Sellers-List/"
-					target="_blank" 
-					//prevent tabnabbing
-					rel="noopener noreferrer"
-				>
-					go to NYT Best Sellers API page
-				</a> */}

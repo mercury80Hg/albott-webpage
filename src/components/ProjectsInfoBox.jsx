@@ -7,7 +7,6 @@ function ProjectsInfoBox({ projObj }) {
 		<>
 			<div
 				className="proj-info-column"
-				style={{ display: projObj == home ? "none" : "" }}
 			>
 				<div className="proj-image">
 					<img
@@ -17,9 +16,13 @@ function ProjectsInfoBox({ projObj }) {
 					/>
 				</div>
 				<div className="proj-links">
-					<div className="proj-info-column-title">visit:</div>
+					{projObj.link  && (
+						<div className="proj-info-column-title">visit:</div>
+					)}
+					
 					<div className="proj-links-buttons">
-						<a
+						{projObj.link  && (
+							<a 
 							className="hyperlink-button"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -27,6 +30,8 @@ function ProjectsInfoBox({ projObj }) {
 						>
 							project
 						</a>
+						)}
+						
 						{projObj.blog && (
 							<a
 								className="hyperlink-button"

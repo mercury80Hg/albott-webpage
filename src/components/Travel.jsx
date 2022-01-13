@@ -4,24 +4,20 @@ import HeaderSub from "./HeaderSub"
 import { travelImg } from "./Images"
 
 function Travel() {
-  return (
-    <div className="content-container" id="travel">
-        <HeaderSub title={"travel"} />
-        <SimpleSlider imgArray={travelImg} />
-				<p className="content-paragraph shadowbox">
-					It is for these reasons that I regard the decision last year to shift
-					our efforts in space from low to high gear as among the most important
-					decisions that will be made during my incumbency in the office of the
-					Presidency.
-					{/* Having lived on four continents I can say, nothing gives you full apperciation and
-					knowledge unless you actually live the culture. Anything else is
-					visiting, and while you can appreciate a lot from a visit, living
-					there gives you true perspective.{" "} */}
-				</p>
-			</div>
-  )
+	return (
+		<div className="content-container" id="travel">
+			<HeaderSub title={"travel"} />
+			<SimpleSlider imgArray={travelImg} />
+			<p className="content-paragraph shadowbox">
+				Blood, sweat and tears don't have to mean toiling, but they are probably
+				the makings of a good story, a story you could never have told without
+				some wanderlust itches being scratched. It's a great comedy that the
+				world is so large and our lives are so short and it's an even greater
+				tragedy to not have experienced as much of it as possible. An adventure
+				never happens standing still.
+			</p>
+		</div>
+	)
 }
 
-export default Travel 
-
-
+export default Travel
