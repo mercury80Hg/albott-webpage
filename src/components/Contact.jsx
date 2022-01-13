@@ -1,6 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import Footer from "./Footer"
+
 const bodyText = "go one git"
+
 function Contact() {
 	return (
 		<div className="contact" id="contact">
@@ -8,18 +11,24 @@ function Contact() {
 				<div>
 					<h1 className="myname-contact">allan E bott</h1>
 					<div className="contact-method-row">
-						<a href="https://www.linkedin.com/in/allan-bott/" target="_blank" rel="noopener noreferrer" alt="link to allan bott's linked in page">
+						<a
+							href="https://www.linkedin.com/in/allan-bott/"
+							target="_blank"
+							rel="noopener noreferrer"
+							alt="link to allan bott's linked in page"
+							title="linked-in"
+						>
 							<img
 								className="linkedin-img"
 								src="images/linkedin.png"
 								alt="linked in logo"
 							></img>
 						</a>
-						<a href="tel:+13476884186">
-							<img className="mobile-img" src="images/call.png" alt=""></img>
+						<a href="tel:+12068091032">
+							<img className="mobile-img" src="images/call.png" alt="" title="+1 (206) 809-1032"></img>
 						</a>
-						<a href="mailto:[silver47ag@gmail.com]?subject=Email from allanbott.com, RE: &body=Your favorite color is: %0A%0AIf you could be an animal: %0A%0ASince you are human, what kind of robot would you like to be?: %0A%0A%0A">
-							<img className="email-img" src="images/at-sign.png" alt=""></img>
+						<a href="mailto:[mercury80hg200@gmail.com]?subject=Email from allanbott.com, RE: &body=Your favorite color is: %0A%0AIf you could be an animal: %0A%0ASince you are human, what kind of robot would you like to be?: %0A%0A%0A">
+							<img className="email-img" src="images/at-sign.png" alt="" title="mercury80hg200@gmail.com"></img>
 						</a>
 					</div>
 				</div>
@@ -53,10 +62,12 @@ function Contact() {
 					</ul>
 				</div>
 			</div>
-			<br />
-			<br />
+		
 			<div>
 				<hr size="5" noshade />
+			</div>
+			<div>
+				<Footer />
 			</div>
 			<Link to="/" class="material-icons floating-btn">
 				<span class="material-icons-round floating-btn-icon">home</span>

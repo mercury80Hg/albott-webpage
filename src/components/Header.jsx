@@ -13,7 +13,7 @@ function Header() {
 				<Link className="hyperlinks contacts" to="/contact">
 					contact
 				</Link>
-				<Link className="hyperlinks contacts" to="/projects_blank">
+				<Link className="hyperlinks contacts" to="/projects">
 					projects
 				</Link>
 			</div>
