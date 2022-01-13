@@ -6,7 +6,8 @@ import Slider from "react-slick"
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-
+//memoized progressive image loading optimization based from Niraj M. Rajgor https://codeburst.io/how-to-progressively-load-images-in-react-using-hooks-80c50fd447cd
+import ImageLoad from "./ImageLoad"
 
 
 function SimpleSlider(props) {
@@ -30,10 +31,12 @@ function SimpleSlider(props) {
     
   }
 
+  // <ImageLoad className="carousel-image" src={x} placeholder="/images/AEB-logo-plastic.png" alt={x} />
+
   return (
     <div >
       <Slider {...settings} className="carousel">
-      {imgArray.map(x => <div><img className="carousel-image" src={x}></img></div>)}
+      {imgArray.map(x => <div><ImageLoad src={x} placeholder="/images/AEB-logo-plastic.png" alt={x} /></div>)}
 
       
         {/* <div>

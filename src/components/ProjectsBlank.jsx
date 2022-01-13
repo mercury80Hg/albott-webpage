@@ -13,7 +13,6 @@ import {
 import ProjectsInfoBox from "./ProjectsInfoBox"
 import ComingSoon from "./ComingSoon"
 
-
 function Projects() {
 	const [projObj, setprojObj] = useState(home)
 	// const [projObj, setprojObj] = useState(null)
@@ -59,14 +58,13 @@ function Projects() {
 					</div>
 				</div>
 
-        {projObj == home ? (<div/>) : <ProjectsInfoBox projObj={projObj}/> && 
-				projObj.image ? (
-          
-          <ProjectsInfoBox projObj={projObj}/>
+				{projObj == home ? (
+					<div />
+				) : <ProjectsInfoBox projObj={projObj} /> && projObj.image ? (
+					<ProjectsInfoBox projObj={projObj} />
 				) : (
 					<ComingSoon />
 				)}
-
 			</div>
 		</div>
 	)
