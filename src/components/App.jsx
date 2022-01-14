@@ -2,7 +2,6 @@ import React from "react"
 
 import Splash from "./Splash"
 import Contact from "./Contact"
-// import Footer from "./Footer"
 import About from "./About"
 import { Routes, Route } from "react-router-dom"
 
@@ -11,7 +10,7 @@ import Excitement from "./Excitement"
 import Beauty from "./Beauty"
 import Travel from "./Travel"
 import Projects from "./Projects"
-// import ProjectsBlank from "./Projects"
+
 
 function App() {
 	return (
@@ -19,7 +18,6 @@ function App() {
 			<Routes>
 				<Route path="about" element={<About />} />
 				<Route path="contact" element={<Contact />} />
-				{/* <Route path="projects_blank"	element={<ProjectsBlank />} /> */}
 				<Route path="projects" element={<Projects />} /> 
 				<Route path="adventure" element={<Adventure />} />
 				<Route path="excitement" element={<Excitement />} />
