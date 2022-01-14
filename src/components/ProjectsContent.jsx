@@ -75,6 +75,18 @@ const techIcons = {
 		path: "images/tech_icons/apple_blk_rSquare.png",
 		name: "apple",
 	},
+	ejs: {
+		path: "images/tech_icons/ejs_blk_tag.png",
+		name: "embedded Js",
+	},
+	exp: {
+		path: "images/tech_icons/Expressjs.png",
+		name: "express",
+	},
+	mongo: {
+		path: "images/tech_icons/mongodb_color_logo.png",
+		name: "mongodb",
+	},
 }
 
 export const home = {
@@ -219,13 +231,39 @@ export const scratchPad = {
 
 export const blog = {
 	title: "My Blog",
-	image: "",
-	link: "",
+	image: "images/projects/ScreenShot_Blog.png",
+	link: "https://polar-anchorage-37592.herokuapp.com/",
 	git: "",
-	icons: [],
+	icons: [
+		techIcons.html,
+		techIcons.css,
+		techIcons.nodeJs,
+		techIcons.ejs,
+		techIcons.mongo,
+		techIcons.exp,
+	],
 	blog: "",
-	synopsis: "",
-	story: "",
+	synopsis: (
+		<p>
+			Very rudimentary blog I did with a tutorial from Dr. Angela Yu using ejs
+			and mongoose db deployed on heroku. It's not pretty but I wanted to put
+			some notes out there on my experiences with the New York Times API and to
+			give a nice snippet of my poblem solving paths.
+		</p>
+	),
+	story: (
+		<p>
+			I like the idea of a blog, but I feel you need to keep up on entries to
+			keep people interested in visiting it. However, not every day or week is
+			as interesting as the next so you'd better be a great or intersting writer
+			that can make the mundane amusing or your blog quality will just feel
+			forced, and we have plenty of that on the internet already. If I decdide
+			later to actually do some sort of blogging I will completely start from
+			scratch in designing a site. This blog is not representative of quality,
+			it is acting as a quick vehicle for the content. The blog does however at
+			the very least display the ability to follow blueprints and direction.
+		</p>
+	),
 }
 
 export const photography = {
