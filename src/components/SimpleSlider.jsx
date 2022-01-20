@@ -34,20 +34,20 @@ function SimpleSlider(props) {
 		centerMode: true,
 		infinite: true,
 		centerPadding: "50px",
-	  pauseOnFocus: false,
-    pauseOnHover: false,
+		pauseOnFocus: false,
+		pauseOnHover: false,
 		speed: 3000,
-    autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 2000,
 		slidesToShow: 1,
-    touchMove: true,
+		touchMove: true,
 		variableWidth: true,
-    zIndex: 1000,
-	
+		zIndex: 1000,
+
 		// vertical: false,
-    // adaptiveHeight: true,
-	  // slidesToScroll: 1,
-	  // dots: true,
+		// adaptiveHeight: true,
+		// slidesToScroll: 1,
+		// dots: true,
 	}
 
 	return (
