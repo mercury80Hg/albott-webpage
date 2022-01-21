@@ -221,7 +221,7 @@ h4 {
 	background:
 		/* Shadow covers */ linear-gradient(
 			#bec4d9 30%,
-			rgba(255, 255, 255, 0)
+			#ffffff00
 		),
 		linear-gradient(rgba(255, 255, 255, 0), #bec4d9 70%) 0 100%,
 		/* Shadows */
