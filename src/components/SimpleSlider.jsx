@@ -64,7 +64,7 @@ function SimpleSlider(props) {
 		<div>
 			{isLoading ? (
 				<div >
-					<img className="carousel-image" src="/images/AEB-logo-plastic.png" alt="personal logo" />
+					<img className="carousel-image" src="/images/AEB-infoImages/AEB-logo-plastic-Loading.png" alt="personal logo" />
 				</div>
 			) : (
 				<Slider {...settings} className="carousel">
