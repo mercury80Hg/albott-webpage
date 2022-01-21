@@ -12,8 +12,8 @@ function Excitement() {
 				'Oomph.' What a great word. It's a sound, it's a noun, it's a perfect
 				way to be exciting. If you don't have oomph you can always just pretend
 				you do on social media, but being exciting should lead to the exciting,
-				so why not just have some oomph. Without some danger then how fun can
-				it be?
+				so why not just have some oomph. Without some danger then how fun can it
+				be?
 			</p>
 		</div>
 	)

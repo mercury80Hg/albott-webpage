@@ -1,3 +1,10 @@
+/* these techIcons are the locations of the tech image files.  They are done 
+as an object with a name so that I can add them as a title value so that full 
+names of the icons are displayed when hovering over them.  I suppose its ADA 
+friendly, but sometimes you dont't know every tiny obscure tech icon so at 
+least you can hover to see what it is. */
+
+//this techIcons object should be moved to it's own file as it has grown a lot
 const techIcons = {
 	sass: {
 		path: "images/tech_icons/sass_blk_S_round.png",
@@ -88,6 +95,13 @@ const techIcons = {
 		name: "mongodb",
 	},
 }
+
+/* Each of these objects are being used as pieces to the rendering of the 
+Projects component page, also currently including content */
+
+/* NOTE: currently there exists conditional rendering based on whether there is 
+an image present or not.  If no image is supplied then the COMING SOON is 
+rendered instead. */
 
 export const home = {
 	title: "",

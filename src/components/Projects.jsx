@@ -1,5 +1,5 @@
-/*This is the Projects page which is a component being passed data objects from ProjectsContent 
-that change the state of what is displayed.*/
+/*This is the Projects page which is a component being passed data objects from 
+ProjectsContent that change the state of what is displayed.*/
 
 import React, { useState } from "react"
 import HeaderSub from "./HeaderSub"
@@ -51,10 +51,7 @@ function Projects() {
 						>
 							scratch pad
 						</div>
-						<div
-							className="proj-hyperlinks "
-							onClick={() => handleClick(blog)}
-						>
+						<div className="proj-hyperlinks " onClick={() => handleClick(blog)}>
 							blog
 						</div>
 						<div
@@ -63,16 +60,17 @@ function Projects() {
 						>
 							photography
 						</div>
-						<div
-							className="proj-hyperlinks"
-							onClick={() => handleClick(logo)}
-						>
+						<div className="proj-hyperlinks" onClick={() => handleClick(logo)}>
 							logo
 						</div>
-						
 					</div>
 				</div>
-
+				{/* Conditionally renders the right portion of the Projects page 
+				"ProjectInfoBox" depending on whether it is at home or a selection has
+				 been made.  Further conditional rendering is based on whether there is an 
+				 image present in the projObj being supplied from an object in the 
+				 ProjectsContent file.  If there is no image supplied then Coming Soon will 
+				 be rendered */}
 				{projObj == home ? (
 					<div />
 				) : <ProjectsInfoBox projObj={projObj} /> && projObj.image ? (

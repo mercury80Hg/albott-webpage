@@ -1,9 +1,9 @@
 import React from "react"
+import { Routes, Route } from "react-router-dom"
 
 import Splash from "./Splash"
 import Contact from "./Contact"
 import About from "./About"
-import { Routes, Route } from "react-router-dom"
 
 import Adventure from "./Adventure"
 import Excitement from "./Excitement"
