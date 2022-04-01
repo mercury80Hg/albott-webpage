@@ -928,7 +928,9 @@ h4 {
 @media only screen and (max-device-width: 390px) and (orientation: portrait) {
 	body {
 		/* background-color: violet; */
-		
+		height: calc(var(--vh, 1vh) * 100);
+			/* adjusts for 'useable' viewport accounting for the space taken 
+			by navbars and url inputs */
 	}
 	
 /*Header includes name:allan e bott as well as the nav buttons on splash page*/
@@ -1003,7 +1005,7 @@ h4 {
 	}
 
 	.splash {
-		margin-top: 15vh;;
+		
 		width: 100vw;
 		height: 100vh;
 		margin-left: unset;
@@ -1136,6 +1138,7 @@ h4 {
 	}
 	.img-wrapper {
 		/* display: flex; */
+		display: block;
 		/* align-items: center; */
 		/* justify-content: center; */
 	}
