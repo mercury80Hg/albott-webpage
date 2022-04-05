@@ -12,7 +12,7 @@ function Footer() {
 					<p>photography</p>
 					<p>by</p>
 					<p>allan bott</p>
-					<p style={{ fontSize: "1.5vh", paddingTop: "2vh" }}>
+					<p className="copyright" >
 						One photo by Josh Ter Louw
 					</p>
 				</div>
@@ -40,7 +40,7 @@ function Footer() {
 					</a>
 				</div>
 				<div>Additional Icons from Material Icons</div>
-				<p style={{ fontSize: "2vh", paddingTop: "10vh" }}>
+				<p className="copyright" >
 					Copyright &copy; allanbott.com 2022
 				</p>
 			</div>
