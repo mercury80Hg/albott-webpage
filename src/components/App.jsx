@@ -11,6 +11,9 @@ import Beauty from "./Beauty"
 import Travel from "./Travel"
 import Projects from "./Projects"
 
+//setting the viewport for the useable space accounting for mobile nav/url bar interference
+let vh = window.innerHeight * 0.01
+document.documentElement.style.setProperty("--vh", `${vh}px`)
 
 function App() {
 	return (

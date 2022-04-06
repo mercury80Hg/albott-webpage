@@ -102,20 +102,29 @@ h4 {
 	border: solid 1px #335;
 	border-radius: 5px;
 	font-size: 1.7vh;
-	margin: 0 1vh;
+	margin: 1vh;
 	width: 8vw;
 }
 
 .hyperlinks-navButton-headingSub {
+	display: flex;
+	justify-content: center;
 	text-align: center;
-	padding: 1vh;
-	width: 7vw;
+	padding: 1vh 0 1vh 0;
+
+	width: 8vw;
 }
 
-.hyperlinks-navButton-headingSub:nth-of-type(2) {
+.hyperlinks-navButton-headingSub-contact {
+	display: flex;
 	border-top: 1px solid #335;
 	border-bottom: 1px solid #335;
+	/* margin: 1vh; */
 }
+/* .hyperlinks-navButton-headingSub:nth-of-type(2) {
+	border-top: 1px solid #335;
+	border-bottom: 1px solid #335;
+} */
 
 .hyperlinks-navButton-headingSub:hover {
 	transition: background-color 1s;
@@ -134,8 +143,8 @@ h4 {
 	border: 1px solid #335;
 	border-radius: 5px;
 	height: 5vh;
-	padding: 0 1vw;
-	margin: 1vh 1vw;
+	/* margin: 0 1vw; */
+	/* margin: 1vh 1vw; */
 }
 
 .hyperlink-button:hover {
@@ -174,10 +183,10 @@ h4 {
 	color: #fff;
 }
 
-.hyperlinks:nth-of-type(2) {
+/* .hyperlinks:nth-of-type(2) {
 	border-left: 1px solid #335;
 	border-right: 1px solid #335;
-}
+} */
 
 /*///// Floating Home Button /////// */
 /*// save this for mobile //*/
@@ -906,6 +915,7 @@ h4 {
 		height: calc(var(--vh, 1vh) * 100);
 		/* adjusts for 'useable' viewport accounting for the space taken 
 			by navbars and url inputs */
+		overflow: hidden;
 	}
 
 	/*Header includes name:allan e bott as well as the nav buttons on splash page*/
@@ -916,7 +926,7 @@ h4 {
 		position: fixed;
 
 		/* align-items: center; */
-		height: 99vh;
+		height: 100vh;
 		width: 100vw;
 		margin-left: 0vw;
 	}
@@ -958,7 +968,7 @@ h4 {
 		/* display: flex; */
 		/* flex-direction: row; */
 		/* border: 1px solid #335; */
-		border-radius: 20px;
+		border-radius: 10px;
 		/* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 		/* color: #335; */
 		/* font-size: 2vh; */
@@ -979,6 +989,14 @@ h4 {
 		/* text-decoration: none; */
 	}
 
+	.hyperlinks-navButton-headingSub-contact-splash {
+		display: flex;
+		border-left: 1px solid #335;
+		border-right: 1px solid #335;
+		border-top: unset;
+		border-bottom: unset;
+		/* margin: 1vh; */
+	}
 	.splash {
 		width: 100vw;
 		height: 99vh;
@@ -1104,7 +1122,7 @@ h4 {
 		/* position:absolute; */
 		padding: 3vh;
 		border: 1px solid #335;
-		border-radius: 20px;
+		border-radius: 10px;
 		border-width: 1px;
 	}
 	.img-wrapper {
@@ -1132,7 +1150,7 @@ h4 {
 		margin-top: unset;
 	}
 	.content-heading {
-		border-radius: 20px;
+		border-radius: 10px;
 		font-size: 1.7vh;
 		margin-left: 2vw;
 	}
@@ -1160,7 +1178,7 @@ h4 {
 		justify-items: center;
 		/* align-items: center; */
 		/* border: solid 1px #335; */
-		border-radius: 20px;
+		border-radius: 10px;
 		/* font-size: 1.7vh; */
 		/* margin: 0 1vh; */
 		width: 25vw;
@@ -1169,7 +1187,7 @@ h4 {
 	.hyperlinks-navButton-headingSub {
 		/* text-align: center; */
 		/* padding: 1vh; */
-		width: 20vw;
+		width: 25vw;
 	}
 
 	/*////////Carousel\\\\\\\\*/
@@ -1404,6 +1422,7 @@ h4 {
 	height: 3vh;
 	width: 100vw;
 	padding-left: unset;
+	
 	}
 
 	.proj-list-box {
@@ -1412,7 +1431,8 @@ h4 {
 	height: 3vh;
 	width: 95vw;
 	/* border: solid 1px #335; */
-	border-radius: 20px;
+	border-radius: 10px;
+
 	}
 
 	.proj-hyperlinks {
@@ -1425,6 +1445,8 @@ h4 {
 	/* color: #335; */
 	/* text-decoration: none; */
 	text-align: center;
+	font-size: 1vh;
+	font-weight: bolder;
 	}
 
 	.proj-hyperlinks:hover {
@@ -1471,12 +1493,12 @@ h4 {
 		/* flex-direction: column; */
 		/* justify-content: center; */
 		height: 5vh;
-
 		/* align-items: center; */
 	}
 
 	.proj-visit-title {
 		/* display: flex; */
+		
 	}
 
 	.proj-links-buttons {
@@ -1486,13 +1508,21 @@ h4 {
 		width: 100vw;
 	
 	}
+	.hyperlink-button-proj {
+		margin: 0 1vw;
+		width: 20vw;
+		font-size: 1vh;
+		font-weight: bolder
+	}
 
 	.proj-info-column-title {
 		/* display: flex; */
 		justify-content: space-evenly;
-		padding: 0;
+		padding-bottom: 0.5vh;
 		height: 1.5vh;
 		width: 100vw;
+		font-size: 1.5vh;
+		font-weight: bolder;
 	}
 
 	.proj-tech-icons-box {
@@ -1539,6 +1569,7 @@ h4 {
 		/* border-radius: 5px; */
 		/* margin: 1vw; */
 		/* padding: 0.5vw; */
+		font-size: 1.5vh;
 	}
 
 	.story-text-box {
@@ -1549,6 +1580,7 @@ h4 {
 		/* border-radius: 5px; */
 		/* margin: 1vw; */
 		/* padding: 0.5vw; */
+		font-size: 1.5vh;
 	}
 
 	/* ////////Coming Soon page///////// */

@@ -31,7 +31,7 @@ function Projects() {
 				<div className="proj-list">
 					<div className="proj-list-box ">
 						<div className="proj-hyperlinks" onClick={() => handleClick(ab)}>
-							allanbott.com
+							personal website
 						</div>
 						<div
 							className="proj-hyperlinks ohmgd-hyperlinks"
@@ -58,7 +58,7 @@ function Projects() {
 							className="proj-hyperlinks blog-hyperlinks"
 							onClick={() => handleClick(photography)}
 						>
-							photography
+							photos
 						</div>
 						<div className="proj-hyperlinks" onClick={() => handleClick(logo)}>
 							logo
