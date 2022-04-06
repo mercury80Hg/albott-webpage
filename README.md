@@ -8,7 +8,7 @@ Below you'll find my documentation notes on styles I went with and some instruct
 
 ## Style
 
-Style themes and motifes run through out the website.  Here are the fonts, spacing, colors, gradients and shapes to adhere to when creating new pages, content, boxes, buttons... etc.
+Style themes and motifes run throughout the website.  Here are the fonts, spacing, colors, gradients and shapes to adhere to when creating new pages, content, boxes, buttons... etc.
 
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-spacing: 
