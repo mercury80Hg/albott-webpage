@@ -11,10 +11,10 @@ function Header() {
 				<Link className="hyperlinks" to="/about">
 					about
 				</Link>
-				<Link className="hyperlinks contacts hyperlinks-navButton-headingSub-contact-splash" to="/contact">
+				<Link className="hyperlinks hyperlinks-contact hyperlinks-navButton-headingSub-contact-splash" to="/contact">
 					contact
 				</Link>
-				<Link className="hyperlinks contacts" to="/projects">
+				<Link className="hyperlinks" to="/projects">
 					projects
 				</Link>
 			</div>

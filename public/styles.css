@@ -143,7 +143,8 @@ h4 {
 	border: 1px solid #335;
 	border-radius: 5px;
 	height: 5vh;
-	/* margin: 0 1vw; */
+	margin: 0 1vw;
+	width: 8vw;
 	/* margin: 1vh 1vw; */
 }
 
@@ -177,12 +178,17 @@ h4 {
 	text-decoration: none;
 }
 
+
 .hyperlinks:hover {
 	transition: background-color 1s;
 	background-color: #ec008c;
 	color: #fff;
 }
 
+.hyperlinks-contact {
+	border-left: 1px solid #335;
+	border-right: 1px solid #335;
+}
 /* .hyperlinks:nth-of-type(2) {
 	border-left: 1px solid #335;
 	border-right: 1px solid #335;
