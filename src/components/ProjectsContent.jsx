@@ -194,7 +194,7 @@ export const ohmgd = {
 }
 
 export const nytbs = {
-	title: "New York Times Best Sellers list API integration",
+	title: "New York Times Best Sellers API",
 	image: "images/projects/ScreenShot_NYTBS.png",
 	link: "https://mercury80hg.github.io/NYT-Best-Sellers-List",
 	git: "https://github.com/mercury80Hg/NYT-Best-Sellers-List",
@@ -207,7 +207,7 @@ export const nytbs = {
 		techIcons.gh,
 		techIcons.nodeJs,
 	],
-	blog: "https://blogityblogblog.com",
+	blog: "https://polar-anchorage-37592.herokuapp.com/",
 	synopsis: (
 		<p>
 			This is pretty simple. All I wanted was to create a little API pull for
@@ -244,7 +244,7 @@ export const scratchPad = {
 }
 
 export const blog = {
-	title: "My Blog",
+	title: "A Blog",
 	image: "images/projects/ScreenShot_Blog.png",
 	link: "https://polar-anchorage-37592.herokuapp.com/",
 	git: "",
@@ -318,7 +318,7 @@ export const photography = {
 }
 
 export const logo = {
-	title: "",
+	title: "Logo",
 	image: "images/AEB_logo_drafts.jpg",
 	link: "",
 	git: "",
