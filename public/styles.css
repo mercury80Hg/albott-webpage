@@ -178,7 +178,6 @@ h4 {
 	text-decoration: none;
 }
 
-
 .hyperlinks:hover {
 	transition: background-color 1s;
 	background-color: #ec008c;
@@ -1386,11 +1385,6 @@ h4 {
 		/* transition: background 0.25s; */
 	}
 
-
-
-
-
-
 	/*//////////Project Page///////////*/
 
 	.content-container {
@@ -1408,7 +1402,7 @@ h4 {
 		font-size: 2vh;
 		margin-bottom: 1vh;
 		line-height: 0px;
-		font-weight:lighter;
+		font-weight: lighter;
 		letter-spacing: 1vw;
 	}
 
@@ -1418,41 +1412,38 @@ h4 {
 		flex-direction: column;
 		/* width: 100vw; */
 		height: 67vh;
-
 	}
 
 	.proj-list {
 		/* display: flex; */
-	flex-direction: row;
-	justify-content: center;
-	height: 3vh;
-	width: 100vw;
-	padding-left: unset;
-	
+		flex-direction: row;
+		justify-content: center;
+		height: 3vh;
+		width: 100vw;
+		padding-left: unset;
 	}
 
 	.proj-list-box {
 		/* display: flex; */
-	flex-direction: row;
-	height: 3vh;
-	width: 95vw;
-	/* border: solid 1px #335; */
-	border-radius: 10px;
-
+		flex-direction: row;
+		height: 3vh;
+		width: 95vw;
+		/* border: solid 1px #335; */
+		border-radius: 10px;
 	}
 
 	.proj-hyperlinks {
 		/* display: flex; */
-	/* flex-direction: row; */
-	/* align-items: center; */
-	/* justify-content: center; */
-	height: 3vh;
-	/* width: inherit; */
-	/* color: #335; */
-	/* text-decoration: none; */
-	text-align: center;
-	font-size: 1vh;
-	font-weight: bolder;
+		/* flex-direction: row; */
+		/* align-items: center; */
+		/* justify-content: center; */
+		height: 3vh;
+		/* width: inherit; */
+		/* color: #335; */
+		/* text-decoration: none; */
+		text-align: center;
+		font-size: 1vh;
+		font-weight: bolder;
 	}
 
 	.proj-hyperlinks:hover {
@@ -1504,7 +1495,6 @@ h4 {
 
 	.proj-visit-title {
 		/* display: flex; */
-		
 	}
 
 	.proj-links-buttons {
@@ -1512,13 +1502,12 @@ h4 {
 		justify-content: center;
 		padding: 0 1vw;
 		width: 100vw;
-	
 	}
 	.hyperlink-button-proj {
 		margin: 0 1vw;
 		width: 20vw;
 		font-size: 1vh;
-		font-weight: bolder
+		font-weight: bolder;
 	}
 
 	.proj-info-column-title {
@@ -1594,13 +1583,13 @@ h4 {
 	.coming-soon-container {
 		/* display: flex; */
 		/* justify-content: center; */
-		
+
 		width: unset;
 		height: 64vh;
 		position: relative;
-	
+
 		/* align-items: center; */
-		margin: 0vh; 
+		margin: 0vh;
 		padding: 1vh;
 		border: unset;
 		/* border-radius: 5px; */
@@ -1613,11 +1602,11 @@ h4 {
 	}
 
 	.coming-soon {
-	bottom: 20vh;
-	/* color: #ec008c; */
-	font-size: 7vh;
-	/* text-align: center; */
-	/* text-shadow: 0px 10px 15px #335; */ 
+		bottom: 20vh;
+		/* color: #ec008c; */
+		font-size: 7vh;
+		/* text-align: center; */
+		/* text-shadow: 0px 10px 15px #335; */
 	}
 }
 
