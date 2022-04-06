@@ -31,7 +31,7 @@ function ProjectsInfoBox({ projObj }) {
 					<div className="proj-links-buttons">
 						{projObj.link && (
 							<a
-								className="hyperlink-button"
+								className="hyperlink-button hyperlink-button-proj"
 								target="_blank"
 								rel="noopener noreferrer"
 								href={projObj.link}
@@ -42,7 +42,7 @@ function ProjectsInfoBox({ projObj }) {
 
 						{projObj.blog && (
 							<a
-								className="hyperlink-button"
+								className="hyperlink-button hyperlink-button-proj"
 								target="_blank"
 								rel="noopener noreferrer"
 								href={projObj.blog}
@@ -53,7 +53,7 @@ function ProjectsInfoBox({ projObj }) {
 						)}
 						{projObj.git && (
 							<a
-								className="hyperlink-button"
+								className="hyperlink-button hyperlink-button-proj"
 								target="_blank"
 								rel="noopener noreferrer"
 								href={projObj.git}

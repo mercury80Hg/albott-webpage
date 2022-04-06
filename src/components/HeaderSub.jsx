@@ -35,7 +35,7 @@ function HeaderSub(props) {
 				<Link className="hyperlinks-navButton-headingSub" to="/about">
 					about
 				</Link>
-				<Link className="hyperlinks-navButton-headingSub" to="/contact">
+				<Link className="hyperlinks-navButton-headingSub hyperlinks-navButton-headingSub-contact" to="/contact">
 					contact
 				</Link>
 				<Link className="hyperlinks-navButton-headingSub"  to="/projects">
