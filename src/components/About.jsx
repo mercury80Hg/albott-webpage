@@ -31,14 +31,14 @@ function About() {
 				people from all walks of life, honing his personal and professional
 				skills. <br />
 				<br />
-				However, when you reach the top of a precipice you can more easily see
-				that you are surrounded by peaks. Having reached a plateau in
-				hospitality with a solid set of skills Allan decided to search for a
-				mountain with no peak. Software became that endless goal of constant
-				learning where one can master something only for it to be deprecated
-				shortly after. Technology is ever-changing and feeding off new faster
-				programming and New is not every year but every day. The endless
-				landscape of software, where the jack-of-all gets farther ahead.
+				However, it is only when you reach the top of a precipice that you can
+				then more easily see you are surrounded by peaks. Having reached a
+				plateau in hospitality with a solid set of skills Allan decided to
+				search for a mountain with no peak. Software became that endless goal of
+				constant learning where one can master something only for it to be
+				deprecated shortly after. Technology is ever-changing and feeding off
+				new faster programming and New is not every year but every day. The
+				endless landscape of software, where the jack-of-all gets farther ahead.
 			</p>
 		</div>
 	)
