@@ -109,7 +109,7 @@ const techIcons = {
 	npm: {
 		path: "images/tech_icons/npm_blk_n.png",
 		name: "node package manager",
-	}
+	},
 }
 
 /* Each of these objects are being used as pieces to the rendering of the 
@@ -168,11 +168,11 @@ export const ab = {
 				to navigate pages and then you'll find when you get to the Projects
 				section, where you are now, this area has been implemented with React
 				Hooks and State for better reusability. I wanted to display use of
-				Router, Hooks and State. While I could have also implemented State in the front
-				portion I wanted to spread the tech use out. You will find some logos
-				implemented from third parties referenced in the footer loacated on the
-				Contact page. Most of the site was built from scratch after
-				"react-create-app" of cousre.
+				Router, Hooks and State. While I could have also implemented State in
+				the front portion I wanted to spread the tech use out. You will find
+				some logos implemented from third parties referenced in the footer
+				loacated on the Contact page. Most of the site was built from scratch
+				after "react-create-app" of cousre.
 			</p>
 			<br />
 			<h4>Images</h4> <br />
@@ -266,26 +266,26 @@ export const scratchPad = {
 	blog: "",
 	synopsis: (
 		<p>
-			This project is an interactive coding environment that transpiles and 
-			bundles everything in-browser. You can write Javascript, see it 
-			executed, and write comprehensive documentation using markdown.  It is
-			deployed as a package to NPM named scratchpadjs.  Should you choose to 
-			install it, activate the server in CLI with "npx scratchapdjs serve" 
-			where it will be accessed at localhost:4005.
+			This project is an interactive coding environment that transpiles and
+			bundles everything in-browser. You can write Javascript, see it executed,
+			and write comprehensive documentation using markdown. It is deployed as a
+			package to NPM named scratchpadjs. Should you choose to install it,
+			activate the local server in CLI with "npx scratchapdjs serve
+			choosesavename.js" where it will be accessed at localhost:4005.
 		</p>
 	),
 	story: (
 		<p>
-			Quite a fun project that leaves me with something I can use instead 
-			of a magic 8 ball or drum kit.  I do not claim to be the architect of
-			this project.  This was an exercise from Stephen Grider that took me 
-			down new paths of Js having to learn Typescript along the way.  I found
-			out how to manipulate features in technology by using esbuild to transpile
-			and bundle code in browser and using lerna to access the npm library.  
-			Altogether I found the project quite clever and useful.  Now I feel I have 
-			worked through a very comprehensive understanding of how to search deeper 
-			to bring a visioned project to reality. I learned more making this than 
-			most of everything I've done so far.
+			Quite a fun project that leaves me with something I can use instead of a
+			magic 8 ball or drum kit. I do not claim to be the architect of this
+			project. This was an exercise from Stephen Grider that took me down new
+			paths of Js having to learn Typescript along the way. I found out how to
+			manipulate features in technology by using esbuild to transpile and bundle
+			code in browser and using lerna to access the npm library. Altogether I
+			found the project quite clever and useful. Now I feel I have worked
+			through a very comprehensive understanding of how to search deeper to
+			bring a visioned project to reality. I learned more making this than most
+			of everything I've done so far.
 		</p>
 	),
 }
@@ -343,12 +343,13 @@ export const photography = {
 	blog: "",
 	synopsis: (
 		<p>
-			Formally I was trained in Film Direction at Columbia in Chicago and after 
-			many classes in photography, lighting, filming, editing and composition I 
-			have finally improved at capturing of a more aesthetic photo. Pretty much 
-			every image on this website has been taken by me and applied to this website 
-			to add a more vibrant visual element. Hopefully you enjoy some of them, but 
-			at the very least they serve to remind me of certain stories in my past.
+			Formally I was trained in Film Direction at Columbia in Chicago and after
+			many classes in photography, lighting, filming, editing and composition I
+			have finally improved at capturing of a more aesthetic photo. Pretty much
+			every image on this website has been taken by me and applied to this
+			website to add a more vibrant visual element. Hopefully you enjoy some of
+			them, but at the very least they serve to remind me of certain stories in
+			my past.
 		</p>
 	),
 	story: (
