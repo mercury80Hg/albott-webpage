@@ -56,6 +56,7 @@ h4 {
 	margin: 0;
 }
 
+
 /*///////SUB HEADER for full navbar control outside of Splash page///*/
 /* different than the HEADER for react Projects page*/
 .headerSub-box {
@@ -476,6 +477,10 @@ h4 {
 	margin: 1vh;
 	font-size: 2vh;
 	/* height: 80vh; */
+}
+
+.content-paragraph > p {
+	 margin-bottom: 15px;
 }
 
 .content-heading {
