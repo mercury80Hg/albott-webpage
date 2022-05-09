@@ -3,6 +3,7 @@ import SimpleSlider from "./SimpleSlider"
 import HeaderSub from "./HeaderSub"
 import { aboutImg } from "./Images"
 
+
 function About() {
 	return (
 		<div className="content-container" id="about">
@@ -24,13 +25,15 @@ function About() {
 				<span style={{ color: "#ec008c" }}>A</span>
 				<span style={{ color: "#f0e54bd8" }}>T</span> of life, a way to approach
 				the world. Or this could just be a bunch of Allan Ipsum and means
-				nothing. <br />
-				<br />
+				nothing. 
+				<p>
 				For 20 years Allan was a restaurateur managing eateries in many bustling
 				corners of the u.s.a. During that time he enjoyed making friends with
 				people from all walks of life, honing his personal and professional
-				skills. <br />
-				<br />
+				skills.</p>
+				<p>
+
+				</p>
 				However, it is only when you reach the top of a precipice that you can
 				then more easily see you are surrounded by peaks. Having reached a
 				plateau in hospitality with a solid set of skills Allan decided to
