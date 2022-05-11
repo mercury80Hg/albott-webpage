@@ -17,7 +17,7 @@ function Contact() {
 							href="https://www.linkedin.com/in/allan-bott/"
 							target="_blank"
 							rel="noopener noreferrer"
-							alt="link to allan bott's linked in page"
+							alt="allan bott's linked in page"
 							title="linked-in"
 						>
 							<img
@@ -26,11 +26,11 @@ function Contact() {
 								alt="linked in logo"
 							></img>
 						</a>
-						<a href="tel:+12068091032">
+						<a href="tel:+12068091032" alt="allan's phone number">
 							<img
 								className="mobile-img"
 								src="images/call.png"
-								alt=""
+								alt="telephone"
 								title="+1 (206) 809-1032"
 							></img>
 						</a>
@@ -39,7 +39,7 @@ function Contact() {
 							<img
 								className="email-img"
 								src="images/at-sign.png"
-								alt=""
+								alt="piece of mail"
 								title="mercury80hg200@gmail.com"
 							></img>
 						</a>
@@ -68,7 +68,7 @@ function Contact() {
 								target="_blank"
 								//to prevent tabnabbing
 								rel="noopener noreferrer"
-								alt="link to Uber Eats gift card purchasing webpage"
+								alt="Uber Eats gift card purchasing webpage"
 							>
 								take me out to lunch
 							</a>

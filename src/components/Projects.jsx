@@ -12,7 +12,7 @@ import {
 	photography,
 	nytbs,
 	logo,
-} from "./ProjectsContent"
+} from "../constants/ProjectsContent.js"
 import ProjectsInfoBox from "./ProjectsInfoBox"
 import ComingSoon from "./ComingSoon"
 

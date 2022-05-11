@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 /* This is a navbar component that heads all the pages except the Splash and 
 Contacts */
 
-function HeaderSub(props) {
-  const {title} = props
+function HeaderSub({title}) {
+ 
   const style =`content-heading ${title}-text`
 
 	return (

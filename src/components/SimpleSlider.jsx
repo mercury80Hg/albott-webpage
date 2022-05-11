@@ -10,8 +10,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 /* This component is a sliding image carousel based on Slick Slider currently pulling props for the appropriate image array.  isLoading was supposed to be a statefull part of cacheing the images for smoother loading experience.  It may not be implemented correctly if it's still here. */
-function SimpleSlider(props) {
-	const { imgArray } = props
+function SimpleSlider({ imgArray }) {
 	const [isLoading, setIsLoading] = useState(true)
 
 	/* adaption of preloading images for a more smooth ux. It is slightly faster 
@@ -34,7 +33,7 @@ function SimpleSlider(props) {
 
 	useEffect(() => {
 		cacheImages(imgArray)
-	}, [])
+	}, [imgArray])
 
 	//settings for slider more are available in the docs for Slick Slider
 	let settings = {
@@ -63,8 +62,12 @@ function SimpleSlider(props) {
 	return (
 		<div>
 			{isLoading ? (
-				<div >
-					<img className="carousel-image" src="/images/AEB-infoImages/AEB-logo-plastic-Loading.png" alt="personal logo" />
+				<div>
+					<img
+						className="carousel-image"
+						src="/images/AEB-infoImages/AEB-logo-plastic-Loading.png"
+						alt="personal logo"
+					/>
 				</div>
 			) : (
 				<Slider {...settings} className="carousel">
