@@ -114,10 +114,20 @@ I think that's all there is to it.  If you find an error make an Issue in the gi
   
   
   
+  ## Adding Images
+
+  To add some images to the slider carousel it's pretty simple.  Given the small size of the site I have not downgraded the image levels but some standardization in doing that may come around if perfomance becomes noticeable and you would find those standards listed here.
+
+  Located in the "public" folder of the project you will find the "images" folder.  Inside of it you can add image files to the corresponding carousel's folder.  All of the sub-folders of "images" foler are a carousels image files except for "projects".  Projects contain images for the projects page.  TechIcons have been refferenced in this documation earlier and have their own standards.
   
   
   
   
+
+
+
+
+
   
 # Getting Started with Create React App
 

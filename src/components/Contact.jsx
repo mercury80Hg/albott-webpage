@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
 /* I decided to put the footer here since this is probably where you'll go last 
 if you were interested in anything you saw here.  I didn't like the idea of 
@@ -11,13 +11,13 @@ function Contact() {
 		<div className="contact" id="contact">
 			<div className="banner-row">
 				<div>
-					<h1 className="myname-contact">allan E bott</h1>
+					{/* <h1 className="myname-contact">allan E bott</h1> */}
 					<div className="contact-method-row">
 						<a
 							href="https://www.linkedin.com/in/allan-bott/"
 							target="_blank"
 							rel="noopener noreferrer"
-							alt="link to allan bott's linked in page"
+							alt="allan bott's linked in page"
 							title="linked-in"
 						>
 							<img
@@ -26,11 +26,11 @@ function Contact() {
 								alt="linked in logo"
 							></img>
 						</a>
-						<a href="tel:+12068091032">
+						<a href="tel:+12068091032" alt="allan's phone number">
 							<img
 								className="mobile-img"
 								src="images/call.png"
-								alt=""
+								alt="telephone"
 								title="+1 (206) 809-1032"
 							></img>
 						</a>
@@ -39,20 +39,20 @@ function Contact() {
 							<img
 								className="email-img"
 								src="images/at-sign.png"
-								alt=""
+								alt="piece of mail"
 								title="mercury80hg200@gmail.com"
 							></img>
 						</a>
 					</div>
 				</div>
 
-				<div className="logo-box">
+				{/* <div className="logo-box">
 					<img
 						className="logo-contact"
 						src="images/AEB-logo-final.png"
 						alt="logo: green winged letter B in front of a pink and blue pyramid in front of a yellow circle"
 					/>
-				</div>
+				</div> */}
 
 				<div className="why-list">
 					<h3>
@@ -68,7 +68,7 @@ function Contact() {
 								target="_blank"
 								//to prevent tabnabbing
 								rel="noopener noreferrer"
-								alt="link to Uber Eats gift card purchasing webpage"
+								alt="Uber Eats gift card purchasing webpage"
 							>
 								take me out to lunch
 							</a>
@@ -89,9 +89,9 @@ function Contact() {
 			Once the site grew I added React-Router and then the Projects page ended 
 			up getting State.  The button remains because I aesthetically liked it 
 			here and also needed a route out. */}
-			<Link to="/" class="material-icons floating-btn">
+			{/* <Link to="/" class="material-icons floating-btn">
 				<span class="material-icons-round floating-btn-icon">home</span>
-			</Link>
+			</Link> */}
 		</div>
 	)
 }

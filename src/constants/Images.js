@@ -1,12 +1,13 @@
 /* This is where all the image arrays are that contain the pertinant 
-image paths to supply the SimpleSlider component */
+image paths to supply the SimpleSlider component.  If you want to add or remove
+images this is where you can do that. */
 
 export const aboutImg = [
 	"images/about/Me_Colum_Dog.JPG",
 	"images/about/Me_DelCoronado.JPG",
 	"images/about/Me_MXC_Mezcal.jpg",
-	// "images/about/Me_PDX_Beer.JPG",
-	"images/about/Me_Pink.JPG",
+	//"images/about/Me_PDX_Beer.JPG",
+	//"images/about/Me_Pink.JPG",
 ]
 
 export const adventureImg = [

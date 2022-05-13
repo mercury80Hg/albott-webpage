@@ -12,7 +12,7 @@ function Footer() {
 					<p>photography</p>
 					<p>by</p>
 					<p>allan bott</p>
-					<p className="copyright" >
+					<p className="josh" >
 						One photo by Josh Ter Louw
 					</p>
 				</div>
