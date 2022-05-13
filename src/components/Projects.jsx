@@ -2,7 +2,6 @@
 ProjectsContent that change the state of what is displayed.*/
 
 import React, { useState } from "react"
-import HeaderSub from "./HeaderSub"
 import {
 	ab,
 	blog,
@@ -25,7 +24,6 @@ function Projects() {
 
 	return (
 		<div className="content-container">
-			<HeaderSub title={"projects"} />
 			<div className="proj-title">{projObj.title}</div>
 			<div className="proj-content-row">
 				<div className="proj-list">
@@ -71,7 +69,7 @@ function Projects() {
 				 image present in the projObj being supplied from an object in the 
 				 ProjectsContent file.  If there is no image supplied then Coming Soon will 
 				 be rendered */}
-				{projObj == home ? (
+				{projObj === home ? (
 					<div />
 				) : <ProjectsInfoBox projObj={projObj} /> && projObj.image ? (
 					<ProjectsInfoBox projObj={projObj} />

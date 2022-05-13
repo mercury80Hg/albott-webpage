@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
 /* I decided to put the footer here since this is probably where you'll go last 
 if you were interested in anything you saw here.  I didn't like the idea of 
@@ -11,7 +11,7 @@ function Contact() {
 		<div className="contact" id="contact">
 			<div className="banner-row">
 				<div>
-					<h1 className="myname-contact">allan E bott</h1>
+					{/* <h1 className="myname-contact">allan E bott</h1> */}
 					<div className="contact-method-row">
 						<a
 							href="https://www.linkedin.com/in/allan-bott/"
@@ -46,13 +46,13 @@ function Contact() {
 					</div>
 				</div>
 
-				<div className="logo-box">
+				{/* <div className="logo-box">
 					<img
 						className="logo-contact"
 						src="images/AEB-logo-final.png"
 						alt="logo: green winged letter B in front of a pink and blue pyramid in front of a yellow circle"
 					/>
-				</div>
+				</div> */}
 
 				<div className="why-list">
 					<h3>
@@ -89,9 +89,9 @@ function Contact() {
 			Once the site grew I added React-Router and then the Projects page ended 
 			up getting State.  The button remains because I aesthetically liked it 
 			here and also needed a route out. */}
-			<Link to="/" class="material-icons floating-btn">
+			{/* <Link to="/" class="material-icons floating-btn">
 				<span class="material-icons-round floating-btn-icon">home</span>
-			</Link>
+			</Link> */}
 		</div>
 	)
 }

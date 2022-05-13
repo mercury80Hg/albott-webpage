@@ -1,6 +1,5 @@
 import React from "react"
-import SimpleSlider from "./SimpleSlider"
-import { home } from "../constants/ProjectsContent"
+
 
 /* ProjectInfoBox is essentially the right couple boxes (of 3) of the body's row.  
 The first left box with all the project selection buttons are not part of 

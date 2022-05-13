@@ -2,14 +2,16 @@ import React from "react"
 import { Routes, Route } from "react-router-dom"
 
 import Splash from "./Splash"
-import Contact from "./Contact"
-import About from "./About"
-
-import Adventure from "./Adventure"
-import Excitement from "./Excitement"
-import Beauty from "./Beauty"
-import Travel from "./Travel"
-import Projects from "./Projects"
+import Beat from "./Beat"
+import {
+	about,
+	adventure,
+	excitement,
+	beauty,
+	travel,
+	projects,
+	contact,
+} from "../constants/BeatContent"
 
 //setting the viewport for the useable space accounting for mobile nav/url bar interference
 const vh = window.innerHeight * 0.01
@@ -19,13 +21,14 @@ function App() {
 	return (
 		<div className="page">
 			<Routes>
-				<Route path="about" element={<About />} />
-				<Route path="contact" element={<Contact />} />
-				<Route path="projects" element={<Projects />} /> 
-				<Route path="adventure" element={<Adventure />} />
-				<Route path="excitement" element={<Excitement />} />
-				<Route path="beauty" element={<Beauty />} />
-				<Route path="travel" element={<Travel />} />
+				<Route path="about" element={<Beat data={about} />} />
+				<Route path="projects" element={<Beat data={projects} />} />
+				<Route path="adventure" element={<Beat data={adventure} />} />
+				<Route path="excitement" element={<Beat data={excitement} />} />
+				<Route path="beauty" element={<Beat data={beauty} />} />
+				<Route path="travel" element={<Beat data={travel} />} />
+
+				<Route path="contact" element={<Beat data={contact} />} />
 				<Route path="/" element={<Splash />} />
 			</Routes>
 		</div>

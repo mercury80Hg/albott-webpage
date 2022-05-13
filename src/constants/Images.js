@@ -6,7 +6,7 @@ export const aboutImg = [
 	"images/about/Me_Colum_Dog.JPG",
 	"images/about/Me_DelCoronado.JPG",
 	"images/about/Me_MXC_Mezcal.jpg",
- 	//"images/about/Me_PDX_Beer.JPG",
+	//"images/about/Me_PDX_Beer.JPG",
 	//"images/about/Me_Pink.JPG",
 ]
 
