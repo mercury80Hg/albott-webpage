@@ -56,6 +56,7 @@ h4 {
 	margin: 0;
 }
 
+
 /*///////SUB HEADER for full navbar control outside of Splash page///*/
 /* different than the HEADER for react Projects page*/
 .headerSub-box {
@@ -195,14 +196,14 @@ h4 {
 
 /*///// Floating Home Button /////// */
 /*// save this for mobile //*/
-.floating-btn-icon {
+/* .floating-btn-icon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 7vh;
 	z-index: 10;
-}
-
+} */
+/* 
 .floating-btn {
 	display: flex;
 	width: 7vh;
@@ -216,11 +217,11 @@ h4 {
 	right: 40px;
 	bottom: 20px;
 	transition: background 0.25s;
-}
-
+} */
+/* 
 .floating-btn:active {
 	background-color: #fced05;
-}
+} */
 
 /*/////////// Scroll Shadow /////////*/
 /*// save this for mobile //*/
@@ -478,6 +479,10 @@ h4 {
 	/* height: 80vh; */
 }
 
+.content-paragraph > p {
+	 margin-bottom: 2vh;
+}
+
 .content-heading {
 	display: flex;
 	height: 6vh;
@@ -669,7 +674,7 @@ h4 {
 .proj-info-column-title {
 	display: flex;
 	justify-content: center;
-
+	align-items: center;
 	padding: 2vh 0;
 }
 
@@ -696,8 +701,18 @@ h4 {
 .proj-content-column {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	height: 75vh;
 	width: 50vw;
+}
+
+.proj-content-row-titles {
+	display: flex;
+	flex-direction: row;
+
+	width: 25vw;
+	border: solid 1px #335;
+	border-radius: 5px;
 }
 
 .proj-content-column-titles {
@@ -705,12 +720,18 @@ h4 {
 	height: 5vh;
 	margin: unset;
 	justify-content: center;
-	align-items: flex-end;
+	align-items: center;
+	width: 20vw;
+
+}
+
+ .left-border {
+	border-left: solid 1px #335;
 }
 
 .synopsis-text-box {
 	display: flex;
-	max-height: 25vh;
+	max-height: 60vh;
 	overflow: scroll;
 	border: solid 1px #335;
 	border-radius: 5px;
@@ -762,7 +783,7 @@ h4 {
 	display: flex;
 	justify-content: space-between;
 	/* padding: 3vh; */
-	height: 100vh;
+	height: 100%;
 	width: 100vw;
 }
 
@@ -770,32 +791,34 @@ h4 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	align-items: flex-end;
-	height: 40vh;
+	align-items: center;
+	height: 30vh;
 }
 
-.myname-contact {
+/* .myname-contact {
 	display: flex;
 	justify-content: center;
 	font-weight: lighter;
 	letter-spacing: 1vw;
 	width: 30vw;
-}
+} */
 
 .logo-box {
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	width: 30vw;
 }
 
-.logo-contact {
+/* .logo-contact {
 	height: 20vh;
 	position: relative;
 	padding: 6vh;
 	border: 1px solid #335;
 	border-radius: 5px;
 	border-width: 1px;
-}
+} */
+
+
 
 .why-list {
 	display: flex;
@@ -814,21 +837,22 @@ h4 {
 .contact-method-row {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-evenly;
 	padding: 2vh 0 2vh 0;
+	width: 60vw;
 }
 
 .linkedin-img {
-	height: 3.5vh;
+	height: 9vh;
 }
 
 .mobile-img {
-	height: 3.5vh;
-	margin: 0 3vw 0 3vw;
+	height: 8vh;
+	/* margin: 0 3vw 0 3vw; */
 }
 
 .email-img {
-	height: 3.5vh;
+	height: 8vh;
 }
 
 .or {
@@ -874,7 +898,7 @@ h4 {
 .footer-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	align-items: center;
 	width: 100vw;
 	height: 45vh;
@@ -912,6 +936,10 @@ h4 {
 	padding-top: 5vh;
 }
 
+.copyright {
+	margin-top: 4vh;
+}
+
 /*///////\\\\\\\\\\\\ MOBILE //////////////\\\\\\*/
 
 @media only screen and (max-device-width: 920px) and (orientation: portrait) {
@@ -934,7 +962,7 @@ h4 {
 		position: fixed;
 
 		/* align-items: center; */
-		height: 100vh;
+		height: 98vh;
 		width: 100vw;
 		margin-left: 0vw;
 	}
@@ -1005,6 +1033,8 @@ h4 {
 		border-bottom: unset;
 		/* margin: 1vh; */
 	}
+
+	
 	.splash {
 		width: 100vw;
 		height: 100vh;
@@ -1223,7 +1253,7 @@ h4 {
 
 	/* /////Paragraph Content\\\\\*/
 	.content-paragraph {
-		height: 27vh;
+		height: 15vh;
 		/* width: 90vw; */
 		overflow: auto;
 		margin: 1vh 1vh 1vh 1vh;
@@ -1246,10 +1276,10 @@ h4 {
 	.banner-row {
 		display: flex;
 		flex-direction: column;
-		justify-content: flex-end;
+		justify-content: flex-start;
 		align-items: center;
 
-		height: 60vh;
+		height: 27vh;
 	}
 
 	.myname-contact {
@@ -1269,16 +1299,16 @@ h4 {
 	}
 
 	.linkedin-img {
-		height: 2.5vh;
+		height: 5vh;
 	}
 
 	.mobile-img {
-		height: 2.5vh;
+		height: 5vh;
 		margin: 0 10vw 2vh 10vw;
 	}
 
 	.email-img {
-		height: 2.5vh;
+		height: 5vh;
 	}
 
 	.logo-box {
@@ -1318,7 +1348,7 @@ h4 {
 		/* justify-content: flex-start; */
 		/* align-items: center; */
 		/* width: 100vw; */
-		height: 30vh;
+		height: 100%;
 		margin-top: 3vh;
 		font-size: 1vh;
 	}
@@ -1365,29 +1395,10 @@ h4 {
 		padding-top: 2vh;
 	}
 
-	/*///// Floating Home Button /////// */
-	.floating-btn-icon {
-		/* display: flex; */
-		/* justify-content: center; */
-		/* align-items: center; */
-		font-size: 5vh;
-		/* z-index: 10; */
+	.josh {
+		margin-top: 2vh;
 	}
 
-	.floating-btn {
-		/* display: flex; */
-		width: 5vh;
-		height: 5vh;
-		/* background: #00c18ba1; */
-		/* border: 1px solid #335; */
-		border-radius: 20px;
-		/* text-decoration: none; */
-		/* color: #ec0080a0; */
-		/* position: fixed; */
-		right: 40px;
-		bottom: 13vh;
-		/* transition: background 0.25s; */
-	}
 
 	/*//////////Project Page///////////*/
 
@@ -1551,13 +1562,21 @@ h4 {
 		width: 100vw;
 	}
 
+	.proj-content-row-titles {
+		height: 2.5vh;
+		width: 40vw;
+		margin: 3vh 0 .8vh 0;
+		border-radius: 10px;
+	}
+
 	.proj-content-column-titles {
 		/* display: flex; */
-		height: 4vh;
+		height: 2.5vh;
 		/* margin: unset; */
 		/* justify-content: center; */
 		/* align-items: flex-end; */
 		font-size: 1.5vh;
+		
 	}
 
 	.synopsis-text-box {
