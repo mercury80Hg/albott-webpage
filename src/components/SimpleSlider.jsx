@@ -17,6 +17,7 @@ function SimpleSlider({ imgArray }) {
 	but at least now has a placeholder for errors. pulled from 
 	https://jack72828383883.medium.com/how-to-preload-images-into-cache-in-react-js-ff1642708240 */
 	const cacheImages = async (srcArray) => {
+		setIsLoading(true)
 		const promises = srcArray.map((src, i) => {
 			return new Promise(function (resolve, reject) {
 				const img = new Image()
@@ -62,12 +63,8 @@ function SimpleSlider({ imgArray }) {
 	return (
 		<div>
 			{isLoading ? (
-				<div>
-					<img
-						className="carousel-image"
-						src="/images/AEB-infoImages/AEB-logo-plastic-Loading.png"
-						alt="personal logo"
-					/>
+				<div className="loading ">
+Loading
 				</div>
 			) : (
 				<Slider {...settings} className="carousel">
