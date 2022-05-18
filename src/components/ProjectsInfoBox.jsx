@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 
 
-/* ProjectInfoBox is essentially the right couple boxes (of 3) of the body's row.  
-The first left box with all the project selection buttons are not part of 
-ProjectInfoBox, nor is the HeaderSub which contains all the navbar items.  
+/* ProjectInfoBox is the right couple flex boxes(desktop styling) (of 3) of the body's row.  
+The first left box with all the project selection nav buttons are not part of 
+ProjectInfoBox, nor is the HeaderSub which contains all the top navbar items.  
 This was separated from the rest in order to display different content depending on 
 the project selected while still being able to navigate to the others by keeping 
 the project selections visible.  It was supposed to go along with reusing code 
@@ -11,6 +11,32 @@ and implementing state and all the good things with it. It also is not dispalyed
 at all when initially visited. */
 
 function ProjectsInfoBox({ projObj }) {
+	const synopsis = projObj.synopsis
+	const story = projObj.story
+
+	let synopsisCss = {backgroundColor: "#ec008cb0", color: "#fff"}
+	let storyCss = {bacgroundColor: "inherit"}
+
+	const [projText, setProjText] = useState(synopsis)
+
+	function handleClick(text){
+		if(projText === text) {
+			return 
+		} else {
+			setProjText(text)
+		}
+	}
+
+// switch color styling for synopsis/story
+	if(projText === synopsis) {
+		synopsisCss = {backgroundColor: "#ec008cb0", color: "#fff"}
+		storyCss = {bacgroundColor: "inherit"}
+	} else {
+		storyCss = {backgroundColor: "#ec008cb0", color: "#fff"}
+		synopsisCss = {bacgroundColor: "inherit"}
+	}
+		
+
 	return (
 		<>
 			<div className="proj-info-column">
@@ -76,10 +102,15 @@ function ProjectsInfoBox({ projObj }) {
 				</div>
 			</div>
 			<div className="proj-content-column">
-				<h4 className="proj-content-column-titles">Synopsis</h4>
-				<div className="synopsis-text-box shadowbox">{projObj.synopsis}</div>
-				<h4 className="proj-content-column-titles">Story</h4>
-				<div className="story-text-box shadowbox">{projObj.story}</div>
+				<div className="proj-content-row-titles" >
+				
+						<h4 className="proj-content-column-titles" style={synopsisCss} onClick={() => handleClick(synopsis)} >Synopsis</h4>
+						<h4 className="proj-content-column-titles  left-border" style={storyCss} onClick={() => handleClick(story)} >Story</h4>
+				</div>
+				
+				<div className="synopsis-text-box shadowbox">{projText}</div>
+			
+				
 			</div>
 		</>
 	)
