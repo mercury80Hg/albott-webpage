@@ -962,7 +962,7 @@ h4 {
 		position: fixed;
 
 		/* align-items: center; */
-		height: 98vh;
+		height: 94vh;
 		width: 100vw;
 		margin-left: 0vw;
 	}
@@ -970,7 +970,7 @@ h4 {
 	.myname {
 		/* display: flex; */
 		margin-left: 0vw;
-		margin-top: 10vh;
+		margin-top: 7vh;
 		/* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 		/* color: #335; */
 		/* font-size: 3.8vh; */
@@ -1037,7 +1037,7 @@ h4 {
 	
 	.splash {
 		width: 100vw;
-		height: 100vh;
+		height: 90vh;
 		margin-left: unset;
 		overflow: hidden;
 	}
