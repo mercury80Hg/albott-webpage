@@ -112,16 +112,16 @@ export const nytbs = {
 	blog: "https://polar-anchorage-37592.herokuapp.com/",
 	synopsis: (
 		<p>
-			This is pretty simple. All I wanted was to create a little API pull for
-			exercise from a cold start, not following a lesson or tutorial. I searched
-			through an API list and found the NYT API returned data I could work with
-			and set forth to build a simple site. Of course as I went along I wanted
-			to add more and more to make it look spectacular in my portfolio. In the
-			end what you see is the final product reserved significantly to the
-			original goal. I ended up learning to use SASS/SCSS and other tech I did
-			not start out intending to learn. It's all good, the product is what it
-			is… a semi fancy yet simple New York Times Best Sellers list from their
-			API.
+			This is a pretty simple excercise of an API pull from a cold start, not 
+			following a lesson or tutorial. So essentially this is a self-created project 
+			to exercise data fetching skills.  I searched through an API list and found 
+			the NYT API returned data I could work with and set forth to build a simple
+			site. Of course as I went along I wanted to add more and more to make it 
+			look spectacular in my portfolio. In the end what you see is the final 
+			product reserved significantly to the original goal. I ended up learning 
+			to use SASS/SCSS and other tech I did not start out intending to learn. 
+			The product is what it is… a semi fancy yet simple 
+			New York Times Best Sellers list from their API.
 		</p>
 	),
 	story: (
@@ -157,7 +157,7 @@ export const scratchPad = {
 			and write comprehensive documentation using markdown. It is deployed as a
 			package to NPM named scratchpadjs. Should you choose to install it,
 			activate the local server in CLI with "npx scratchapdjs serve
-			choosesavename.js" where it will be accessed at localhost:4005.
+			chooseSaveName.js" where it will be accessed at localhost:4005.
 		</p>
 	),
 	story: (
@@ -170,8 +170,8 @@ export const scratchPad = {
 			code in browser and using lerna to access the npm library. Altogether I
 			found the project quite clever and useful. Now I feel I have worked
 			through a very comprehensive understanding of how to search deeper to
-			bring a visioned project to reality. I learned more making this than most
-			of everything I've done so far.
+			bring a visioned project to reality. I learned quite a lot from this project 
+			and look forward to implementing it into some other projects.
 		</p>
 	),
 }
@@ -194,8 +194,8 @@ export const blog = {
 		<p>
 			Very rudimentary blog I did with a tutorial from Dr. Angela Yu using ejs
 			and mongoose db deployed on heroku. It's not pretty but I wanted to put
-			some notes out there on my experiences with the New York Times API and to
-			give a nice snippet of my poblem solving paths.
+			some notes out there on my experiences with the New York Times API project
+			 and to give a nice snippet of my poblem solving paths.
 		</p>
 	),
 	story: (

@@ -56,7 +56,6 @@ h4 {
 	margin: 0;
 }
 
-
 /*///////SUB HEADER for full navbar control outside of Splash page///*/
 /* different than the HEADER for react Projects page*/
 .headerSub-box {
@@ -480,7 +479,7 @@ h4 {
 }
 
 .content-paragraph > p {
-	 margin-bottom: 2vh;
+	margin-bottom: 2vh;
 }
 
 .content-heading {
@@ -722,10 +721,9 @@ h4 {
 	justify-content: center;
 	align-items: center;
 	width: 20vw;
-
 }
 
- .left-border {
+.left-border {
 	border-left: solid 1px #335;
 }
 
@@ -817,8 +815,6 @@ h4 {
 	border-radius: 5px;
 	border-width: 1px;
 } */
-
-
 
 .why-list {
 	display: flex;
@@ -962,7 +958,7 @@ h4 {
 		position: fixed;
 
 		/* align-items: center; */
-		height: 98vh;
+		height: 94vh;
 		width: 100vw;
 		margin-left: 0vw;
 	}
@@ -970,7 +966,7 @@ h4 {
 	.myname {
 		/* display: flex; */
 		margin-left: 0vw;
-		margin-top: 10vh;
+		margin-top: 7vh;
 		/* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 		/* color: #335; */
 		/* font-size: 3.8vh; */
@@ -1034,10 +1030,9 @@ h4 {
 		/* margin: 1vh; */
 	}
 
-	
 	.splash {
 		width: 100vw;
-		height: 100vh;
+		height: 90vh;
 		margin-left: unset;
 		overflow: hidden;
 	}
@@ -1400,7 +1395,6 @@ h4 {
 		margin-top: 2vh;
 	}
 
-
 	/*//////////Project Page///////////*/
 
 	.content-container {
@@ -1568,7 +1562,7 @@ h4 {
 	.proj-content-row-titles {
 		height: 2.5vh;
 		width: 40vw;
-		margin: 3vh 0 .8vh 0;
+		margin: 3vh 0 0.8vh 0;
 		border-radius: 10px;
 	}
 
@@ -1579,7 +1573,6 @@ h4 {
 		/* justify-content: center; */
 		/* align-items: flex-end; */
 		font-size: 1.5vh;
-		
 	}
 
 	.synopsis-text-box {

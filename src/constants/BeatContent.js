@@ -59,7 +59,7 @@ export const beauty = {
 	text: (
 		<p className="content-paragraph shadowbox">
 			<p>
-				Photographs are the greatest betrayal of beauty. A great photographer is
+				Photographs can be the greatest betrayal of beauty. A great photographer is
 				only trying to find the best possible way to capture a scene or moment,
 				and even the best camera person will always admit that being there is
 				always better. Yet a photograph is still beautiful even though it's
