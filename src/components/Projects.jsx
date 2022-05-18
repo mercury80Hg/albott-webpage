@@ -63,7 +63,7 @@ function Projects() {
 						</div>
 					</div>
 				</div>
-				{/* Conditionally renders the right portion of the Projects page 
+				{/* Conditionally renders the non-nav portion of the Projects page 
 				"ProjectInfoBox" depending on whether it is at home or a selection has
 				 been made.  Further conditional rendering is based on whether there is an 
 				 image present in the projObj being supplied from an object in the 

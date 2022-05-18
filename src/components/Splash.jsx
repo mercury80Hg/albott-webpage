@@ -10,7 +10,7 @@ are a running theme in the site.  */
 
 function Splash() {
 	return (
-		<div>
+		<div className="splash-container">
 			<Header />
 			<div className="splash">
 				<div className="splash-boxes">
