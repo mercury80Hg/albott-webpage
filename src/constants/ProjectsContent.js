@@ -1,4 +1,3 @@
-
 /* Each of these objects are being used as pieces to the rendering of the 
 Projects component page, also currently including content */
 
@@ -50,7 +49,7 @@ export const ab = {
 	),
 	story: (
 		<div>
-			<h4>Tech</h4> 
+			<h4>Tech</h4>
 			<p>
 				This website was developed in react using the usual suspects (HTML, CSS,
 				JS). The larger bulk of this site is rather simple, using React-Router
@@ -72,7 +71,7 @@ export const ab = {
 				single rainy shot of Pike Place Market in Seattle taken by a friend Josh
 				Ter Louw.
 			</p>
-			<h4>Colors</h4> 
+			<h4>Colors</h4>
 			<p>
 				The color scheme you'll see throughout is also in the logo and was
 				derived from the many bright hues of the Caribbean and tropics that

@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-
+import React, { useEffect, useState } from "react"
 
 /* ProjectInfoBox is the right couple flex boxes(desktop styling) (of 3) of the body's row.  
 The first left box with all the project selection nav buttons are not part of 
@@ -11,31 +10,30 @@ and implementing state and all the good things with it. It also is not dispalyed
 at all when initially visited. */
 
 function ProjectsInfoBox({ projObj }) {
-	const synopsis = projObj.synopsis
-	const story = projObj.story
+	const [projText, setProjText] = useState(projObj.synopsis)
 
-	let synopsisCss = {backgroundColor: "#ec008cb0", color: "#fff"}
-	let storyCss = {bacgroundColor: "inherit"}
+	useEffect(() => {
+		return setProjText(projObj.synopsis)
+	}, [projObj.synopsis])
 
-	const [projText, setProjText] = useState(synopsis)
-
-	function handleClick(text){
-		if(projText === text) {
-			return 
+	function handleSwitchClick(text) {
+		if (projText === text) {
+			return
 		} else {
 			setProjText(text)
 		}
 	}
+	let synopsisCss = { backgroundColor: "#ec008cb0", color: "#fff" }
+	let storyCss = { bacgroundColor: "inherit" }
 
-// switch color styling for synopsis/story
-	if(projText === synopsis) {
-		synopsisCss = {backgroundColor: "#ec008cb0", color: "#fff"}
-		storyCss = {bacgroundColor: "inherit"}
+	// switch color styling for synopsis/story
+	if (projText === projObj.synopsis) {
+		synopsisCss = { backgroundColor: "#ec008cb0", color: "#fff" }
+		storyCss = { bacgroundColor: "inherit" }
 	} else {
-		storyCss = {backgroundColor: "#ec008cb0", color: "#fff"}
-		synopsisCss = {bacgroundColor: "inherit"}
+		storyCss = { backgroundColor: "#ec008cb0", color: "#fff" }
+		synopsisCss = { bacgroundColor: "inherit" }
 	}
-		
 
 	return (
 		<>
@@ -102,15 +100,24 @@ function ProjectsInfoBox({ projObj }) {
 				</div>
 			</div>
 			<div className="proj-content-column">
-				<div className="proj-content-row-titles" >
-				
-						<h4 className="proj-content-column-titles" style={synopsisCss} onClick={() => handleClick(synopsis)} >Synopsis</h4>
-						<h4 className="proj-content-column-titles  left-border" style={storyCss} onClick={() => handleClick(story)} >Story</h4>
+				<div className="proj-content-row-titles">
+					<h4
+						className="proj-content-column-titles"
+						style={synopsisCss}
+						onClick={() => handleSwitchClick(projObj.synopsis)}
+					>
+						Synopsis
+					</h4>
+					<h4
+						className="proj-content-column-titles  left-border"
+						style={storyCss}
+						onClick={() => handleSwitchClick(projObj.story)}
+					>
+						Story
+					</h4>
 				</div>
-				
+
 				<div className="synopsis-text-box shadowbox">{projText}</div>
-			
-				
 			</div>
 		</>
 	)
