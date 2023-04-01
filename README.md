@@ -4,14 +4,14 @@
 
 This is a portfolio project that also acts as a venue for other projects.  I wanted to create a small personal page that gives you a vibe of who I am, but displays my projects with more description and explanation.  Just something nice to help with the hiring process.  This website isn't really going to tell you a ton about me as person, but will hopefully give you a look at some of my tech and personal skills.
 
-### Tech Stack
+## Tech Stack
 - React
 - React-Router
 - Javascript
 - CSS
 - HTML
 
-### Deployment
+## Deployment
 This project was version managed using git github and deployed on Github Pages.
 
 
