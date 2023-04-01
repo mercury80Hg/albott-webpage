@@ -4,6 +4,13 @@
 
 This is a portfolio project that also acts as a venue for other projects.  I wanted to create a small personal page that gives you a vibe of who I am, but displays my projects with more description and explanation.  Just something nice to help with the hiring process.  This website isn't really going to tell you a ton about me as person, but will hopefully give you a look at some of my tech and personal skills.
 
+### Tech Stack
+- React
+- React-Router
+- Javascript
+- CSS
+- HTML
+
 Below you'll find my documentation notes on styles I went with and some instructions on adding projects.
 
 ## Style
