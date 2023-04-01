@@ -11,7 +11,7 @@ This is a portfolio project that also acts as a venue for other projects.  I wan
 - CSS
 - HTML
 
-Below you'll find my documentation notes on styles I went with and some instructions on adding projects.
+Below you'll find my documentation notes on styles I went with and some instructions on adding projects to the Projects component.
 
 ## Style
 
