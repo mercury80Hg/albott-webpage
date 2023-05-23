@@ -17,6 +17,8 @@ import {
 const vh = window.innerHeight * 0.01
 document.documentElement.style.setProperty("--vh", `${vh}px`)
 
+//  TODO: could refactor adventure, excitement, beauty, travel into one like projects since their layout is the same. 
+// however currently leaving it so both serve as a display of both.
 function App() {
 	return (
 		<div className="page">
