@@ -24,7 +24,7 @@ function ProjectsInfoBox({ projObj }) {
 		}
 	}
 	let synopsisCss = { backgroundColor: "#ec008cb0", color: "#fff" }
-	let storyCss = { bacgroundColor: "inherit" }
+	let storyCss = { bacgroundColor: "inherit" } // CHECK THIS:  backgroundColor is spelled incorrectly!
 
 	// switch color styling for synopsis/story
 	if (projText === projObj.synopsis) {

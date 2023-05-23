@@ -86,7 +86,7 @@ All the colors in here are motifed throughout the site.  The main four colors in
 
 ## Adding Projects
 
-Projects can be added by copying the object format in the ProjectsContent.jsx file.  You can add icons for the techologies used by adding techIcons to the array from the list or follow the instructions for adding a techIcon to the list.  As techIcons object is growing it may move to its own file hopefully aptly named TechIcons.
+Projects can be added by replicating the object format in the ProjectsContent.jsx file.  You can add icons for the techologies used by adding techIcons to the array from the list or follow the instructions for adding a techIcon to the list.  As techIcons object is growing it may move to its own file hopefully aptly named TechIcons.
   - If there is no image the Projects page will render a Coming Soon component 
   - If there is no "link" the "visit:" text will not be rendered nor the "project" button 
   - If the corresponding "git" or "blog" is empty, the buttons will not display
