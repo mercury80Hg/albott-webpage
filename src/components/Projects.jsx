@@ -11,6 +11,7 @@ import {
   photography,
   nytbs,
   logo,
+  ballSave,
 } from '../constants/ProjectsContent.js';
 import ProjectsInfoBox from './ProjectsInfoBox';
 import ComingSoon from './ComingSoon';
@@ -49,9 +50,17 @@ function Projects() {
             >
               scratch pad
             </div>
-            <div className='proj-hyperlinks ' onClick={() => handleClick(blog)}>
-              blog
+            <div
+              className='proj-hyperlinks'
+              onClick={() => handleClick(ballSave)}
+            >
+              ball save
             </div>
+            {/* blog's deployment was removed by Heroku when it killed it's free tier */}
+            {/* <div className='proj-hyperlinks' 
+              onClick={() => handleClick(blog)}>
+              blog
+            </div> */}
             <div
               className='proj-hyperlinks blog-hyperlinks'
               onClick={() => handleClick(photography)}

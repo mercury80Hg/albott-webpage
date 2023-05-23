@@ -217,42 +217,42 @@ export const scratchPad = {
 };
 
 ///////// Heroku deleted the account and blog when it killed it's free tier.  This project needs a new deployment
-// export const blog = {
-//   title: 'A Blog',
-//   image: 'images/projects/ScreenShot_Blog.png',
-//   link: 'https://polar-anchorage-37592.herokuapp.com/',
-//   git: '',
-//   icons: [
-//     techIcons.html,
-//     techIcons.css,
-//     techIcons.nodeJs,
-//     techIcons.ejs,
-//     techIcons.mongo,
-//     techIcons.exp,
-//   ],
-//   blog: '',
-//   synopsis: (
-//     <p>
-//       Very rudimentary blog I did with a tutorial from Dr. Angela Yu using ejs
-//       and mongoose db deployed on heroku. It's not pretty but I wanted to put
-//       some notes out there on my experiences with the New York Times API project
-//       and to give a nice snippet of my poblem solving paths.
-//     </p>
-//   ),
-//   story: (
-//     <p>
-//       I like the idea of a blog, but I feel you need to keep up on entries to
-//       keep people interested in visiting it. However, not every day or week is
-//       as interesting as the next so you'd better be a great or intersting writer
-//       that can make the mundane amusing or your blog quality will just feel
-//       forced, and we have plenty of that on the internet already. If I decdide
-//       later to actually do some sort of blogging I will completely start from
-//       scratch in designing a site. This blog is not representative of quality,
-//       it is acting as a quick vehicle for the content. The blog does however at
-//       the very least display the ability to follow blueprints and direction.
-//     </p>
-//   ),
-// };
+export const blog = {
+  title: 'A Blog',
+  image: 'images/projects/ScreenShot_Blog.png',
+  link: 'https://polar-anchorage-37592.herokuapp.com/',
+  git: '',
+  icons: [
+    techIcons.html,
+    techIcons.css,
+    techIcons.nodeJs,
+    techIcons.ejs,
+    techIcons.mongo,
+    techIcons.exp,
+  ],
+  blog: '',
+  synopsis: (
+    <p>
+      Very rudimentary blog I did with a tutorial from Dr. Angela Yu using ejs
+      and mongoose db deployed on heroku. It's not pretty but I wanted to put
+      some notes out there on my experiences with the New York Times API project
+      and to give a nice snippet of my poblem solving paths.
+    </p>
+  ),
+  story: (
+    <p>
+      I like the idea of a blog, but I feel you need to keep up on entries to
+      keep people interested in visiting it. However, not every day or week is
+      as interesting as the next so you'd better be a great or intersting writer
+      that can make the mundane amusing or your blog quality will just feel
+      forced, and we have plenty of that on the internet already. If I decdide
+      later to actually do some sort of blogging I will completely start from
+      scratch in designing a site. This blog is not representative of quality,
+      it is acting as a quick vehicle for the content. The blog does however at
+      the very least display the ability to follow blueprints and direction.
+    </p>
+  ),
+};
 
 export const photography = {
   title: 'Photography',
