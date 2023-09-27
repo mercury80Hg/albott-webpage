@@ -12,7 +12,7 @@ function Contact() {
       <div className='banner-row' data-testid='contact-container'>
         <div>
           {/* <h1 className="myname-contact">allan E bott</h1> */}
-          <div className='contact-method-row'>
+          <div className='contact-method-row' data-testid='contact-methods'>
             <a
               href='https://www.linkedin.com/in/allan-bott/'
               target='_blank'
