@@ -43,6 +43,7 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "gh-pages": "^3.2.3",
+    "polyfill": "^0.1.0",
     "webpack": "^4.44.2"
   }
 }
