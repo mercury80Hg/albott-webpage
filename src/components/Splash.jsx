@@ -24,7 +24,7 @@ function Splash() {
 					<div className="splash-logo-group">
 						<div className="img-wrapper">
 							<img
-								className="logo"
+								className="logo"  
 								src="images/AEB-logo-final.png"
 								alt="logo: green winged letter B in front of a pink and blue pyramid in front of a yellow circle"
 							/>
