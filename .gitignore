@@ -24,3 +24,6 @@ yarn-error.log*
 
 # code review
 /code_review
+
+#large format images
+original/

@@ -13,7 +13,7 @@ export const about = {
   title: 'about',
   images: aboutImg,
   text: (
-    <p className='content-paragraph shadowbox'>
+    <div className='content-paragraph shadowbox'>
       <p>
         Wind in the rigging, a cobra in the rafters, an elephant roars to the
         rising sun. Sleep is taken between the lines when life is lived
@@ -48,7 +48,7 @@ export const about = {
         new faster programming and New is not every year but every day. The
         endless landscape of software, where the jack-of-all gets farther ahead.
       </p>
-    </p>
+    </div>
   ),
 };
 
@@ -57,7 +57,7 @@ export const beauty = {
   title: 'beauty',
   images: beautyImg,
   text: (
-    <p className='content-paragraph shadowbox'>
+    <div className='content-paragraph shadowbox'>
       <p>
         Photographs can be the greatest betrayal of beauty. A great photographer
         is only trying to find the best possible way to capture a scene or
@@ -67,7 +67,7 @@ export const beauty = {
         <span title='but they are to me'>may not be the best, </span>
         but they are markers to memories of the adventure.
       </p>
-    </p>
+    </div>
   ),
 };
 
@@ -76,7 +76,7 @@ export const excitement = {
   title: 'excitement',
   images: excitementImg,
   text: (
-    <p className='content-paragraph shadowbox'>
+    <div className='content-paragraph shadowbox'>
       <p>
         'Oomph.' What a great word. It's a sound, it's a noun, it's a perfect
         way to be exciting. If you don't have oomph you can always just pretend
@@ -84,7 +84,7 @@ export const excitement = {
         so why not just have some oomph. Without some danger then how fun can it
         be?
       </p>
-    </p>
+    </div>
   ),
 };
 
@@ -93,7 +93,7 @@ export const adventure = {
   title: 'adventure',
   images: adventureImg,
   text: (
-    <p className='content-paragraph shadowbox'>
+    <div className='content-paragraph shadowbox'>
       <p>
         <span title="James Stewart, George Bailey - It's a wonderful life.">
           Anchor chains, plane motors and train whistles
@@ -106,7 +106,7 @@ export const adventure = {
         learned but boredom will always be left behind as long as you're seeking
         the abnormal. Adventure.
       </p>
-    </p>
+    </div>
   ),
 };
 
@@ -115,7 +115,7 @@ export const travel = {
   title: 'travel',
   images: travelImg,
   text: (
-    <p className='content-paragraph shadowbox'>
+    <div className='content-paragraph shadowbox'>
       <p>
         Blood, sweat and tears don't have to mean toiling, but they are probably
         the makings of a good story, a story you could never have told without
@@ -124,7 +124,7 @@ export const travel = {
         tragedy to not have experienced as much of it as possible. An adventure
         never happens standing still.
       </p>
-    </p>
+    </div>
   ),
 };
 

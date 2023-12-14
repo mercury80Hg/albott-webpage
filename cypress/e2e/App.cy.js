@@ -28,12 +28,12 @@ describe('App.jsx, allanbott.com', () => {
   });
 
   Cypress.Commands.add('beatBody', () => {
-    cy.get('.carousel', {"timeout":15000}).should('exist');
+    cy.get('.carousel', { timeout: 15000 }).should('exist');
     cy.get('img')
-    .should('exist')
-    .should('be.visible')
-    .and('have.prop', 'naturalWidth')
-    .should('be.greaterThan', 0);
+      .should('exist')
+      .should('be.visible')
+      .and('have.prop', 'naturalWidth')
+      .should('be.greaterThan', 0);
     cy.get('img').should('have.length.above', 2);
     cy.get('.content-paragraph > p')
       .invoke('text')
@@ -65,7 +65,6 @@ describe('App.jsx, allanbott.com', () => {
 
   it('Should visit /contact and load all content', () => {
     cy.headerSubBar('contact', 17);
-
   });
 
   it('Should visit /projects and load all content', () => {

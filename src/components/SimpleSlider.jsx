@@ -69,7 +69,7 @@ Loading
 			) : (
 				<Slider {...settings} className="carousel">
 					{imgArray.map((x) => (
-						<div>
+						<div key={x}>
 							<img className="carousel-image" src={x} alt={x}></img>
 						</div>
 					))}
