@@ -3,11 +3,11 @@ image paths to supply the SimpleSlider component.  If you want to add or remove
 images this is where you can do that. */
 
 export const aboutImg = [
-  'images/about/me_colum_dog.JPG',
-  'images/about/me_delcoronado.JPG',
-  'images/about/me_mxc_mezcal.JPG',
-  //"images/about/me_pdx_beer.JPG",
-  //"images/about/me_pink.JPG",
+  'images/about/me_colum_dog.jpg',
+  'images/about/me_delcoronado.jpg',
+  'images/about/me_mxc_mezcal.jpg',
+  //"images/about/me_pdx_beer.jpg",
+  //"images/about/me_pink.jpg",
 ];
 
 export const adventureImg = [
