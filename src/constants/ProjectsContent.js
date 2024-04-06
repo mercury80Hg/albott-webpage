@@ -99,7 +99,7 @@ export const ohmgd = {
 export const ballSave = {
   title: 'Ball Save',
   image: 'images/Ball-save Screenshot.png',
-  link: 'https://ballsave.fun',
+  link: 'https://ballsave.allanbott.com',
   git: 'https://github.com/mercury80Hg/ball-save-react',
   icons: [
     techIcons.html,
