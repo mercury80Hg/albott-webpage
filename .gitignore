@@ -25,3 +25,5 @@ yarn-error.log*
 # code review
 /code_review
 
+# original image quality
+/original
