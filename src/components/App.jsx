@@ -11,6 +11,7 @@ import {
 	travel,
 	projects,
 	contact,
+	privacy,
 } from "../constants/BeatContent"
 
 //setting the viewport for the useable space accounting for mobile nav/url bar interference
@@ -29,6 +30,7 @@ function App() {
 				<Route path="travel" element={<Beat data={travel} />} />
 
 				<Route path="contact" element={<Beat data={contact} />} />
+				<Route path="privacy" element={<Beat data={privacy} />} />
 				<Route path="/" element={<Splash />} />
 			</Routes>
 		</div>

@@ -140,6 +140,31 @@ export const contact = {
   text: <Contact />,
 };
 
+// PRIVACY
+export const privacy = {
+  title: 'privacy',
+  text: (
+    <div className='content-paragraph shadowbox'>
+      <p>
+        My interactive résumé at resume.allanbott.com uses Cloudflare Turnstile
+        to confirm that visitors are human and to help protect the page from
+        automated scraping and misuse. Turnstile runs a lightweight, invisible
+        check in your browser and may collect limited technical information for
+        that purpose. This processing is governed by the{' '}
+        <a
+          href='https://www.cloudflare.com/turnstile-privacy-policy/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Cloudflare Turnstile Privacy Addendum
+        </a>
+        . Aside from that, this site does not use analytics or tracking, and I
+        do not sell or share your personal information.
+      </p>
+    </div>
+  ),
+};
+
 const pageContent = {
   travel,
   adventure,
@@ -148,6 +173,7 @@ const pageContent = {
   beauty,
   projects,
   contact,
+  privacy,
 };
 
 export default pageContent;
