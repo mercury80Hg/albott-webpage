@@ -2569,4 +2569,13 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 		margin: 1vh 0.75rem 3vh;
 		padding: 1.5rem 1.25rem 2rem;
 	}
+
+	/* the footer is a full-screen, bottom-anchored block on the single-screen
+	   BEAT pages; on the scrollable /hire page that leaves a big gap above it,
+	   so let it shrink to its content there */
+	.hire .footer-container {
+		height: auto;
+		justify-content: flex-start;
+		padding-bottom: 3vh;
+	}
 }
