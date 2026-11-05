@@ -25,13 +25,51 @@ function HeaderSub({ name }) {
 
 	return (
 		<div className="headerSub-box">
-			<Link to="/">
-				<img
-					className="headerSub-logo"
-					src="images/AEB-logo-final.png"
-					alt="logo: green winged letter B in front of a pink and blue pyramid in front of a yellow circle"
-				/>
-			</Link>
+			{/* logo + desktop hamburger, grouped together at the left */}
+			<div className="headerSub-brand">
+				<Link to="/">
+					<img
+						className="headerSub-logo"
+						src="images/AEB-logo-final.png"
+						alt="logo: green winged letter B in front of a pink and blue pyramid in front of a yellow circle"
+					/>
+				</Link>
+
+				{/* desktop-only hamburger, just right of the logo; it drops a
+				    menu down rather than covering the title. Hidden on mobile,
+				    where the in-row hamburger is used instead. */}
+				<div className={`nav-desktop${menuOpen ? " is-open" : ""}`}>
+					<button
+						type="button"
+						className="nav-desktop-btn"
+						aria-label={menuOpen ? "Close menu" : "Open menu"}
+						aria-expanded={menuOpen}
+						aria-controls="headerSub-desktop-menu"
+						onClick={() => setMenuOpen((o) => !o)}
+					>
+						<span className="nav-desktop-bar" />
+						<span className="nav-desktop-bar" />
+						<span className="nav-desktop-bar" />
+					</button>
+					<nav
+						id="headerSub-desktop-menu"
+						className="nav-desktop-menu"
+						aria-hidden={!menuOpen}
+					>
+						{NAV_LINKS.map((l) => (
+							<Link
+								key={l.to}
+								className="nav-desktop-link"
+								to={l.to}
+								tabIndex={menuOpen ? 0 : -1}
+								onClick={() => setMenuOpen(false)}
+							>
+								{l.label}
+							</Link>
+						))}
+					</nav>
+				</div>
+			</div>
 
 			<h1 className="myname myname-headerSub">
 				<Link to="/adventure">a</Link>llan{" "}
@@ -122,20 +160,6 @@ function HeaderSub({ name }) {
 				</div>
 			</div>
 
-			{/* desktop stacked nav (hidden on mobile, replaced by the hamburger) */}
-			<div className="hyperlinks-headerSub">
-				{NAV_LINKS.map((l) => (
-					<Link
-						key={l.to}
-						className={`hyperlinks-navButton-headingSub${
-							l.cls ? " " + l.cls : ""
-						}`}
-						to={l.to}
-					>
-						{l.label}
-					</Link>
-				))}
-			</div>
 		</div>
 	)
 }

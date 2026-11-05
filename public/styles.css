@@ -132,15 +132,104 @@ h4 {
 	color: #fff;
 }
 
-/* The mobile hamburger menu is hidden on desktop; the stacked nav above is
-   used there instead. Its mobile layout/animation lives in the mobile media
-   query near the bottom of this file. The nav row is display:contents on
-   desktop so its children (title + dots) stay flat in the header flex row. */
+/* The nav row is display:contents on desktop so its children (title + dots)
+   stay flat in the header flex row; the in-row hamburger inside it is for
+   mobile only and hidden on desktop. */
 .headerSub-nav-row {
 	display: contents;
 }
 .nav-hamburger-wrap {
 	display: none;
+}
+
+/* ===== desktop hamburger menu ======================================= *
+ * Grouped with the logo at the left; it drops a bordered menu down below
+ * (it does not cover the page title). Hidden on mobile, where the in-row
+ * hamburger is used instead. */
+.headerSub-brand {
+	display: flex;
+	align-items: center;
+}
+
+.nav-desktop {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	margin-left: 1.5vh;
+}
+
+.nav-desktop-btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	width: 42px;
+	height: 42px;
+	padding: 0;
+	border: solid 1px #335;
+	border-radius: 5px;
+	background-color: #bec4d9;
+	cursor: pointer;
+}
+
+.nav-desktop-bar {
+	display: block;
+	width: 20px;
+	height: 2.5px;
+	border-radius: 2px;
+	background-color: #335;
+	transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* three bars -> X */
+.nav-desktop.is-open .nav-desktop-bar:nth-child(1) {
+	transform: translateY(6.5px) rotate(45deg);
+}
+.nav-desktop.is-open .nav-desktop-bar:nth-child(2) {
+	opacity: 0;
+}
+.nav-desktop.is-open .nav-desktop-bar:nth-child(3) {
+	transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.nav-desktop-menu {
+	position: absolute;
+	top: calc(100% + 5px);
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	min-width: 130px;
+	border: solid 1px #335;
+	border-radius: 5px;
+	background-color: #bec4d9;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: max-height 0.32s ease, opacity 0.2s ease;
+	z-index: 100;
+}
+
+.nav-desktop.is-open .nav-desktop-menu {
+	max-height: 60vh;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.nav-desktop-link {
+	padding: 1vh 1.4vh;
+	font-size: 1.7vh;
+	color: #335;
+	white-space: nowrap;
+}
+.nav-desktop-link + .nav-desktop-link {
+	border-top: solid 1px #335;
+}
+.nav-desktop-link:hover {
+	transition: background-color 0.6s;
+	background-color: #ec008c;
+	color: #fff;
 }
 
 /* //////hyperlinks/////// */
@@ -1253,8 +1342,12 @@ h4 {
 		/* border: solid 1px #335; */
 	}
 
-	/* on mobile the stacked desktop nav is replaced by the hamburger below */
-	.hyperlinks-headerSub {
+	/* the desktop hamburger is replaced by the in-row one below; ungroup the
+	   brand so the logo lays out as a plain header child like before */
+	.headerSub-brand {
+		display: contents;
+	}
+	.nav-desktop {
 		display: none;
 	}
 
