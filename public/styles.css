@@ -1727,6 +1727,12 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 	animation: recruiterLabelIntro 4.2s ease-out 1;
 }
 
+/* the briefcase icon is a mobile-only resting state; hidden everywhere else
+   (needs .recruiter-btn to out-specify the Material Icons font stylesheet) */
+.recruiter-btn .recruiter-icon {
+	display: none;
+}
+
 .recruiter-btn:hover,
 .recruiter-btn:focus-visible {
 	max-width: 40vw; /* high cap; actual width = the label + its padding */
@@ -1758,17 +1764,20 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
 	}
 	12% {
-		box-shadow: 0 0 22px 6px rgba(240, 229, 75, 0.95);
+		/* flash: a bright tight core + a wide soft halo so it really pops */
+		box-shadow: 0 0 20px 5px rgba(255, 249, 150, 1),
+			0 0 52px 18px rgba(240, 229, 75, 0.9);
 	}
 	26% {
-		box-shadow: 0 0 7px 1px rgba(240, 229, 75, 0.35);
+		box-shadow: 0 0 10px 2px rgba(240, 229, 75, 0.4);
 	}
 	40% {
-		box-shadow: 0 0 22px 6px rgba(240, 229, 75, 0.95);
+		box-shadow: 0 0 20px 5px rgba(255, 249, 150, 1),
+			0 0 52px 18px rgba(240, 229, 75, 0.9);
 	}
 	58% {
 		max-width: 40vw;
-		box-shadow: 0 0 6px 1px rgba(240, 229, 75, 0.3);
+		box-shadow: 0 0 8px 1px rgba(240, 229, 75, 0.3);
 	}
 	100% {
 		max-width: 4px;
@@ -1859,9 +1868,168 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 	}
 }
 
-/* respect reduced-motion preference: no intro animation */
-@media (prefers-reduced-motion: reduce) {
+/* ----- mobile only: the recruiter button leaves the nav row and stands on
+   its own, centred just below the navbar; the three links keep their words
+   (never icons); and the arrival glow settles into a quiet, still-legible
+   resting look. Nothing here touches the desktop layout. ----- */
+@media only screen and (max-device-width: 920px) and (orientation: portrait) {
+	/* always keep the words on phones — never swap to icons */
+	.hyperlinks-box.nav-compact .nav-text {
+		display: inline;
+	}
+	.hyperlinks-box.nav-compact .nav-icon {
+		display: none;
+	}
+
+	/* anchor for the detached button */
+	.hyperlinks-box {
+		position: relative;
+	}
+
+	/* lift the recruiter button out of the nav flow and centre it just
+	   beneath the box, as its own standalone element. The button is now only a
+	   quiet, icon-sized tap target: it has no border or fill of its own — the
+	   word below carries the border + glow, then hands off to the briefcase. */
 	.recruiter-btn {
+		position: absolute;
+		top: calc(100% + 2.5vh);
+		left: 50%;
+		transform: translateX(-50%);
+		flex: 0 0 auto;
+		height: auto;
+		width: auto;
+		max-width: none;
+		padding: 1.3vh 7vw;
+		border: none;
+		border-radius: 6px;
+		background-color: transparent;
+		overflow: visible;
+		animation: none;
+	}
+
+	/* the briefcase: the resting state. Hidden while the word performs, then
+	   fades/settles in as the word collapses. Muted navy #484878 (~4.9:1 on the
+	   lavender splash — well past the 3:1 WCAG 1.4.11 minimum for a meaningful
+	   glyph; the button also carries aria-label="For recruiters"). */
+	.recruiter-btn .recruiter-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 52px;
+		line-height: 1;
+		color: #484878;
+		opacity: 1;
+		animation: recruiterMobileIcon 4s ease-out 1;
+	}
+
+	/* on phones the word becomes a self-contained pill (its own blue fill,
+	   border and glow), absolutely centred over the icon so its grow/shrink
+	   never nudges the layout. It arrives glowing, the fill disappears, it
+	   swells for a beat, then shrinks to nothing and fades — border and all —
+	   leaving only the briefcase behind. */
+	.recruiter-label {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%) scale(1);
+		box-sizing: border-box;
+		padding: 1.3vh 8vw;
+		white-space: nowrap;
+		border: 1px solid #335;
+		border-radius: 6px;
+		background-color: #7ba5de;
+		color: #484878;
+		pointer-events: none;
+		opacity: 0;
+		animation: recruiterMobileLabel 4s ease-out 1;
+	}
+}
+
+/* mobile intro — the word pill: arrive glowing in travel yellow, let the blue
+   fill disappear, swell briefly, then shrink to nothing and fade out with its
+   border. Every frame keeps the centring translate so only the scale changes. */
+@keyframes recruiterMobileLabel {
+	0% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		background-color: #7ba5de;
+		border-color: #335;
+		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
+	}
+	12% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		background-color: #7ba5de;
+		box-shadow: 0 0 24px 7px rgba(240, 229, 75, 0.95);
+	}
+	26% {
+		background-color: #7ba5de;
+		box-shadow: 0 0 8px 1px rgba(240, 229, 75, 0.4);
+	}
+	40% {
+		background-color: #7ba5de;
+		box-shadow: 0 0 24px 7px rgba(240, 229, 75, 0.95);
+	}
+	55% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		background-color: #7ba5de;
+		border-color: #335;
+		box-shadow: 0 0 6px 1px rgba(240, 229, 75, 0.3);
+	}
+	64% {
+		/* the blue fill disappears, glow gone, still full size */
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		background-color: transparent;
+		border-color: #335;
+		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
+	}
+	74% {
+		/* swell for a beat */
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1.14);
+		background-color: transparent;
+		border-color: #335;
+	}
+	100% {
+		/* shrink to nothing and fade, border and all */
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.08);
+		background-color: transparent;
+		border-color: rgba(51, 51, 85, 0);
+		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
+	}
+}
+
+/* mobile intro — the briefcase: stay hidden while the word performs, then
+   settle in just as the word collapses away. */
+@keyframes recruiterMobileIcon {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+	78% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+	90% {
+		/* pop out big, then settle back to the (now larger) resting size */
+		opacity: 1;
+		transform: scale(1.35);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* respect reduced-motion preference: no intro animation — the word pill stays
+   hidden (opacity 0) and the briefcase simply shows, still with no motion */
+@media (prefers-reduced-motion: reduce) {
+	.recruiter-btn,
+	.recruiter-label,
+	.recruiter-btn .recruiter-icon {
 		animation: none;
 	}
 }
@@ -1874,7 +2042,9 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 	align-items: center;
 	justify-content: center;
 	padding: 1rem;
-	z-index: 1000;
+	/* rendered via a portal on <body>, so it escapes the fixed mobile header's
+	   stacking context; a high z-index keeps it above the splash logo/blocks */
+	z-index: 9999;
 }
 
 .recruiter-modal {

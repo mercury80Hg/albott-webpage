@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { createPortal } from "react-dom"
 import { Link } from "react-router-dom"
 
 /* A "for recruiters" popup: a short pitch, key tech, and links out to the
@@ -46,13 +47,20 @@ function RecruiterModal() {
 				type="button"
 				className="recruiter-btn"
 				onClick={() => setOpen(true)}
+				aria-label="For recruiters"
 			>
 				<span className="recruiter-label">recruiter</span>
+				{/* mobile-only resting state: the word animates away and hands off
+				    to this briefcase icon (hidden on desktop via CSS) */}
+				<span className="material-icons recruiter-icon" aria-hidden="true">
+					work
+				</span>
 			</button>
 
-			{open && (
-				<div
-					className="recruiter-overlay"
+			{open &&
+				createPortal(
+					<div
+						className="recruiter-overlay"
 					onClick={() => setOpen(false)}
 					role="dialog"
 					aria-modal="true"
@@ -123,7 +131,8 @@ function RecruiterModal() {
 							</Link>
 						</div>
 					</div>
-				</div>
+				</div>,
+				document.body
 			)}
 		</>
 	)
