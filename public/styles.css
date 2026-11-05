@@ -132,6 +132,17 @@ h4 {
 	color: #fff;
 }
 
+/* The mobile hamburger menu is hidden on desktop; the stacked nav above is
+   used there instead. Its mobile layout/animation lives in the mobile media
+   query near the bottom of this file. The nav row is display:contents on
+   desktop so its children (title + dots) stay flat in the header flex row. */
+.headerSub-nav-row {
+	display: contents;
+}
+.nav-hamburger-wrap {
+	display: none;
+}
+
 /* //////hyperlinks/////// */
 
 .hyperlink-button {
@@ -1211,6 +1222,7 @@ h4 {
 		height: 24vh;
 		margin-top: 1.5vh;
 		/* width: 100vw; */
+		position: relative; /* anchor for the absolute hamburger menu */
 	}
 
 	.myname-headerSub {
@@ -1241,22 +1253,157 @@ h4 {
 		/* border: solid 1px #335; */
 	}
 
+	/* on mobile the stacked desktop nav is replaced by the hamburger below */
 	.hyperlinks-headerSub {
-		/* display: flex; */
-		/* flex-direction: column; */
-		justify-items: center;
-		/* align-items: center; */
-		/* border: solid 1px #335; */
-		border-radius: 10px;
-		/* font-size: 1.7vh; */
-		/* margin: 0 1vh; */
-		width: 25vw;
+		display: none;
 	}
 
-	.hyperlinks-navButton-headingSub {
-		/* text-align: center; */
-		/* padding: 1vh; */
-		width: 25vw;
+	/* ===== mobile hamburger menu ======================================= *
+	 * Row 2 of the header: hamburger · page title · nav dots, evenly spaced,
+	 * hamburger pinned left and dots pinned right with matching gutters. */
+	.headerSub-nav-row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		flex-basis: 100%; /* force onto its own row below logo + name */
+		width: 100vw;
+		box-sizing: border-box;
+		padding: 0 4vw; /* equal left/right gutters */
+	}
+
+	/* the title no longer needs its own left offset inside the flex row */
+	.headerSub-nav-row .content-heading {
+		margin-left: 0;
+	}
+
+	/* the box is the same height as the page-title box (51px) and holds the
+	 * three bars; it stays put in the row while an absolute panel inside it
+	 * grows over the title when open, so nothing else reflows. */
+	.nav-hamburger-wrap {
+		display: block;
+		position: relative;
+		flex: 0 0 auto;
+		width: 51px;
+		height: 51px;
+	}
+
+	.nav-hamburger-panel {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 120;
+		box-sizing: border-box;
+		width: 51px;
+		height: 51px;
+		border: solid 1px #335;
+		border-radius: 10px;
+		background-color: #bec4d9;
+		overflow: hidden;
+		transition: width 0.32s ease, height 0.32s ease,
+			box-shadow 0.32s ease;
+	}
+
+	.nav-hamburger-wrap.is-open .nav-hamburger-panel {
+		width: 205px; /* covers the page title, stops before the nav dots */
+		height: 247px; /* five equal 49px rows: X/title + four links */
+		box-shadow: 0 6px 18px rgba(51, 51, 85, 0.28);
+	}
+
+	/* hide the real page title while the box covers it (space is kept so the
+	 * dots don't shift); the title is re-shown inside the box beside the X */
+	.nav-hamburger-wrap.is-open ~ .content-heading {
+		visibility: hidden;
+	}
+
+	/* top row inside the panel: the X button, then the page title */
+	.nav-hamburger-top {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 49px; /* = closed panel inner height */
+	}
+
+	.nav-hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		flex: 0 0 auto;
+		width: 49px;
+		height: 49px;
+		padding: 0;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	.nav-hamburger-page {
+		/* styled as a chip matching the real title box (same lavender
+		   background + 1px border), centered in the space right of the X */
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.35em 0.7em;
+		font-size: 1.9vh;
+		line-height: 1;
+		color: #335;
+		/* no background here: the `${name}-text` class supplies the page's
+		   colour on BEAT pages, and the lavender panel shows through on the
+		   others — matching the real title box it covers in both cases */
+		border: 1px solid #335;
+		border-radius: 5px;
+		white-space: nowrap;
+		opacity: 0; /* revealed only when the box is open */
+		transition: opacity 0.2s ease 0.12s;
+	}
+	.nav-hamburger-wrap.is-open .nav-hamburger-page {
+		opacity: 1;
+	}
+
+	.nav-hamburger-bar {
+		display: block;
+		width: 24px;
+		height: 3px;
+		border-radius: 2px;
+		background-color: #335;
+		transition: transform 0.3s ease, opacity 0.2s ease;
+	}
+
+	/* three bars -> X */
+	.nav-hamburger-wrap.is-open .nav-hamburger-bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+	.nav-hamburger-wrap.is-open .nav-hamburger-bar:nth-child(2) {
+		opacity: 0;
+	}
+	.nav-hamburger-wrap.is-open .nav-hamburger-bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.nav-hamburger-menu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.nav-hamburger-link {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		height: 49px; /* same height as the X/title row */
+		padding: 0 16px;
+		font-size: 2.1vh;
+		line-height: 1;
+		color: #335;
+		white-space: nowrap;
+		border-top: 1px solid #335;
+	}
+	.nav-hamburger-link:hover,
+	.nav-hamburger-link:active {
+		background-color: #ec008c;
+		color: #fff;
 	}
 
 	/*////////Carousel\\\\\\\\*/
@@ -2401,8 +2548,25 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 
 /* mobile: tighten the panel padding so it hugs the content */
 @media only screen and (max-device-width: 920px) and (orientation: portrait) {
+	/* The body is locked to the viewport (overflow:hidden) for the single-screen
+	   BEAT pages, so the tall /hire page would be clipped. Make /hire its own
+	   full-height scroll container instead. */
+	.hire {
+		height: calc(var(--vh, 1vh) * 100);
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	/* the BEAT pages need the tall header to seat the carousel; /hire has a
+	   panel right below it, so let the header shrink to its content and drop
+	   the extra bottom space */
+	.hire .headerSub-box {
+		height: auto;
+		padding-bottom: 1vh;
+	}
+
 	.hire-main {
-		margin: 1.5vh 0.75rem 3vh;
+		margin: 1vh 0.75rem 3vh;
 		padding: 1.5rem 1.25rem 2rem;
 	}
 }
