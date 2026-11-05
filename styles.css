@@ -3,7 +3,8 @@ body {
 	box-sizing: border-box;
 	margin: 0;
 	background-color: #bec4d9;
-	height: 100vh;
+	height: 100vh; /* fallback for very old browsers */
+	height: 100dvh; /* usable viewport, excludes browser chrome */
 	width: 100vw;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
@@ -33,7 +34,7 @@ header {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	height: 15vh;
+	height: 15dvh;
 	margin-left: 5vw;
 }
 
@@ -42,7 +43,7 @@ header {
 	margin-left: 8vw;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	color: #335;
-	font-size: 3.8vh;
+	font-size: 3.8dvh;
 	line-height: 0px;
 	font-weight: lighter;
 	letter-spacing: 1vw;
@@ -63,26 +64,26 @@ h4 {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	height: 15vh;
+	height: 15dvh;
 	width: 100vw;
 }
 
 .headerSub-logo {
 	display: flex;
-	height: 10vh;
-	padding: 0 2vh;
+	height: 10dvh;
+	padding: 0 2dvh;
 }
 
 .myname-headerSub {
 	margin: 0;
-	padding: 0 2vh;
+	padding: 0 2dvh;
 }
 
 #nav-dot {
 	height: 1vw;
 	width: 1vw;
 	border-radius: 50%;
-	margin: 0 2vh;
+	margin: 0 2dvh;
 	border: solid 1px #335;
 }
 
@@ -91,7 +92,7 @@ h4 {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 1vh;
+	padding: 1dvh;
 }
 
 .hyperlinks-headerSub {
@@ -101,8 +102,8 @@ h4 {
 	align-items: center;
 	border: solid 1px #335;
 	border-radius: 5px;
-	font-size: 1.7vh;
-	margin: 1vh;
+	font-size: 1.7dvh;
+	margin: 1dvh;
 	width: 8vw;
 }
 
@@ -110,7 +111,7 @@ h4 {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	padding: 1vh 0 1vh 0;
+	padding: 1dvh 0 1dvh 0;
 
 	width: 8vw;
 }
@@ -119,7 +120,7 @@ h4 {
 	display: flex;
 	border-top: 1px solid #335;
 	border-bottom: 1px solid #335;
-	/* margin: 1vh; */
+	/* margin: 1dvh; */
 }
 /* .hyperlinks-navButton-headingSub:nth-of-type(2) {
 	border-top: 1px solid #335;
@@ -128,6 +129,106 @@ h4 {
 
 .hyperlinks-navButton-headingSub:hover {
 	transition: background-color 1s;
+	background-color: #ec008c;
+	color: #fff;
+}
+
+/* The nav row is display:contents on desktop so its children (title + dots)
+   stay flat in the header flex row; the in-row hamburger inside it is for
+   mobile only and hidden on desktop. */
+.headerSub-nav-row {
+	display: contents;
+}
+.nav-hamburger-wrap {
+	display: none;
+}
+
+/* ===== desktop hamburger menu ======================================= *
+ * Grouped with the logo at the left; it drops a bordered menu down below
+ * (it does not cover the page title). Hidden on mobile, where the in-row
+ * hamburger is used instead. */
+.headerSub-brand {
+	display: flex;
+	align-items: center;
+}
+
+.nav-desktop {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	margin-left: 1.5dvh;
+}
+
+.nav-desktop-btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	width: 42px;
+	height: 42px;
+	padding: 0;
+	border: solid 1px #335;
+	border-radius: 5px;
+	background-color: #bec4d9;
+	cursor: pointer;
+}
+
+.nav-desktop-bar {
+	display: block;
+	width: 20px;
+	height: 2.5px;
+	border-radius: 2px;
+	background-color: #335;
+	transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+/* three bars -> X */
+.nav-desktop.is-open .nav-desktop-bar:nth-child(1) {
+	transform: translateY(6.5px) rotate(45deg);
+}
+.nav-desktop.is-open .nav-desktop-bar:nth-child(2) {
+	opacity: 0;
+}
+.nav-desktop.is-open .nav-desktop-bar:nth-child(3) {
+	transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.nav-desktop-menu {
+	position: absolute;
+	top: calc(100% + 5px);
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	min-width: 130px;
+	border: solid 1px #335;
+	border-radius: 5px;
+	background-color: #bec4d9;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: max-height 0.32s ease, opacity 0.2s ease;
+	z-index: 100;
+}
+
+.nav-desktop.is-open .nav-desktop-menu {
+	max-height: 60dvh;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.nav-desktop-link {
+	padding: 1dvh 1.4dvh;
+	font-size: 1.7dvh;
+	color: #335;
+	white-space: nowrap;
+}
+.nav-desktop-link + .nav-desktop-link {
+	border-top: solid 1px #335;
+}
+.nav-desktop-link:hover {
+	transition: background-color 0.6s;
 	background-color: #ec008c;
 	color: #fff;
 }
@@ -142,10 +243,10 @@ h4 {
 	color: #335;
 	border: 1px solid #335;
 	border-radius: 5px;
-	height: 5vh;
+	height: 5dvh;
 	margin: 0 1vw;
 	width: 8vw;
-	/* margin: 1vh 1vw; */
+	/* margin: 1dvh 1vw; */
 }
 
 .hyperlink-button:hover {
@@ -161,9 +262,9 @@ h4 {
 	border-radius: 5px;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	color: #335;
-	font-size: 2vh;
+	font-size: 2dvh;
 	line-height: 20px;
-	width: 30vw;
+	width: 36vw;
 	justify-content: space-between;
 }
 
@@ -172,7 +273,7 @@ h4 {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	height: 5vh;
+	height: 5dvh;
 	width: inherit;
 	color: #335;
 	text-decoration: none;
@@ -199,14 +300,14 @@ h4 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 7vh;
+	font-size: 7dvh;
 	z-index: 10;
 } */
 /* 
 .floating-btn {
 	display: flex;
-	width: 7vh;
-	height: 7vh;
+	width: 7dvh;
+	height: 7dvh;
 	background: #00c18ba1;
 	border: 1px solid #335;
 	border-radius: 5px;
@@ -277,7 +378,7 @@ h4 {
 
 .carousel {
 	/* display: flex; */
-	height: 60vh;
+	height: 60dvh;
 	width: 100vw;
 	overflow: scroll;
 	/* object-fit: contain; */
@@ -286,7 +387,7 @@ h4 {
 .carousel-image {
 	/* display: flex;
 	flex-direction: row; */
-	height: 59vh;
+	height: 59dvh;
 	margin: 0 1vw 0 1vw;
 	border: solid 1px #335;
 	border-radius: 5px;
@@ -295,7 +396,7 @@ h4 {
 }
 
 .slick-slide {
-	height: 60vh;
+	height: 60dvh;
 }
 
 .loading {
@@ -303,9 +404,9 @@ h4 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-size: 10vh;
-	height: 59vh;
-	width: 59vh;
+	font-size: 10dvh;
+	height: 59dvh;
+	width: 59dvh;
 	border: solid 1px #335;
 	border-radius: 5px;
 }
@@ -339,7 +440,7 @@ h4 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 85vh;
+	height: 85dvh;
 	margin-left: 15vw;
 }
 
@@ -360,17 +461,17 @@ h4 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 28vh;
+	height: 28dvh;
 	width: 20vw;
 	border: 1px solid #335;
 	border-radius: 5px;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 3vh;
+	font-size: 3dvh;
 	border-right: none;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
-	margin-bottom: 5vh;
-	letter-spacing: 1vh;
+	margin-bottom: 5dvh;
+	letter-spacing: 1dvh;
 	text-decoration: none;
 	background-color: #ec008c;
 	color: #ec008c;
@@ -386,11 +487,11 @@ h4 {
 	flex-direction: column;
 	align-self: center;
 	justify-content: space-between;
-	height: 50vh;
+	height: 50dvh;
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 3vh;
+	font-size: 3dvh;
 	line-height: 20px;
-	letter-spacing: 1vh;
+	letter-spacing: 1dvh;
 	align-self: center;
 }
 
@@ -399,14 +500,14 @@ h4 {
 	border: 1px solid #335;
 	border-radius: 5px;
 	width: 20vw;
-	height: 10vh;
+	height: 10dvh;
 	align-items: center;
 	justify-content: center;
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
 	border-left: none;
-	margin-bottom: 5vh;
-	font-size: 3vh;
+	margin-bottom: 5dvh;
+	font-size: 3dvh;
 	text-decoration: none;
 	background-color: #00c18b;
 	color: #00c18b;
@@ -422,14 +523,14 @@ h4 {
 	border: 1px solid #335;
 	border-radius: 5px;
 	width: 20vw;
-	height: 15vh;
+	height: 15dvh;
 	align-items: center;
 	justify-content: center;
 	border-bottom-left-radius: 0;
 	border-top-left-radius: 0;
 	border-left: none;
-	margin-bottom: 5vh;
-	font-size: 3vh;
+	margin-bottom: 5dvh;
+	font-size: 3dvh;
 	text-decoration: none;
 	background-color: #7ba5de;
 	color: #7ba5de;
@@ -445,9 +546,9 @@ h4 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 5vh;
-	width: 40vh;
-	font-size: 3vh;
+	height: 5dvh;
+	width: 40dvh;
+	font-size: 3dvh;
 	border: 1px solid #335;
 	border-radius: 5px;
 	border-top: none;
@@ -471,9 +572,9 @@ h4 {
 }
 
 .logo {
-	height: 50vh;
+	height: 50dvh;
 	position: relative;
-	padding: 6vh;
+	padding: 6dvh;
 	border: 1px solid #335;
 	border-radius: 5px;
 	border-width: 1px;
@@ -497,28 +598,28 @@ h4 {
 
 .content-container {
 	display: flex;
-	/* height: 100vh;
+	/* height: 100dvh;
 	width: 100vw; */
 	flex-direction: column;
 	align-items: center;
 }
 
 .content-paragraph {
-	height: 22vh;
+	height: 22dvh;
 	width: 90vw;
 	overflow: auto;
-	margin: 1vh;
-	font-size: 2vh;
-	/* height: 80vh; */
+	margin: 1dvh;
+	font-size: 2dvh;
+	/* height: 80dvh; */
 }
 
 .content-paragraph > p {
-	margin-bottom: 2vh;
+	margin-bottom: 2dvh;
 }
 
 .content-heading {
 	display: flex;
-	height: 6vh;
+	height: 6dvh;
 	width: 30vw;
 	justify-content: center;
 	align-items: center;
@@ -537,14 +638,14 @@ h4 {
 /* 
 .about {
 	display: flex;
-	height: 100vh;
+	height: 100dvh;
 	flex-direction: column;
 	align-items: center;
 } */
 
 /* .adventure {
 	display: flex;
-	height: 100vh;
+	height: 100dvh;
 	flex-direction: column;
 	align-items: center;
 } */
@@ -554,7 +655,7 @@ h4 {
 
 /* .excitement {
 	display: flex;
-	height: 100vh;
+	height: 100dvh;
 	flex-direction: column;
 	align-items: center;
 	
@@ -567,7 +668,7 @@ h4 {
 /* 
 .beauty {
 	display: flex;
-	height: 100vh;
+	height: 100dvh;
 	flex-direction: column;
 	align-items: center;
 } */
@@ -578,7 +679,7 @@ h4 {
 
 /* .travel {
 	display: flex;
-	height: 100vh;
+	height: 100dvh;
 	flex-direction: column;
 	align-items: center;
 } */
@@ -589,7 +690,7 @@ h4 {
 
 .contact {
 	display: flex;
-	height: 100vh;
+	height: 100dvh;
 	flex-direction: column;
 }
 
@@ -608,7 +709,7 @@ h4 {
 
 .proj-title {
 	display: flex;
-	height: 10vh;
+	height: 10dvh;
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
@@ -623,9 +724,9 @@ h4 {
 .proj-list {
 	display: flex;
 	flex-direction: column;
-	height: 75vh;
+	height: 75dvh;
 	width: 20vw;
-	padding-left: 2vh;
+	padding-left: 2dvh;
 }
 
 .proj-list-box {
@@ -640,7 +741,7 @@ h4 {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	height: 5vh;
+	height: 5dvh;
 	width: inherit;
 	color: #335;
 	text-decoration: none;
@@ -673,12 +774,12 @@ h4 {
 	flex-direction: column;
 	justify-content: center;
 	width: 30vw;
-	height: 75vh;
+	height: 75dvh;
 }
 
 .proj-image {
 	display: flex;
-	height: 40vh;
+	height: 40dvh;
 	justify-content: center;
 	overflow: hidden;
 	object-fit: contain;
@@ -690,7 +791,7 @@ h4 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 10vh;
+	height: 10dvh;
 
 	align-items: center;
 }
@@ -708,34 +809,34 @@ h4 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 2vh 0;
+	padding: 2dvh 0;
 }
 
 .proj-tech-icons-box {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	height: 6vh;
+	height: 6dvh;
 }
 
 .proj-tech-icons {
 	display: flex;
-	height: 3vh;
+	height: 3dvh;
 	object-fit: contain;
-	padding: 0 1vh;
+	padding: 0 1dvh;
 	color: #bec4d9;
 }
 
 .proj-blog-links {
 	display: flex;
-	height: 10vh;
+	height: 10dvh;
 }
 
 .proj-content-column {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 75vh;
+	height: 75dvh;
 	width: 50vw;
 }
 
@@ -750,7 +851,7 @@ h4 {
 
 .proj-content-column-titles {
 	display: flex;
-	height: 5vh;
+	height: 5dvh;
 	margin: unset;
 	justify-content: center;
 	align-items: center;
@@ -763,7 +864,7 @@ h4 {
 
 .synopsis-text-box {
 	display: flex;
-	max-height: 60vh;
+	max-height: 60dvh;
 	overflow: scroll;
 	border: solid 1px #335;
 	border-radius: 5px;
@@ -773,7 +874,7 @@ h4 {
 
 .story-text-box {
 	display: flex;
-	max-height: 40vh;
+	max-height: 40dvh;
 	overflow: scroll;
 	border: solid 1px #335;
 	border-radius: 5px;
@@ -785,11 +886,11 @@ h4 {
 
 .coming-soon-container {
 	width: 75vw;
-	height: 70vh;
+	height: 70dvh;
 	position: relative;
 	justify-content: center;
 	align-items: center;
-	margin: 0 3vh;
+	margin: 0 3dvh;
 	border: solid 1px #335;
 	border-radius: 5px;
 }
@@ -802,9 +903,9 @@ h4 {
 
 .coming-soon {
 	position: absolute;
-	bottom: -9vh;
+	bottom: -9dvh;
 	color: #ec008c;
-	font-size: 25vh;
+	font-size: 25dvh;
 	text-align: center;
 	text-shadow: 0px 10px 15px #335;
 }
@@ -814,7 +915,7 @@ h4 {
 .contact {
 	display: flex;
 	justify-content: space-between;
-	/* padding: 3vh; */
+	/* padding: 3dvh; */
 	height: 100%;
 	width: 100vw;
 }
@@ -824,7 +925,7 @@ h4 {
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-	height: 30vh;
+	height: 30dvh;
 }
 
 /* .myname-contact {
@@ -842,9 +943,9 @@ h4 {
 }
 
 /* .logo-contact {
-	height: 20vh;
+	height: 20dvh;
 	position: relative;
-	padding: 6vh;
+	padding: 6dvh;
 	border: 1px solid #335;
 	border-radius: 5px;
 	border-width: 1px;
@@ -858,7 +959,7 @@ h4 {
 
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	color: #335;
-	font-size: 2vh;
+	font-size: 2dvh;
 	/* line-height: 0px; */
 	font-weight: lighter;
 	letter-spacing: 0.3vw;
@@ -868,21 +969,21 @@ h4 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	padding: 2vh 0 2vh 0;
+	padding: 2dvh 0 2dvh 0;
 	width: 60vw;
 }
 
 .linkedin-img {
-	height: 9vh;
+	height: 9dvh;
 }
 
 .mobile-img {
-	height: 8vh;
+	height: 8dvh;
 	/* margin: 0 3vw 0 3vw; */
 }
 
 .email-img {
-	height: 8vh;
+	height: 8dvh;
 }
 
 .or {
@@ -931,12 +1032,12 @@ h4 {
 	justify-content: flex-end;
 	align-items: center;
 	width: 100vw;
-	height: 45vh;
+	height: 45dvh;
 }
 
 .footer-title {
 	display: flex;
-	font-size: 2vh;
+	font-size: 2dvh;
 	border-bottom: solid 1px #335;
 }
 
@@ -945,7 +1046,7 @@ h4 {
 	flex-direction: row;
 	justify-content: center;
 	align-items: flex-start;
-	font-size: 2vh;
+	font-size: 2dvh;
 	text-align: center;
 }
 
@@ -962,12 +1063,12 @@ h4 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-size: 2vh;
-	padding-top: 5vh;
+	font-size: 2dvh;
+	padding-top: 5dvh;
 }
 
 .copyright {
-	margin-top: 4vh;
+	margin-top: 4dvh;
 }
 
 /*///////\\\\\\\\\\\\ MOBILE //////////////\\\\\\*/
@@ -979,9 +1080,13 @@ h4 {
 		/* fallback for browsers without customizable properties  */
 		height: 100vh;
 
-		/* adjusts for 'useable' viewport accounting for the space taken by
-		 navbars and url inputs */
+		/* JS-driven usable viewport (App.jsx keeps --vh live on resize/rotate)
+		   for browsers that predate dvh */
 		height: calc(var(--vh, 1vh) * 100);
+
+		/* modern: dynamic viewport height — the usable area, auto-updating as the
+		   browser's URL/nav bars and device chrome appear or disappear */
+		height: 100dvh;
 	}
 
 	/*Header includes name:allan e bott as well as the nav buttons on splash page*/
@@ -992,7 +1097,7 @@ h4 {
 		position: fixed;
 
 		/* align-items: center; */
-		height: 94vh;
+		height: 94dvh;
 		width: 100vw;
 		margin-left: 0vw;
 	}
@@ -1000,10 +1105,10 @@ h4 {
 	.myname {
 		/* display: flex; */
 		margin-left: 0vw;
-		margin-top: 7vh;
+		margin-top: 7dvh;
 		/* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 		/* color: #335; */
-		/* font-size: 3.8vh; */
+		/* font-size: 3.8dvh; */
 		/* line-height: 0px; */
 		/* font-weight: lighter; */
 		/* letter-spacing: 1vw; */
@@ -1025,7 +1130,7 @@ h4 {
 		/* color: #335; */
 		/* border: 1px solid #335; */
 		border-radius: 10px;
-		height: 2vh;
+		height: 2dvh;
 		/* padding: 0 1vw; */
 		/* margin: unset; */
 	}
@@ -1037,10 +1142,10 @@ h4 {
 		border-radius: 10px;
 		/* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 		/* color: #335; */
-		/* font-size: 2vh; */
+		/* font-size: 2dvh; */
 		/* line-height: 20px; */
 		width: 70vw;
-		margin-bottom: 10vh;
+		margin-bottom: 10dvh;
 		/* justify-content: space-between; */
 	}
 
@@ -1049,7 +1154,7 @@ h4 {
 		/* flex-direction: row; */
 		/* align-items: center; */
 		/* justify-content: center; */
-		/* height: 5vh; */
+		/* height: 5dvh; */
 		/* width: inherit; */
 		/* color: #335; */
 		/* text-decoration: none; */
@@ -1061,12 +1166,12 @@ h4 {
 		border-right: 1px solid #335;
 		border-top: unset;
 		border-bottom: unset;
-		/* margin: 1vh; */
+		/* margin: 1dvh; */
 	}
 
 	.splash {
 		width: 100vw;
-		height: 90vh;
+		height: 90dvh;
 		margin-left: unset;
 		overflow: hidden;
 	}
@@ -1092,17 +1197,17 @@ h4 {
 		/* display: flex; */
 		/* justify-content: center; */
 		/* align-items: center; */
-		height: 3vh;
-		width: 3vh;
+		height: 3dvh;
+		width: 3dvh;
 		/* border: 1px solid #335; */
 		border-radius: 100px;
 		/* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
-		font-size: 2.5vh;
+		font-size: 2.5dvh;
 		border-bottom: none;
 		/* border-bottom-right-radius: 0; */
 		/* border-bottom-left-radius: 0; */
-		margin-bottom: 3vh;
-		/* letter-spacing: 1vh; */
+		margin-bottom: 3dvh;
+		/* letter-spacing: 1dvh; */
 		/* text-decoration: none; */
 		/* background-color: #ec008c; */
 		color: #ec008c00;
@@ -1115,13 +1220,13 @@ h4 {
 		/* flex-direction: column; */
 		/* justify-content: center; */
 		/* align-items: center; */
-		height: 3vh;
-		width: 3vh;
-		font-size: 2.5vh;
+		height: 3dvh;
+		width: 3dvh;
+		font-size: 2.5dvh;
 		/* border: 1px solid #335; */
 		border-radius: 100px;
-		margin-top: 5vh;
-		margin-bottom: 3vh;
+		margin-top: 5dvh;
+		margin-bottom: 3dvh;
 		/* border-top: none; */
 		/* border-top-left-radius: 0; */
 		/* border-top-right-radius: 0; */
@@ -1138,11 +1243,11 @@ h4 {
 		/* flex-direction: column; */
 		/* align-self: center; */
 		justify-content: flex-start;
-		height: 10vh;
+		height: 10dvh;
 		/* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
-		/* font-size: 2.5vh; */
+		/* font-size: 2.5dvh; */
 		/* line-height: 20px; */
-		/* letter-spacing: 1vh; */
+		/* letter-spacing: 1dvh; */
 		/* align-self: center; */
 	}
 
@@ -1151,15 +1256,15 @@ h4 {
 		/* display: flex; */
 		/* border: 1px solid #335; */
 		border-radius: 100px;
-		width: 3vh;
-		height: 3vh;
+		width: 3dvh;
+		height: 3dvh;
 		/* align-items: center; */
 		/* justify-content: center; */
 		/* border-bottom-left-radius: 0; */
 		/* border-top-left-radius: 0; */
 		/* border-left: none; */
-		margin-bottom: 3vh;
-		font-size: 2.5vh;
+		margin-bottom: 3dvh;
+		font-size: 2.5dvh;
 		/* text-decoration: none; */
 		/* background-color: #00c18b; */
 		color: #00c18b00;
@@ -1170,25 +1275,25 @@ h4 {
 		/* display: flex; */
 		/* border: 1px solid #335; */
 		border-radius: 100px;
-		width: 3vh;
-		height: 3vh;
+		width: 3dvh;
+		height: 3dvh;
 		/* align-items: center; */
 		align-self: center;
 		/* justify-content: center; */
 		/* border-bottom-left-radius: 0; */
 		/* border-top-left-radius: 0; */
 		/* border-left: none; */
-		margin-bottom: 0vh;
-		font-size: 2.5vh;
+		margin-bottom: 0dvh;
+		font-size: 2.5dvh;
 		/* text-decoration: none; */
 		/* background-color: #7ba5de; */
 		color: #7ba5de00;
 	}
 
 	.logo {
-		height: 30vh;
+		height: 30dvh;
 		/* position:absolute; */
-		padding: 3vh;
+		padding: 3dvh;
 		border: 1px solid #335;
 		border-radius: 10px;
 		border-width: 1px;
@@ -1208,19 +1313,20 @@ h4 {
 		flex-wrap: wrap;
 		justify-content: center;
 		/* align-items: center; */
-		height: 24vh;
-		margin-top: 1.5vh;
+		height: 24dvh;
+		margin-top: 1.5dvh;
 		/* width: 100vw; */
+		position: relative; /* anchor for the absolute hamburger menu */
 	}
 
 	.myname-headerSub {
 		/* margin: 0; */
-		/* padding: 0 2vh; */
+		/* padding: 0 2dvh; */
 		margin-top: unset;
 	}
 	.content-heading {
 		border-radius: 10px;
-		font-size: 1.7vh;
+		font-size: 1.7dvh;
 		margin-left: 2vw;
 	}
 
@@ -1230,40 +1336,179 @@ h4 {
 		/* justify-content: center; */
 		/* align-items: center; */
 		width: 35vw;
-		padding: 0vh;
+		padding: 0dvh;
 	}
 
 	#nav-dot {
 		height: 3vw;
 		width: 3vw;
 		border-radius: 50%;
-		margin: 0 1vh;
+		margin: 0 1dvh;
 		/* border: solid 1px #335; */
 	}
 
-	.hyperlinks-headerSub {
-		/* display: flex; */
-		/* flex-direction: column; */
-		justify-items: center;
-		/* align-items: center; */
-		/* border: solid 1px #335; */
+	/* the desktop hamburger is replaced by the in-row one below; ungroup the
+	   brand so the logo lays out as a plain header child like before */
+	.headerSub-brand {
+		display: contents;
+	}
+	.nav-desktop {
+		display: none;
+	}
+
+	/* ===== mobile hamburger menu ======================================= *
+	 * Row 2 of the header: hamburger · page title · nav dots, evenly spaced,
+	 * hamburger pinned left and dots pinned right with matching gutters. */
+	.headerSub-nav-row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		flex-basis: 100%; /* force onto its own row below logo + name */
+		width: 100vw;
+		box-sizing: border-box;
+		padding: 0 4vw; /* equal left/right gutters */
+	}
+
+	/* the title no longer needs its own left offset inside the flex row */
+	.headerSub-nav-row .content-heading {
+		margin-left: 0;
+	}
+
+	/* the box is the same height as the page-title box (51px) and holds the
+	 * three bars; it stays put in the row while an absolute panel inside it
+	 * grows over the title when open, so nothing else reflows. */
+	.nav-hamburger-wrap {
+		display: block;
+		position: relative;
+		flex: 0 0 auto;
+		width: 51px;
+		height: 51px;
+	}
+
+	.nav-hamburger-panel {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 120;
+		box-sizing: border-box;
+		width: 51px;
+		height: 51px;
+		border: solid 1px #335;
 		border-radius: 10px;
-		/* font-size: 1.7vh; */
-		/* margin: 0 1vh; */
-		width: 25vw;
+		background-color: #bec4d9;
+		overflow: hidden;
+		transition: width 0.32s ease, height 0.32s ease,
+			box-shadow 0.32s ease;
 	}
 
-	.hyperlinks-navButton-headingSub {
-		/* text-align: center; */
-		/* padding: 1vh; */
-		width: 25vw;
+	.nav-hamburger-wrap.is-open .nav-hamburger-panel {
+		width: 205px; /* covers the page title, stops before the nav dots */
+		height: 247px; /* five equal 49px rows: X/title + four links */
+		box-shadow: 0 6px 18px rgba(51, 51, 85, 0.28);
+	}
+
+	/* hide the real page title while the box covers it (space is kept so the
+	 * dots don't shift); the title is re-shown inside the box beside the X */
+	.nav-hamburger-wrap.is-open ~ .content-heading {
+		visibility: hidden;
+	}
+
+	/* top row inside the panel: the X button, then the page title */
+	.nav-hamburger-top {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		height: 49px; /* = closed panel inner height */
+	}
+
+	.nav-hamburger {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		flex: 0 0 auto;
+		width: 49px;
+		height: 49px;
+		padding: 0;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+	}
+
+	.nav-hamburger-page {
+		/* styled as a chip matching the real title box (same lavender
+		   background + 1px border), centered in the space right of the X */
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.35em 0.7em;
+		font-size: 1.9dvh;
+		line-height: 1;
+		color: #335;
+		/* no background here: the `${name}-text` class supplies the page's
+		   colour on BEAT pages, and the lavender panel shows through on the
+		   others — matching the real title box it covers in both cases */
+		border: 1px solid #335;
+		border-radius: 5px;
+		white-space: nowrap;
+		opacity: 0; /* revealed only when the box is open */
+		transition: opacity 0.2s ease 0.12s;
+	}
+	.nav-hamburger-wrap.is-open .nav-hamburger-page {
+		opacity: 1;
+	}
+
+	.nav-hamburger-bar {
+		display: block;
+		width: 24px;
+		height: 3px;
+		border-radius: 2px;
+		background-color: #335;
+		transition: transform 0.3s ease, opacity 0.2s ease;
+	}
+
+	/* three bars -> X */
+	.nav-hamburger-wrap.is-open .nav-hamburger-bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+	.nav-hamburger-wrap.is-open .nav-hamburger-bar:nth-child(2) {
+		opacity: 0;
+	}
+	.nav-hamburger-wrap.is-open .nav-hamburger-bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	.nav-hamburger-menu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.nav-hamburger-link {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		height: 49px; /* same height as the X/title row */
+		padding: 0 16px;
+		font-size: 2.1dvh;
+		line-height: 1;
+		color: #335;
+		white-space: nowrap;
+		border-top: 1px solid #335;
+	}
+	.nav-hamburger-link:hover,
+	.nav-hamburger-link:active {
+		background-color: #ec008c;
+		color: #fff;
 	}
 
 	/*////////Carousel\\\\\\\\*/
 	.carousel {
 		/* display: flex; */
 
-		height: 40vh;
+		height: 40dvh;
 		/* width: 100vw; */
 
 		/* overflow: scroll; */
@@ -1273,8 +1518,8 @@ h4 {
 	.carousel-image {
 		/* display: flex;
 			flex-direction: row; */
-		height: 40vh;
-		margin: 0vh 1vw 0 1vw;
+		height: 40dvh;
+		margin: 0dvh 1vw 0 1vw;
 		/* border: solid 1px #335; */
 		/* border-radius: 5px; */
 		/* width:100%; */
@@ -1283,20 +1528,24 @@ h4 {
 
 	/* /////Paragraph Content\\\\\*/
 	.content-paragraph {
-		height: 15vh;
+		/* grow to fill the space left under the header + carousel so the copy
+		   box reaches the bottom of the screen; min-height:0 lets it shrink far
+		   enough for its own scrollbar to take over on short screens */
+		flex: 1 1 0;
+		min-height: 0;
 		/* width: 90vw; */
 		overflow: auto;
-		margin: 1vh 1vh 1vh 1vh;
-		/* font-size: 2vh; */
+		margin: 1dvh 1dvh 1dvh 1dvh;
+		/* font-size: 2dvh; */
 	}
 	.shadowbox {
 		max-height: unset;
 	}
 
 	.loading {
-		font-size: 5vh;
-		width: 40vh;
-		height: 40vh;
+		font-size: 5dvh;
+		width: 40dvh;
+		height: 40dvh;
 	}
 
 	/*////////////Contact Page\\\\\\\\\\\\*/
@@ -1304,8 +1553,8 @@ h4 {
 	.contact {
 		/* display: flex; */
 		justify-content: center;
-		/*padding: 3vh;*/
-		/* height: 100vh; */
+		/*padding: 3dvh;*/
+		/* height: 100dvh; */
 		/* width: 100vw; */
 	}
 
@@ -1315,7 +1564,7 @@ h4 {
 		justify-content: flex-start;
 		align-items: center;
 
-		height: 27vh;
+		height: 27dvh;
 	}
 
 	.myname-contact {
@@ -1324,27 +1573,27 @@ h4 {
 		/* font-weight: lighter; */
 		letter-spacing: 2vw;
 		width: 100vw;
-		font-size: 4vh;
+		font-size: 4dvh;
 	}
 
 	.contact-method-row {
 		/* display: flex; */
 		/* flex-direction: row; */
 		/* justify-content: center; */
-		/* padding: 2vh 0 2vh 0; */
+		/* padding: 2dvh 0 2dvh 0; */
 	}
 
 	.linkedin-img {
-		height: 5vh;
+		height: 5dvh;
 	}
 
 	.mobile-img {
-		height: 5vh;
-		margin: 0 10vw 2vh 10vw;
+		height: 5dvh;
+		margin: 0 10vw 2dvh 10vw;
 	}
 
 	.email-img {
-		height: 5vh;
+		height: 5dvh;
 	}
 
 	.logo-box {
@@ -1354,9 +1603,9 @@ h4 {
 	}
 
 	.logo-contact {
-		height: 20vh;
+		height: 20dvh;
 		position: relative;
-		padding: 2vh;
+		padding: 2dvh;
 		border: 1px solid #335;
 		border-radius: 20px;
 		border-width: 1px;
@@ -1370,7 +1619,7 @@ h4 {
 
 		/* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
 		/* color: #335; */
-		font-size: 1.5vh;
+		font-size: 1.5dvh;
 		/* line-height: 0px; */
 		/* font-weight: lighter; */
 		/* letter-spacing: 0.3vw; */
@@ -1385,12 +1634,12 @@ h4 {
 		/* align-items: center; */
 		/* width: 100vw; */
 		height: 100%;
-		margin-top: 3vh;
-		font-size: 1vh;
+		margin-top: 3dvh;
+		font-size: 1dvh;
 	}
 
 	.footer-paragraph {
-		font-size: 1.5vh;
+		font-size: 1.5dvh;
 	}
 
 	.footer-title {
@@ -1423,21 +1672,26 @@ h4 {
 		/* justify-content: center; */
 		/* align-items: center; */
 		font-size: unset;
-		padding-top: 3vh;
+		padding-top: 3dvh;
 	}
 
 	.copyright {
-		font-size: 1vh;
-		padding-top: 2vh;
+		font-size: 1dvh;
+		padding-top: 2dvh;
 	}
 
 	.josh {
-		margin-top: 2vh;
+		margin-top: 2dvh;
 	}
 
 	/*//////////Project Page///////////*/
 
 	.content-container {
+		/* fill the usable viewport (dvh accounts for browser/device chrome) so
+		   the copy box below can grow to the bottom edge instead of leaving a
+		   gap. The page itself doesn't scroll; the copy box scrolls internally. */
+		height: 100dvh;
+		overflow: hidden;
 		/* display: flex; */
 		/* justify-content: center; */
 		/* align-items: center; */
@@ -1445,12 +1699,12 @@ h4 {
 
 	.proj-title {
 		/* display: flex; */
-		height: 3vh;
+		height: 3dvh;
 		/* width: 100vw; */
 		/* justify-content: center; */
 		/* align-items: center; */
-		font-size: 2vh;
-		margin-bottom: 1vh;
+		font-size: 2dvh;
+		margin-bottom: 1dvh;
 		line-height: 0px;
 		font-weight: lighter;
 		letter-spacing: 1vw;
@@ -1461,14 +1715,14 @@ h4 {
 		/* display: flex; */
 		flex-direction: column;
 		/* width: 100vw; */
-		height: 67vh;
+		height: 67dvh;
 	}
 
 	.proj-list {
 		/* display: flex; */
 		flex-direction: row;
 		justify-content: center;
-		height: 5vh;
+		height: 5dvh;
 		width: 100vw;
 		padding-left: unset;
 	}
@@ -1476,11 +1730,11 @@ h4 {
 	.proj-list-box {
 		/* display: flex; */
 		flex-direction: row;
-		height: 5vh;
+		height: 5dvh;
 		width: 95vw;
 		/* border: solid 1px #335; */
 		border-radius: 10px;
-		font-size: 1.4vh;
+		font-size: 1.4dvh;
 	}
 
 	.proj-hyperlinks {
@@ -1488,12 +1742,12 @@ h4 {
 		/* flex-direction: row; */
 		/* align-items: center; */
 		/* justify-content: center; */
-		height: 5vh;
+		height: 5dvh;
 		/* width: inherit; */
 		/* color: #335; */
 		/* text-decoration: none; */
 		text-align: center;
-		/* font-size: 1vh; */
+		/* font-size: 1dvh; */
 		font-weight: bolder;
 	}
 
@@ -1522,17 +1776,17 @@ h4 {
 		flex-direction: row;
 		/* justify-content: center; */
 		width: 100vw;
-		height: 30vh;
+		height: 30dvh;
 		flex-wrap: wrap;
 	}
 
 	.proj-image {
 		/* display: flex; */
-		height: 18vh;
+		height: 18dvh;
 		/* justify-content: center; */
 		/* overflow: hidden; */
 		/* object-fit: contain; */
-		padding: 0.5vh;
+		padding: 0.5dvh;
 		/* border-radius: 5px; */
 	}
 
@@ -1540,7 +1794,7 @@ h4 {
 		/* display: flex; */
 		/* flex-direction: column; */
 		/* justify-content: center; */
-		height: 5vh;
+		height: 5dvh;
 		/* align-items: center; */
 	}
 
@@ -1557,17 +1811,17 @@ h4 {
 	.hyperlink-button-proj {
 		margin: 0 1vw;
 		width: 20vw;
-		font-size: 1.5vh;
+		font-size: 1.5dvh;
 		font-weight: bolder;
 	}
 
 	.proj-info-column-title {
 		/* display: flex; */
 		justify-content: space-evenly;
-		padding-bottom: 0.5vh;
-		height: 1.5vh;
+		padding-bottom: 0.5dvh;
+		height: 1.5dvh;
 		width: 100vw;
-		font-size: 1.5vh;
+		font-size: 1.5dvh;
 		font-weight: bolder;
 	}
 
@@ -1575,66 +1829,66 @@ h4 {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		height: 1.5vh;
+		height: 1.5dvh;
 	}
 
 	.proj-tech-icons {
 		display: flex;
-		height: 1.5vh;
+		height: 1.5dvh;
 		object-fit: contain;
-		padding: 0 1vh;
+		padding: 0 1dvh;
 		color: #bec4d9;
 	}
 
 	.proj-blog-links {
 		/* display: flex;
-	height: 10vh; */
+	height: 10dvh; */
 	}
 
 	.proj-content-column {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		height: 23vh;
+		height: 23dvh;
 		width: 100%;
 	}
 
 	.proj-content-row-titles {
-		height: 2.5vh;
+		height: 2.5dvh;
 		width: 40vw;
-		margin: 3vh 0 0.8vh 0;
+		margin: 3dvh 0 0.8dvh 0;
 		border-radius: 10px;
 	}
 
 	.proj-content-column-titles {
 		/* display: flex; */
-		height: 2.5vh;
+		height: 2.5dvh;
 		/* margin: unset; */
 		/* justify-content: center; */
 		/* align-items: flex-end; */
-		font-size: 1.5vh;
+		font-size: 1.5dvh;
 	}
 
 	.synopsis-text-box {
 		/* display: flex; */
-		height: 15vh;
+		height: 15dvh;
 		/* overflow: scroll; */
 		/* border: solid 1px #335; */
 		/* border-radius: 5px; */
 		/* margin: 1vw; */
 		/* padding: 0.5vw; */
-		font-size: 2vh;
+		font-size: 2dvh;
 	}
 
 	.story-text-box {
 		/* display: flex; */
-		height: 15vh;
+		height: 15dvh;
 		/* overflow: scroll; */
 		/* border: solid 1px #335; */
 		/* border-radius: 5px; */
 		/* margin: 1vw; */
 		/* padding: 0.5vw; */
-		font-size: 1.5vh;
+		font-size: 1.5dvh;
 	}
 
 	/* ////////Coming Soon page///////// */
@@ -1644,31 +1898,808 @@ h4 {
 		/* justify-content: center; */
 
 		width: unset;
-		height: 64vh;
+		height: 64dvh;
 		position: relative;
 
 		/* align-items: center; */
-		margin: 0vh;
-		padding: 1vh;
+		margin: 0dvh;
+		padding: 1dvh;
 		border: unset;
 		/* border-radius: 5px; */
 	}
 
 	.coming-soon-image {
-		height: 60vh;
+		height: 60dvh;
 		width: 100%;
 		/* opacity: 50%; */
 	}
 
 	.coming-soon {
-		bottom: 20vh;
+		bottom: 20dvh;
 		/* color: #ec008c; */
-		font-size: 7vh;
+		font-size: 7dvh;
 		/* text-align: center; */
 		/* text-shadow: 0px 10px 15px #335; */
 	}
 }
 
-/* 
+/*
 CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 */
+
+/* ////////////Recruiter button + modal//////////// */
+.recruiter-btn {
+	/* first item in the nav: an animated pill that rests as a thin sliver
+	   on the left and pops out on hover, without moving the name */
+	position: relative;
+	flex: 0 0 auto;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 5dvh;
+	width: auto; /* sizes to its label; capped by max-width below */
+	max-width: 4px; /* resting: a fingernail-tip sliver */
+	padding: 0;
+	overflow: visible;
+	cursor: pointer;
+	font: inherit;
+	letter-spacing: inherit;
+	background-color: #7ba5de; /* same blue as the "beauty" splash block */
+	border: none;
+	border-right: 1px solid #335; /* divider to match the nav */
+	border-radius: 5px 0 0 5px;
+	/* opens instantly on hover (delay overridden below); waits ~2.5s to retract
+	   with a springy bounce so the other links snap back */
+	transition: max-width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 2.5s,
+		box-shadow 0.4s ease;
+	animation: recruiterIntro 4.2s ease-out 1;
+}
+
+/* invisible, enlarged hover target: reaches left of the sliver and a little
+   into the "about" link so it is easy to trigger */
+.recruiter-btn::before {
+	content: "";
+	position: absolute;
+	top: -6px;
+	bottom: -6px;
+	left: -16px;
+	right: -12px;
+}
+
+/* label matches the other nav links; hidden until the button is fully open */
+.recruiter-label {
+	color: #335;
+	white-space: nowrap;
+	padding: 0 0.9vw; /* small breathing room around the word */
+	opacity: 0;
+	transform: scale(0.3);
+	pointer-events: none;
+	/* holds ~2.4s on leave, then disappears; color change stays immediate */
+	transition: opacity 0.2s ease 2.4s, transform 0.3s ease 2.4s,
+		color 0.25s ease 0s;
+	animation: recruiterLabelIntro 4.2s ease-out 1;
+}
+
+/* the briefcase icon is a mobile-only resting state; hidden everywhere else
+   (needs .recruiter-btn to out-specify the Material Icons font stylesheet) */
+.recruiter-btn .recruiter-icon {
+	display: none;
+}
+
+.recruiter-btn:hover,
+.recruiter-btn:focus-visible {
+	max-width: 40vw; /* high cap; actual width = the label + its padding */
+	transition-timing-function: ease-out;
+	transition-delay: 0s; /* expand right away */
+}
+
+/* once the button is open, the label zooms/pops into place (after the width) */
+.recruiter-btn:hover .recruiter-label,
+.recruiter-btn:focus-visible .recruiter-label {
+	opacity: 1;
+	transform: scale(1);
+	pointer-events: auto;
+	transition: opacity 0.18s ease 0.45s,
+		transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s,
+		color 0.25s ease 0s;
+}
+
+/* hovering the word itself turns it pink like the other nav links — text only */
+.recruiter-label:hover {
+	color: #ec008c;
+}
+
+/* intro: appear wide with the label, flash + glow (travel yellow),
+   then slowly shrink to the sliver */
+@keyframes recruiterIntro {
+	0% {
+		max-width: 40vw;
+		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
+	}
+	12% {
+		/* flash: a bright tight core + a wide soft halo so it really pops */
+		box-shadow: 0 0 20px 5px rgba(255, 249, 150, 1),
+			0 0 52px 18px rgba(240, 229, 75, 0.9);
+	}
+	26% {
+		box-shadow: 0 0 10px 2px rgba(240, 229, 75, 0.4);
+	}
+	40% {
+		box-shadow: 0 0 20px 5px rgba(255, 249, 150, 1),
+			0 0 52px 18px rgba(240, 229, 75, 0.9);
+	}
+	58% {
+		max-width: 40vw;
+		box-shadow: 0 0 8px 1px rgba(240, 229, 75, 0.3);
+	}
+	100% {
+		max-width: 4px;
+		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
+	}
+}
+
+/* label shows at full size while the button is wide, then shrinks away */
+@keyframes recruiterLabelIntro {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	52% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	78% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+}
+
+/* the three real nav links are always equal width and fill the row with no
+   gaps; text is clipped so it never spills outside the button */
+.hyperlinks-box .hyperlinks {
+	flex: 1 1 0;
+	min-width: 0;
+	width: auto;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* nav links show their word by default and the icon is hidden
+   (needs .hyperlinks to out-specify the Material Icons font stylesheet) */
+.hyperlinks .nav-icon {
+	display: none;
+	font-size: 2.6dvh;
+	line-height: 1;
+}
+
+/* Header.jsx adds .nav-compact to the box when the longest label would reach
+   the button padding (window narrowed, or the recruiter button expanded and
+   squeezed the links) — then all three show their Material icon, not the word */
+.hyperlinks-box.nav-compact .nav-text {
+	display: none;
+}
+.hyperlinks-box.nav-compact .nav-icon {
+	display: inline-flex;
+	align-items: center;
+}
+
+/* hidden ruler used by the fit measurement; same font as the nav words */
+.nav-ruler {
+	position: absolute;
+	left: -9999px;
+	visibility: hidden;
+	pointer-events: none;
+	white-space: nowrap;
+}
+
+/* touch devices can't hover: show the recruiter button as a normal,
+   tappable nav item (no sliver, no animation, label always visible) */
+@media (hover: none) {
+	.recruiter-btn {
+		flex: 1 1 0;
+		width: auto;
+		max-width: none;
+		padding: 0;
+		animation: none;
+	}
+	.recruiter-btn::before {
+		display: none; /* no hover target; avoid intercepting taps */
+	}
+	.recruiter-label {
+		opacity: 1;
+		transform: none;
+		animation: none;
+	}
+	/* let all four nav items fill the row on phones */
+	.hyperlinks-box .hyperlinks {
+		flex: 1 1 0;
+		width: auto;
+	}
+}
+
+/* ----- mobile only: the recruiter button leaves the nav row and stands on
+   its own, centred just below the navbar; the three links keep their words
+   (never icons); and the arrival glow settles into a quiet, still-legible
+   resting look. Nothing here touches the desktop layout. ----- */
+@media only screen and (max-device-width: 920px) and (orientation: portrait) {
+	/* always keep the words on phones — never swap to icons */
+	.hyperlinks-box.nav-compact .nav-text {
+		display: inline;
+	}
+	.hyperlinks-box.nav-compact .nav-icon {
+		display: none;
+	}
+
+	/* anchor for the detached button */
+	.hyperlinks-box {
+		position: relative;
+	}
+
+	/* lift the recruiter button out of the nav flow and centre it just
+	   beneath the box, as its own standalone element. The button is now only a
+	   quiet, icon-sized tap target: it has no border or fill of its own — the
+	   word below carries the border + glow, then hands off to the briefcase. */
+	.recruiter-btn {
+		position: absolute;
+		top: calc(100% + 2.5dvh);
+		left: 50%;
+		transform: translateX(-50%);
+		flex: 0 0 auto;
+		height: auto;
+		width: auto;
+		max-width: none;
+		padding: 1.3dvh 7vw;
+		border: none;
+		border-radius: 6px;
+		background-color: transparent;
+		overflow: visible;
+		animation: none;
+	}
+
+	/* the briefcase: the resting state. Hidden while the word performs, then
+	   fades/settles in as the word collapses. Muted navy #484878 (~4.9:1 on the
+	   lavender splash — well past the 3:1 WCAG 1.4.11 minimum for a meaningful
+	   glyph; the button also carries aria-label="For recruiters"). */
+	.recruiter-btn .recruiter-icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 52px;
+		line-height: 1;
+		color: #484878;
+		opacity: 1;
+		animation: recruiterMobileIcon 4s ease-out 1;
+	}
+
+	/* on phones the word becomes a self-contained pill (its own blue fill,
+	   border and glow), absolutely centred over the icon so its grow/shrink
+	   never nudges the layout. It arrives glowing, the fill disappears, it
+	   swells for a beat, then shrinks to nothing and fades — border and all —
+	   leaving only the briefcase behind. */
+	.recruiter-label {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%) scale(1);
+		box-sizing: border-box;
+		padding: 1.3dvh 8vw;
+		white-space: nowrap;
+		border: 1px solid #335;
+		border-radius: 6px;
+		background-color: #7ba5de;
+		color: #484878;
+		pointer-events: none;
+		opacity: 0;
+		animation: recruiterMobileLabel 4s ease-out 1;
+	}
+
+	/* a tap leaves the button focused, so the desktop hover/focus rule would
+	   otherwise flash the word back on top of the briefcase (offset, because it
+	   drops the centring translate). Keep it hidden on phones regardless. */
+	.recruiter-btn:hover .recruiter-label,
+	.recruiter-btn:focus-visible .recruiter-label {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.08);
+		pointer-events: none;
+	}
+}
+
+/* mobile intro — the word pill: arrive glowing in travel yellow, let the blue
+   fill disappear, swell briefly, then shrink to nothing and fade out with its
+   border. Every frame keeps the centring translate so only the scale changes. */
+@keyframes recruiterMobileLabel {
+	0% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		background-color: #7ba5de;
+		border-color: #335;
+		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
+	}
+	12% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		background-color: #7ba5de;
+		box-shadow: 0 0 24px 7px rgba(240, 229, 75, 0.95);
+	}
+	26% {
+		background-color: #7ba5de;
+		box-shadow: 0 0 8px 1px rgba(240, 229, 75, 0.4);
+	}
+	40% {
+		background-color: #7ba5de;
+		box-shadow: 0 0 24px 7px rgba(240, 229, 75, 0.95);
+	}
+	55% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		background-color: #7ba5de;
+		border-color: #335;
+		box-shadow: 0 0 6px 1px rgba(240, 229, 75, 0.3);
+	}
+	64% {
+		/* the blue fill disappears, glow gone, still full size */
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+		background-color: transparent;
+		border-color: #335;
+		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
+	}
+	74% {
+		/* swell for a beat */
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1.14);
+		background-color: transparent;
+		border-color: #335;
+	}
+	100% {
+		/* shrink to nothing and fade, border and all */
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.08);
+		background-color: transparent;
+		border-color: rgba(51, 51, 85, 0);
+		box-shadow: 0 0 0 0 rgba(240, 229, 75, 0);
+	}
+}
+
+/* mobile intro — the briefcase: stay hidden while the word performs, then
+   settle in just as the word collapses away. */
+@keyframes recruiterMobileIcon {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+	78% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+	90% {
+		/* pop out big, then settle back to the (now larger) resting size */
+		opacity: 1;
+		transform: scale(1.35);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* respect reduced-motion preference: no intro animation — the word pill stays
+   hidden (opacity 0) and the briefcase simply shows, still with no motion */
+@media (prefers-reduced-motion: reduce) {
+	.recruiter-btn,
+	.recruiter-label,
+	.recruiter-btn .recruiter-icon {
+		animation: none;
+	}
+}
+
+.recruiter-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.55);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+	/* rendered via a portal on <body>, so it escapes the fixed mobile header's
+	   stacking context; a high z-index keeps it above the splash logo/blocks */
+	z-index: 9999;
+}
+
+.recruiter-modal {
+	position: relative;
+	background: #fff;
+	width: 100%;
+	max-width: 520px;
+	max-height: 85dvh;
+	overflow-y: auto;
+	padding: 2rem 1.75rem;
+	border-radius: 10px;
+	/* the site body sets a wide 0.3vw tracking + lighter weight; reset it here
+	   so the recruiter copy reads easily */
+	letter-spacing: normal;
+	line-height: 1.45;
+}
+
+.recruiter-close {
+	/* the close button is the first child of the scrolling modal, so sticky
+	   keeps it pinned to the top-right while the content scrolls under it.
+	   The negative bottom margin stops it reserving a row (so the content
+	   still starts at the top), and the white disc masks text scrolling by. */
+	position: sticky;
+	top: 0.4rem;
+	z-index: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: auto; /* right-align within the content box */
+	margin-right: -1rem; /* nudge toward the modal's edge */
+	margin-bottom: -2rem; /* don't push the content down */
+	width: 2rem;
+	height: 2rem;
+	padding: 0;
+	border: none;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+	font-size: 1.6rem;
+	line-height: 1;
+	cursor: pointer;
+	color: #333;
+}
+
+.recruiter-title {
+	margin: 0 0 0.25rem;
+	color: #054eb4;
+}
+
+.recruiter-tagline {
+	margin: 0 0 0.5rem;
+	line-height: 1.4;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #335;
+}
+.recruiter-summary {
+	margin: 0 0 1.25rem;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+.recruiter-subhead {
+	margin: 0 0 0.5rem;
+	color: #01805c;
+}
+
+.recruiter-tech {
+	margin: 0 0 1.5rem;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.4rem 0.5rem;
+}
+.recruiter-tech li {
+	background: #dbe6f7;
+	border: 1px solid #7ba5de;
+	color: #0a2a4f;
+	border-radius: 5px;
+	padding: 0.25em 0.55em;
+	font-size: 0.85rem;
+	line-height: 1.25;
+}
+
+/* compact at-a-glance inside the modal (reuses .hire-glance markup) */
+.recruiter-glance {
+	margin: 0 0 1.25rem;
+	padding: 0.7rem 0.85rem;
+	gap: 0.6rem 1rem;
+}
+.recruiter-glance .hire-glance-k {
+	font-size: 0.68rem;
+}
+.recruiter-glance .hire-glance-v {
+	font-size: 0.9rem;
+}
+
+.recruiter-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+}
+
+.recruiter-links .hyperlink-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4em;
+	/* the shared .hyperlink-button is a fixed 8vw x 5dvh pill (sized for the
+	   contact row); here let each link size to its icon + label so they don't
+	   clamp and overlap */
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0.32rem 0.6rem;
+	font-size: 0.88rem;
+	line-height: 1.2;
+	white-space: nowrap;
+}
+
+.recruiter-links svg {
+	width: 1.1em;
+	height: 1.1em;
+	fill: currentColor;
+}
+
+/* modal head: name · role · availability on one row, badge pushed to the end
+   on desktop; stacks name → role → availability on phones */
+.recruiter-head {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem 0.7rem;
+	flex-wrap: wrap;
+	margin-bottom: 0.9rem;
+	padding-right: 2rem; /* clear the close × */
+}
+.recruiter-head .recruiter-title {
+	margin: 0;
+}
+.recruiter-role {
+	margin: 0;
+	font-weight: 600;
+	color: #054eb4;
+}
+.recruiter-head .hire-badge {
+	margin-left: auto; /* availability sits at the end of the row */
+}
+@media only screen and (max-device-width: 920px) and (orientation: portrait) {
+	.recruiter-head {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.4rem;
+	}
+	.recruiter-head .hire-badge {
+		margin-left: 0;
+	}
+}
+.recruiter-fullpage {
+	display: inline-block;
+	margin-top: 1.1rem;
+	font-weight: 600;
+	color: #054eb4;
+	text-decoration: underline;
+}
+
+/* ////////////// Hire / recruiter page + shared availability badge ////////////// */
+
+/* availability badge — shared by the /hire page and the modal */
+.hire-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45em;
+	padding: 0.3em 0.8em;
+	border-radius: 999px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	line-height: 1;
+	white-space: nowrap;
+}
+.hire-badge-dot {
+	width: 0.6em;
+	height: 0.6em;
+	border-radius: 50%;
+	background: currentColor;
+}
+.hire-badge.is-available {
+	background: #0b6e49; /* white text on this green = ~5.5:1 (AA) */
+	color: #fff;
+}
+.hire-badge.is-available .hire-badge-dot {
+	animation: hireBadgePulse 2.2s ease-out infinite;
+}
+.hire-badge.is-unavailable {
+	background: #e7e9f2;
+	color: #3a3a52;
+}
+@keyframes hireBadgePulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+
+/* page frame: one white panel on the lavender splash, so body text keeps full
+   contrast while the BEAT colours live in the accents */
+.hire-main {
+	max-width: 780px;
+	margin: 2dvh auto 4dvh;
+	padding: 2rem 2rem 2.5rem;
+	background: #fff;
+	border: 1px solid #335;
+	border-radius: 12px;
+	color: #335;
+	font-size: 1rem;
+	line-height: 1.5;
+	/* reset the body's wide 0.3vw tracking so the page copy reads easily */
+	letter-spacing: normal;
+}
+
+/* hero: role title + availability */
+.hire-hero {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem 1rem;
+	padding-bottom: 1.25rem;
+	margin-bottom: 1.25rem;
+	border-bottom: 3px solid #f0e54b; /* travel-yellow rule */
+}
+.hire-role {
+	font-size: 1.35rem;
+	font-weight: 700;
+	color: #054eb4;
+	border: 1px solid #335;
+	border-radius: 6px;
+	padding: 0.35em 0.7em;
+	line-height: 1;
+}
+.hire-badge-detail {
+	flex-basis: 100%;
+	margin: 0;
+	font-size: 0.95rem;
+	color: #3a3a52;
+}
+
+/* at-a-glance strip */
+.hire-glance {
+	list-style: none;
+	margin: 0 0 1.75rem;
+	padding: 0.9rem 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 0.75rem 1.25rem;
+	background: #eef1fa;
+	border-radius: 8px;
+}
+.hire-glance li {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+}
+.hire-glance-k {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: #5c5c78;
+}
+.hire-glance-v {
+	font-weight: 600;
+}
+
+/* content sections */
+.hire-section {
+	margin: 0 0 1.5rem;
+}
+.hire-subhead {
+	margin: 0 0 0.5rem;
+	font-size: 1.1rem;
+}
+.hire-subhead-blue {
+	color: #054eb4;
+}
+.hire-subhead-green {
+	color: #016b4d; /* darkened teal: ~5.5:1 on white (AA) */
+}
+.hire-subhead-pink {
+	color: #c20074; /* darkened magenta: ~5:1 on white (AA) */
+}
+.hire-body {
+	margin: 0;
+	font-weight: 400;
+}
+/* the punchy one-line hook above the summary */
+.hire-lead {
+	margin: 0 0 0.6rem;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.35;
+	color: #335;
+}
+
+/* key-tech tags */
+.hire-tags {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.4rem 0.5rem;
+}
+.hire-tag {
+	background: #dbe6f7;
+	border: 1px solid #7ba5de;
+	color: #0a2a4f;
+	border-radius: 5px;
+	padding: 0.25em 0.6em;
+	font-size: 0.85rem;
+}
+
+/* why-hire list */
+.hire-list {
+	margin: 0;
+	padding-left: 1.2rem;
+}
+.hire-list li {
+	margin-bottom: 0.5rem;
+}
+
+/* logistics: work auth + notice, side by side */
+.hire-logistics {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.hire-logistics-item {
+	flex: 1 1 220px;
+	margin-bottom: 1.5rem;
+}
+
+.hire-contact-note {
+	margin: 0.75rem 0 0;
+	font-size: 0.95rem;
+}
+.hire-contact-note a {
+	color: #054eb4;
+	text-decoration: underline;
+}
+
+/* the new "hire" item in the inner-page nav column gets a divider above it */
+.hyperlinks-navButton-headingSub-hire {
+	border-top: 1px solid #335;
+}
+
+/* mobile: tighten the panel padding so it hugs the content */
+@media only screen and (max-device-width: 920px) and (orientation: portrait) {
+	/* The body is locked to the viewport (overflow:hidden) for the single-screen
+	   BEAT pages, so the tall /hire page would be clipped. Make /hire its own
+	   full-height scroll container instead. */
+	.hire {
+		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
+		height: 100dvh;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	/* the BEAT pages need the tall header to seat the carousel; /hire has a
+	   panel right below it, so let the header shrink to its content and drop
+	   the extra bottom space */
+	.hire .headerSub-box {
+		height: auto;
+		padding-bottom: 1dvh;
+	}
+
+	.hire-main {
+		margin: 1dvh 0.75rem 3dvh;
+		padding: 1.5rem 1.25rem 2rem;
+	}
+
+	/* the footer is a full-screen, bottom-anchored block on the single-screen
+	   BEAT pages; on the scrollable /hire page that leaves a big gap above it,
+	   so let it shrink to its content there */
+	.hire .footer-container {
+		height: auto;
+		justify-content: flex-start;
+		padding-bottom: 3dvh;
+	}
+}
