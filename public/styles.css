@@ -2066,6 +2066,10 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 	overflow-y: auto;
 	padding: 2rem 1.75rem;
 	border-radius: 10px;
+	/* the site body sets a wide 0.3vw tracking + lighter weight; reset it here
+	   so the recruiter copy reads easily */
+	letter-spacing: normal;
+	line-height: 1.45;
 }
 
 .recruiter-close {
@@ -2086,8 +2090,16 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 }
 
 .recruiter-tagline {
+	margin: 0 0 0.5rem;
+	line-height: 1.4;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: #335;
+}
+.recruiter-summary {
 	margin: 0 0 1.25rem;
 	line-height: 1.5;
+	font-weight: 400;
 }
 
 .recruiter-subhead {
@@ -2097,8 +2109,33 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 
 .recruiter-tech {
 	margin: 0 0 1.5rem;
-	padding-left: 1.2rem;
-	line-height: 1.6;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.4rem 0.5rem;
+}
+.recruiter-tech li {
+	background: #dbe6f7;
+	border: 1px solid #7ba5de;
+	color: #0a2a4f;
+	border-radius: 5px;
+	padding: 0.25em 0.55em;
+	font-size: 0.85rem;
+	line-height: 1.25;
+}
+
+/* compact at-a-glance inside the modal (reuses .hire-glance markup) */
+.recruiter-glance {
+	margin: 0 0 1.25rem;
+	padding: 0.7rem 0.85rem;
+	gap: 0.6rem 1rem;
+}
+.recruiter-glance .hire-glance-k {
+	font-size: 0.68rem;
+}
+.recruiter-glance .hire-glance-v {
+	font-size: 0.9rem;
 }
 
 .recruiter-links {
@@ -2118,8 +2155,8 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 	width: auto;
 	height: auto;
 	margin: 0;
-	padding: 0.5rem 0.85rem;
-	font-size: 1rem;
+	padding: 0.32rem 0.6rem;
+	font-size: 0.88rem;
 	line-height: 1.2;
 	white-space: nowrap;
 }
@@ -2130,18 +2167,36 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 	fill: currentColor;
 }
 
-/* modal: name + badge head row, role line, and the link out to /hire */
+/* modal head: name · role · availability on one row, badge pushed to the end
+   on desktop; stacks name → role → availability on phones */
 .recruiter-head {
 	display: flex;
 	align-items: center;
-	gap: 0.75rem;
+	gap: 0.25rem 0.7rem;
 	flex-wrap: wrap;
-	padding-right: 1.75rem; /* clear the close × */
+	margin-bottom: 0.9rem;
+	padding-right: 2rem; /* clear the close × */
+}
+.recruiter-head .recruiter-title {
+	margin: 0;
 }
 .recruiter-role {
-	margin: 0.1rem 0 0.9rem;
+	margin: 0;
 	font-weight: 600;
 	color: #054eb4;
+}
+.recruiter-head .hire-badge {
+	margin-left: auto; /* availability sits at the end of the row */
+}
+@media only screen and (max-device-width: 920px) and (orientation: portrait) {
+	.recruiter-head {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.4rem;
+	}
+	.recruiter-head .hire-badge {
+		margin-left: 0;
+	}
 }
 .recruiter-fullpage {
 	display: inline-block;
@@ -2206,6 +2261,8 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 	color: #335;
 	font-size: 1rem;
 	line-height: 1.5;
+	/* reset the body's wide 0.3vw tracking so the page copy reads easily */
+	letter-spacing: normal;
 }
 
 /* hero: role title + availability */
@@ -2279,6 +2336,15 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 }
 .hire-body {
 	margin: 0;
+	font-weight: 400;
+}
+/* the punchy one-line hook above the summary */
+.hire-lead {
+	margin: 0 0 0.6rem;
+	font-size: 1.15rem;
+	font-weight: 600;
+	line-height: 1.35;
+	color: #335;
 }
 
 /* key-tech tags */
@@ -2286,17 +2352,17 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.4rem 0.5rem;
 }
 .hire-tag {
 	background: #dbe6f7;
 	border: 1px solid #7ba5de;
 	color: #0a2a4f;
-	border-radius: 6px;
-	padding: 0.3em 0.7em;
-	font-size: 0.95rem;
+	border-radius: 5px;
+	padding: 0.25em 0.6em;
+	font-size: 0.85rem;
 }
 
 /* why-hire list */

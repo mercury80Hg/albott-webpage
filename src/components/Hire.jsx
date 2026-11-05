@@ -66,6 +66,7 @@ function Hire() {
 					<h3 className="hire-subhead hire-subhead-blue">
 						{p.summaryTitle}
 					</h3>
+					<p className="hire-lead">{p.tagline}</p>
 					<p className="hire-body">{p.summary}</p>
 				</section>
 

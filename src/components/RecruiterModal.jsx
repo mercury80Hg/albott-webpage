@@ -64,6 +64,7 @@ function RecruiterModal() {
 
 							<div className="recruiter-head">
 								<h2 className="recruiter-title">{p.name}</h2>
+								<p className="recruiter-role">{p.role}</p>
 								<span
 									className={`hire-badge ${
 										available ? "is-available" : "is-unavailable"
@@ -76,9 +77,41 @@ function RecruiterModal() {
 									{availabilityText}
 								</span>
 							</div>
-							<p className="recruiter-role">{p.role}</p>
 
-							<p className="recruiter-tagline">{p.summary}</p>
+							<p className="recruiter-tagline">{p.tagline}</p>
+							<p className="recruiter-summary">{p.summary}</p>
+
+							<ul
+								className="hire-glance recruiter-glance"
+								aria-label="At a glance"
+							>
+								<li>
+									<span className="hire-glance-k">Location</span>
+									<span className="hire-glance-v">
+										{p.location}
+									</span>
+								</li>
+								<li>
+									<span className="hire-glance-k">
+										Work model
+									</span>
+									<span className="hire-glance-v">
+										{p.workModel}
+									</span>
+								</li>
+								<li>
+									<span className="hire-glance-k">Level</span>
+									<span className="hire-glance-v">
+										{p.seniority}
+									</span>
+								</li>
+								<li>
+									<span className="hire-glance-k">Open to</span>
+									<span className="hire-glance-v">
+										{p.employmentTypes.join(" · ")}
+									</span>
+								</li>
+							</ul>
 
 							<h3 className="recruiter-subhead">Key technologies</h3>
 							<ul className="recruiter-tech">

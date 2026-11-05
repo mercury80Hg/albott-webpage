@@ -13,6 +13,21 @@
  * can supply — swap the bracketed text for the real wording.
  * ------------------------------------------------------------------------- */
 
+/* Years of professional tech experience, computed live from the start date so
+   the "Level" ticks up on its own — the admin only ever edits CAREER_START.
+   Leans favourably via the trailing "+", and counts a whole year as soon as the
+   anniversary month arrives (never shows less than "1+"). */
+const CAREER_START = "2024-03-01" // first paid role in tech
+
+function professionalExperienceLabel(startISO = CAREER_START) {
+	const start = new Date(startISO)
+	const now = new Date()
+	let years = now.getFullYear() - start.getFullYear()
+	if (now.getMonth() < start.getMonth()) years -= 1 // anniversary not reached
+	years = Math.max(1, years)
+	return `${years}+ years commercial tech`
+}
+
 export const recruiterProfile = {
 	name: "Allan Bott",
 	role: "Front End Developer",
@@ -29,25 +44,31 @@ export const recruiterProfile = {
 	availabilityDetail: "Open to full-time and contract roles", // ADMIN
 
 	/* --- at-a-glance strip ----------------------------------------------- */
-	seniority: "Junior–Mid level",
+	careerStart: CAREER_START, // ADMIN — your first paid tech role; drives "Level"
+	// "Level" value, computed live from careerStart (e.g. "2+ years professional
+	// tech development"); read by both the /hire page and the modal
+	seniority: professionalExperienceLabel(),
 	location: "United Kingdom",
 	workModel: "Remote or hybrid",
 	employmentTypes: ["Full-time", "Contract"],
-	noticePeriod: "[Your notice period — e.g. 2 weeks / available immediately]", // ADMIN
+	noticePeriod: "Available on short notice", // ADMIN
 	workAuthorization:
-		"[Your UK work authorization — e.g. British citizen, no visa sponsorship required]",
+		"Authorized to work in the UK, USA, and EU — full details in my interactive CV.",
 
 	/* --- short skills / focus blurb (its own small title) ---------------- */
 	summaryTitle: "Focus & range",
+	// punchy one-line hook shown as the lead on the page + modal
+	tagline:
+		"React Developer who ships accessible UIs built to withstand real pressure.",
 	summary:
-		"Front-end developer building clean, accessible, resilient interfaces in React — and comfortable reaching into the Node/Express services behind them. I pair 20 years of hospitality leadership with modern web engineering, so I ship with real users and real pressure in mind.",
+		"Backed by a full-stack toolkit (React, Node, Express) and a 20-year career as a leader in high-volume hospitality environments. I pair a deep commitment to resilient web accessibility standards with the battle-tested communication skills required to lead engineering sprints under pressure.",
 
 	/* --- Key technologies ------------------------------------------------ */
 	keyTech: [
 		"JavaScript / TypeScript",
 		"React",
 		"Node.js & Express",
-		"HTML & CSS (responsive, accessible)",
+		"HTML & CSS",
 	],
 
 	/* --- Why hire me ----------------------------------------------------- */
