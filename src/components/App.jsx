@@ -15,9 +15,21 @@ import {
 	privacy,
 } from "../constants/BeatContent"
 
-//setting the viewport for the useable space accounting for mobile nav/url bar interference
-const vh = window.innerHeight * 0.01
-document.documentElement.style.setProperty("--vh", `${vh}px`)
+/* --vh: a fallback "1% of the usable viewport height" for browsers that predate
+   the native dvh unit. Modern browsers use `100dvh` in the CSS and ignore this;
+   here we keep --vh current so older browsers stay correct when the URL/nav bar
+   shows or hides and when the device rotates (it was previously set only once at
+   load, so it went stale). */
+const setVh = () => {
+	const vh = window.innerHeight * 0.01
+	document.documentElement.style.setProperty("--vh", `${vh}px`)
+}
+setVh()
+window.addEventListener("resize", setVh)
+window.addEventListener("orientationchange", setVh)
+if (window.visualViewport) {
+	window.visualViewport.addEventListener("resize", setVh)
+}
 
 function App() {
 	return (
