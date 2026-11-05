@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom"
 
 import Splash from "./Splash"
 import Beat from "./Beat"
+import Hire from "./Hire"
 import {
 	about,
 	adventure,
@@ -30,6 +31,7 @@ function App() {
 				<Route path="travel" element={<Beat data={travel} />} />
 
 				<Route path="contact" element={<Beat data={contact} />} />
+				<Route path="hire" element={<Hire />} />
 				<Route path="privacy" element={<Beat data={privacy} />} />
 				<Route path="/" element={<Splash />} />
 			</Routes>

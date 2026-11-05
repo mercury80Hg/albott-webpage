@@ -48,6 +48,9 @@ function HeaderSub({name}) {
 				<Link className="hyperlinks-navButton-headingSub"  to="/projects">
 					projects
 				</Link>
+				<Link className="hyperlinks-navButton-headingSub hyperlinks-navButton-headingSub-hire" to="/hire">
+					hire
+				</Link>
 			</div>
 		</div>
 	)

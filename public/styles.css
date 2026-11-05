@@ -1943,6 +1943,16 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 		opacity: 0;
 		animation: recruiterMobileLabel 4s ease-out 1;
 	}
+
+	/* a tap leaves the button focused, so the desktop hover/focus rule would
+	   otherwise flash the word back on top of the briefcase (offset, because it
+	   drops the centring translate). Keep it hidden on phones regardless. */
+	.recruiter-btn:hover .recruiter-label,
+	.recruiter-btn:focus-visible .recruiter-label {
+		opacity: 0;
+		transform: translate(-50%, -50%) scale(0.08);
+		pointer-events: none;
+	}
 }
 
 /* mobile intro — the word pill: arrive glowing in travel yellow, let the blue
@@ -2100,11 +2110,233 @@ CAN DELETE AFTER MOBILE IS FINISHED (Copied from way up for easier ref)
 .recruiter-links .hyperlink-button {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	gap: 0.4em;
+	/* the shared .hyperlink-button is a fixed 8vw x 5vh pill (sized for the
+	   contact row); here let each link size to its icon + label so they don't
+	   clamp and overlap */
+	width: auto;
+	height: auto;
+	margin: 0;
+	padding: 0.5rem 0.85rem;
+	font-size: 1rem;
+	line-height: 1.2;
+	white-space: nowrap;
 }
 
 .recruiter-links svg {
 	width: 1.1em;
 	height: 1.1em;
 	fill: currentColor;
+}
+
+/* modal: name + badge head row, role line, and the link out to /hire */
+.recruiter-head {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	flex-wrap: wrap;
+	padding-right: 1.75rem; /* clear the close × */
+}
+.recruiter-role {
+	margin: 0.1rem 0 0.9rem;
+	font-weight: 600;
+	color: #054eb4;
+}
+.recruiter-fullpage {
+	display: inline-block;
+	margin-top: 1.1rem;
+	font-weight: 600;
+	color: #054eb4;
+	text-decoration: underline;
+}
+
+/* ////////////// Hire / recruiter page + shared availability badge ////////////// */
+
+/* availability badge — shared by the /hire page and the modal */
+.hire-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45em;
+	padding: 0.3em 0.8em;
+	border-radius: 999px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	line-height: 1;
+	white-space: nowrap;
+}
+.hire-badge-dot {
+	width: 0.6em;
+	height: 0.6em;
+	border-radius: 50%;
+	background: currentColor;
+}
+.hire-badge.is-available {
+	background: #0b6e49; /* white text on this green = ~5.5:1 (AA) */
+	color: #fff;
+}
+.hire-badge.is-available .hire-badge-dot {
+	animation: hireBadgePulse 2.2s ease-out infinite;
+}
+.hire-badge.is-unavailable {
+	background: #e7e9f2;
+	color: #3a3a52;
+}
+@keyframes hireBadgePulse {
+	0% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+	}
+	70% {
+		box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0);
+	}
+	100% {
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+
+/* page frame: one white panel on the lavender splash, so body text keeps full
+   contrast while the BEAT colours live in the accents */
+.hire-main {
+	max-width: 780px;
+	margin: 2vh auto 4vh;
+	padding: 2rem 2rem 2.5rem;
+	background: #fff;
+	border: 1px solid #335;
+	border-radius: 12px;
+	color: #335;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+/* hero: role title + availability */
+.hire-hero {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem 1rem;
+	padding-bottom: 1.25rem;
+	margin-bottom: 1.25rem;
+	border-bottom: 3px solid #f0e54b; /* travel-yellow rule */
+}
+.hire-role {
+	font-size: 1.35rem;
+	font-weight: 700;
+	color: #054eb4;
+	border: 1px solid #335;
+	border-radius: 6px;
+	padding: 0.35em 0.7em;
+	line-height: 1;
+}
+.hire-badge-detail {
+	flex-basis: 100%;
+	margin: 0;
+	font-size: 0.95rem;
+	color: #3a3a52;
+}
+
+/* at-a-glance strip */
+.hire-glance {
+	list-style: none;
+	margin: 0 0 1.75rem;
+	padding: 0.9rem 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 0.75rem 1.25rem;
+	background: #eef1fa;
+	border-radius: 8px;
+}
+.hire-glance li {
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+}
+.hire-glance-k {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: #5c5c78;
+}
+.hire-glance-v {
+	font-weight: 600;
+}
+
+/* content sections */
+.hire-section {
+	margin: 0 0 1.5rem;
+}
+.hire-subhead {
+	margin: 0 0 0.5rem;
+	font-size: 1.1rem;
+}
+.hire-subhead-blue {
+	color: #054eb4;
+}
+.hire-subhead-green {
+	color: #016b4d; /* darkened teal: ~5.5:1 on white (AA) */
+}
+.hire-subhead-pink {
+	color: #c20074; /* darkened magenta: ~5:1 on white (AA) */
+}
+.hire-body {
+	margin: 0;
+}
+
+/* key-tech tags */
+.hire-tags {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+}
+.hire-tag {
+	background: #dbe6f7;
+	border: 1px solid #7ba5de;
+	color: #0a2a4f;
+	border-radius: 6px;
+	padding: 0.3em 0.7em;
+	font-size: 0.95rem;
+}
+
+/* why-hire list */
+.hire-list {
+	margin: 0;
+	padding-left: 1.2rem;
+}
+.hire-list li {
+	margin-bottom: 0.5rem;
+}
+
+/* logistics: work auth + notice, side by side */
+.hire-logistics {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.hire-logistics-item {
+	flex: 1 1 220px;
+	margin-bottom: 1.5rem;
+}
+
+.hire-contact-note {
+	margin: 0.75rem 0 0;
+	font-size: 0.95rem;
+}
+.hire-contact-note a {
+	color: #054eb4;
+	text-decoration: underline;
+}
+
+/* the new "hire" item in the inner-page nav column gets a divider above it */
+.hyperlinks-navButton-headingSub-hire {
+	border-top: 1px solid #335;
+}
+
+/* mobile: tighten the panel padding so it hugs the content */
+@media only screen and (max-device-width: 920px) and (orientation: portrait) {
+	.hire-main {
+		margin: 1.5vh 0.75rem 3vh;
+		padding: 1.5rem 1.25rem 2rem;
+	}
 }
